@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PSLAB – Cloud Computing, Sztuczna Inteligencja, Obsługa IT, Business Intelligence | Tychy</title>
+  <meta name="description" content="PSLAB – specjalistyczna firma IT z Tychów. Usługi cloud computing (AWS, Azure, GCP, OVH), machine learning, generative AI, agentic AI, obsługa informatyczna firm, bezpieczeństwo IT (SIEM, NIS2), business intelligence (Power BI, Tableau, QuickSight) oraz nadzór nad wdrożeniami systemów informatycznych." />
+  <meta name="keywords" content="PSLAB, cloud computing, AWS, Azure, GCP, OVH, sztuczna inteligencja, machine learning, generative AI, agentic AI, obsługa informatyczna firm, bezpieczeństwo IT, SIEM, NIS2, Cisco, Fortinet, Ubiquiti, Windows Server, Linux, Active Directory, ADFS, SSO, MS SQL, PostgreSQL, MySQL, Oracle, business intelligence, Power BI, Tableau, QuickSight, nadzór nad wdrożeniami, audyt IT, DevOps, Terraform, IT consulting, Tychy, Śląsk, Polska" />
+  <meta name="author" content="PSLAB" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://pslab.eu/" />
+  <link rel="alternate" hreflang="pl" href="https://pslab.eu/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pl_PL" />
+  <meta property="og:site_name" content="PSLAB" />
+  <meta property="og:title" content="PSLAB – Cloud Computing, AI, Obsługa IT i Business Intelligence" />
+  <meta property="og:description" content="Specjalistyczne usługi IT: cloud computing AWS/Azure/GCP, sztuczna inteligencja, bezpieczeństwo IT, business intelligence i nadzór nad wdrożeniami. Certyfikowani eksperci z Tychów." />
+  <meta property="og:url" content="https://pslab.eu/" />
+  <meta property="og:image" content="https://pslab.eu/img/pslab-logo-3c-440px.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="PSLAB – Cloud, AI & IT Consulting" />
+  <meta name="twitter:description" content="Certyfikowani eksperci IT: AWS, Azure, GCP, AI/ML, bezpieczeństwo IT, Business Intelligence. Tychy, Polska." />
+  <meta name="twitter:image" content="https://pslab.eu/img/pslab-logo-3c-440px.png" />
+
+  <!-- Geo -->
+  <meta name="geo.region" content="PL-24" />
+  <meta name="geo.placename" content="Tychy" />
+  <meta name="geo.position" content="50.1305;18.9937" />
+  <meta name="ICBM" content="50.1305, 18.9937" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="icon" type="image/png" href="img/pslab-logo-3c-440px.png" />
+
+  <!-- JSON-LD: LocalBusiness + ProfessionalService -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "ProfessionalService"],
+    "name": "PSLAB",
+    "description": "Specjalistyczna firma IT świadcząca usługi cloud computing (AWS, Azure, GCP, OVH), machine learning, generative AI, obsługi informatycznej firm, bezpieczeństwa IT oraz business intelligence.",
+    "url": "https://pslab.eu",
+    "logo": "https://pslab.eu/img/pslab-logo-3c-440px.png",
+    "image": "https://pslab.eu/img/pslab-logo-3c-440px.png",
+    "telephone": "+48792336306",
+    "email": "kontakt@pslab.eu",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "ul. Rolna 22",
+      "addressLocality": "Tychy",
+      "postalCode": "43-100",
+      "addressCountry": "PL"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 50.1305,
+      "longitude": 18.9937
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Polska"
+    },
+    "knowsAbout": [
+      "Cloud Computing", "Amazon Web Services", "Google Cloud Platform", "Microsoft Azure", "OVH",
+      "Machine Learning", "Generative AI", "Agentic AI", "Sztuczna Inteligencja",
+      "Obsługa informatyczna firm", "Bezpieczeństwo IT", "SIEM", "NIS2",
+      "Cisco", "Fortinet", "Ubiquiti", "Linux", "Windows Server", "Active Directory", "ADFS", "SSO",
+      "MS SQL", "PostgreSQL", "MySQL", "Oracle",
+      "Business Intelligence", "Power BI", "Tableau", "Amazon QuickSight",
+      "Nadzór nad wdrożeniami IT", "DevOps", "Terraform"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Usługi IT",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Cloud Computing – AWS, Azure, GCP, OVH",
+            "description": "Projektowanie, migracja i zarządzanie infrastrukturą w chmurze. Architektury multi-cloud, optymalizacja kosztów, DevOps, CI/CD, Infrastructure as Code z Terraform."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Machine Learning, Generative AI i Agentic AI",
+            "description": "Wdrażanie modeli machine learning, rozwiązań generative AI i systemów agentic AI. Automatyzacja procesów biznesowych z wykorzystaniem sztucznej inteligencji, NLP i computer vision."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Obsługa informatyczna firm i bezpieczeństwo IT",
+            "description": "Kompleksowa administracja IT: sieci Cisco, Fortinet, Ubiquiti, serwery Linux i Windows Server, bazy danych MS SQL, PostgreSQL, MySQL, Oracle, Active Directory, ADFS, SSO, SIEM, zgodność z NIS2."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Business Intelligence – Power BI, Tableau, QuickSight",
+            "description": "Projektowanie dashboardów, modelowanie danych i budowa pipeline ETL. Analiza danych i raportowanie z Power BI, Tableau i Amazon QuickSight."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Nadzór nad wdrożeniami systemów informatycznych",
+            "description": "Profesjonalny nadzór techniczny nad wdrożeniami IT. Audyt IT, kontrola jakości, zarządzanie ryzykiem i odbiory techniczne projektów informatycznych."
+          }
+        }
+      ]
+    },
+    "employee": [
+      {
+        "@type": "Person",
+        "name": "dr inż. Paweł Świtała",
+        "jobTitle": "Cloud Architect, AI/ML Engineer, IT Security Expert",
+        "email": "pswitala@pslab.eu",
+        "hasCredential": [
+          {"@type": "EducationalOccupationalCredential", "credentialCategory": "Professional Certification", "name": "AWS Solutions Architect Professional"},
+          {"@type": "EducationalOccupationalCredential", "credentialCategory": "Professional Certification", "name": "AWS Security Specialty"},
+          {"@type": "EducationalOccupationalCredential", "credentialCategory": "Professional Certification", "name": "AWS DevOps Professional Engineer"},
+          {"@type": "EducationalOccupationalCredential", "credentialCategory": "Professional Certification", "name": "AWS Machine Learning Specialty"},
+          {"@type": "EducationalOccupationalCredential", "credentialCategory": "Professional Certification", "name": "MCSA"},
+          {"@type": "EducationalOccupationalCredential", "credentialCategory": "Professional Certification", "name": "MCSE"},
+          {"@type": "EducationalOccupationalCredential", "credentialCategory": "Professional Certification", "name": "MCITP Administrator"},
+          {"@type": "EducationalOccupationalCredential", "credentialCategory": "Professional Certification", "name": "MCITP Database Administrator"}
+        ]
+      },
+      {
+        "@type": "Person",
+        "name": "mgr Barbara Jureczko",
+        "jobTitle": "Business Intelligence Analyst, Project Manager",
+        "email": "bjureczko@pslab.eu"
+      },
+      {
+        "@type": "Person",
+        "name": "mgr Tomasz Michalski",
+        "jobTitle": "Cloud Engineer, Multi-Cloud Specialist",
+        "email": "tmichalski@pslab.eu"
+      }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Jakie usługi cloud computing oferuje PSLAB?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "PSLAB oferuje kompleksowe usługi cloud computing na platformach AWS, Google Cloud Platform (GCP), Microsoft Azure oraz OVH. Obejmują one projektowanie architektury chmurowej, migrację do chmury, zarządzanie infrastrukturą multi-cloud, optymalizację kosztów, wdrażanie DevOps, CI/CD oraz Infrastructure as Code z Terraform."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Czy PSLAB wdraża rozwiązania sztucznej inteligencji i machine learning?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tak, PSLAB specjalizuje się we wdrażaniu modeli machine learning, rozwiązań generative AI oraz systemów agentic AI. Nasz zespół posiada certyfikat AWS Machine Learning Specialty i doświadczenie w NLP, computer vision oraz automatyzacji procesów biznesowych z wykorzystaniem AI."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Jakie certyfikaty posiada zespół PSLAB?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Zespół PSLAB posiada certyfikaty: AWS Solutions Architect Professional, AWS Security Specialty, AWS DevOps Professional Engineer, AWS Machine Learning Specialty, MCSA, MCSE, MCITP Administrator oraz MCITP Database Administrator."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Czy PSLAB oferuje obsługę informatyczną firm i bezpieczeństwo IT?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tak, PSLAB świadczy kompleksową obsługę informatyczną firm obejmującą: sieci Cisco, Fortinet i Ubiquiti, bezpieczeństwo IT z SIEM i zgodność z NIS2, administrację serwerami Linux i Windows Server, bazy danych MS SQL 2025, PostgreSQL, MySQL i Oracle, Active Directory, ADFS, SSO, usługi RDP i obsługę drukarek."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Jakie narzędzia Business Intelligence obsługuje PSLAB?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "PSLAB obsługuje wiodące platformy BI: Microsoft Power BI, Tableau oraz Amazon QuickSight. Oferujemy projektowanie dashboardów, modelowanie danych, budowę pipeline ETL oraz szkolenia z zakresu analizy danych."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Gdzie znajduje się siedziba PSLAB?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Siedziba PSLAB mieści się w Tychach (woj. śląskie) przy ul. Rolnej 22, 43-100. Obsługujemy klientów z całej Polski, a także realizujemy projekty zdalne."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+<a href="#uslugi" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;padding:8px;background:#1a7a8a;color:#fff;font-size:0.9rem;text-decoration:none;" onfocus="this.style.cssText='position:fixed;left:16px;top:16px;width:auto;height:auto;overflow:visible;z-index:9999;padding:8px 16px;background:#1a7a8a;color:#fff;font-size:0.9rem;text-decoration:none;border-radius:8px;'" onblur="this.style.cssText='position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;';">Przejdź do treści</a>
+
+<!-- Background effects -->
+<div class="bg-grid"></div>
+<div class="bg-gradient-blob bg-gradient-blob--1"></div>
+<div class="bg-gradient-blob bg-gradient-blob--2"></div>
+
+<!-- ===== NAVIGATION ===== -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="#" class="navbar__logo">
+      <img src="img/pslab-logo-3c-440px.png" alt="PSLAB Logo" />
+    </a>
+    <ul class="navbar__links" id="navLinks">
+      <li><a href="#uslugi">Usługi</a></li>
+      <li><a href="#zespol">Zespół</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+    <button class="navbar__burger" id="navBurger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<main>
+<section class="hero" id="hero">
+  <div class="container">
+    <div class="hero__inner">
+      <div class="hero__content">
+        <div class="hero__badge"><span class="dot"></span> Specialized IT Consulting</div>
+        <h1 class="hero__title">
+          Technologia, która<br /><span class="gradient-text">napędza Twój biznes</span>
+        </h1>
+        <p class="hero__desc">
+          Łączymy wieloletnie doświadczenie inżynierskie z&nbsp;najnowszymi technologiami chmury, sztucznej inteligencji i&nbsp;analizy danych. Pomagamy firmom bezpiecznie rosnąć w&nbsp;cyfrowym świecie.
+        </p>
+        <div class="hero__cta">
+          <a href="#kontakt" class="btn btn--primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Skontaktuj się
+          </a>
+          <a href="#uslugi" class="btn btn--outline">
+            Nasze usługi
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="hero__visual" aria-hidden="true">
+        <!-- Aurora glow backdrop -->
+        <div class="hero__aurora"></div>
+        <!-- Particle field -->
+        <div class="hero__particles">
+          <span class="particle" style="--x:15%;--y:20%;--d:3s;--s:2px"></span>
+          <span class="particle" style="--x:80%;--y:12%;--d:4s;--s:1.5px"></span>
+          <span class="particle" style="--x:65%;--y:75%;--d:2.5s;--s:2.5px"></span>
+          <span class="particle" style="--x:25%;--y:85%;--d:3.5s;--s:1px"></span>
+          <span class="particle" style="--x:90%;--y:55%;--d:5s;--s:2px"></span>
+          <span class="particle" style="--x:10%;--y:60%;--d:4.5s;--s:1.5px"></span>
+          <span class="particle" style="--x:50%;--y:8%;--d:3s;--s:2px"></span>
+          <span class="particle" style="--x:35%;--y:45%;--d:6s;--s:1px"></span>
+          <span class="particle" style="--x:72%;--y:35%;--d:2.8s;--s:2px"></span>
+          <span class="particle" style="--x:45%;--y:92%;--d:4.2s;--s:1.5px"></span>
+          <span class="particle" style="--x:5%;--y:40%;--d:3.8s;--s:2px"></span>
+          <span class="particle" style="--x:55%;--y:55%;--d:5.5s;--s:1px"></span>
+        </div>
+        <!-- Orbit system -->
+        <div class="orbit-system">
+          <!-- Outer orbit -->
+          <div class="orbit orbit--outer">
+            <div class="orbit__path"></div>
+            <div class="orbit__node orbit__node--1">
+              <span class="node__glow"></span>
+              <span class="node__label">AWS</span>
+            </div>
+            <div class="orbit__node orbit__node--2">
+              <span class="node__glow"></span>
+              <span class="node__label">Azure</span>
+            </div>
+          </div>
+          <!-- Middle orbit -->
+          <div class="orbit orbit--mid">
+            <div class="orbit__path"></div>
+            <div class="orbit__node orbit__node--3">
+              <span class="node__glow"></span>
+              <span class="node__label">GCP</span>
+            </div>
+            <div class="orbit__node orbit__node--4">
+              <span class="node__glow"></span>
+              <span class="node__label">AI</span>
+            </div>
+          </div>
+          <!-- Inner orbit -->
+          <div class="orbit orbit--inner">
+            <div class="orbit__path"></div>
+            <div class="orbit__node orbit__node--5">
+              <span class="node__glow"></span>
+              <span class="node__label">BI</span>
+            </div>
+            <div class="orbit__node orbit__node--6">
+              <span class="node__glow"></span>
+              <span class="node__label">SEC</span>
+            </div>
+          </div>
+          <!-- Center core -->
+          <div class="orbit__core">
+            <div class="orbit__core-pulse"></div>
+            <div class="orbit__core-inner">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/></svg>
+            </div>
+            <div class="orbit__core-ring"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STATS ===== -->
+<section class="stats reveal">
+  <div class="container">
+    <div class="stats__grid">
+      <div class="stats__item">
+        <div class="stats__item-number" data-count="15">0</div>
+        <div class="stats__item-label">lat doświadczenia</div>
+      </div>
+      <div class="stats__item">
+        <div class="stats__item-number" data-count="10">0</div>
+        <div class="stats__item-label">certyfikatów branżowych</div>
+      </div>
+      <div class="stats__item">
+        <div class="stats__item-number" data-count="4">0</div>
+        <div class="stats__item-label">platformy chmurowe</div>
+      </div>
+      <div class="stats__item">
+        <div class="stats__item-number" data-count="50">0</div>
+        <div class="stats__item-label">zrealizowanych projektów</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="services" id="uslugi">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="section-label">Usługi</span>
+      <h2 class="section-title">Kompleksowe wsparcie IT</h2>
+      <p class="section-subtitle">Od chmury i sztucznej inteligencji po bezpieczeństwo i&nbsp;analizę danych – dostarczamy rozwiązania, które działają.</p>
+    </div>
+
+    <div class="services__grid">
+
+      <!-- Cloud Computing -->
+      <article class="service-card reveal" id="cloud-computing">
+        <div class="service-card__icon">
+          <svg viewBox="0 0 24 24"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+        </div>
+        <h3 class="service-card__title">Cloud Computing – AWS, Azure, GCP, OVH</h3>
+        <p class="service-card__desc">Projektowanie architektury chmurowej, migracja do chmury i&nbsp;zarządzanie infrastrukturą multi-cloud. Optymalizacja kosztów cloud, wdrażanie DevOps, CI/CD i&nbsp;Infrastructure as Code z&nbsp;Terraform. Certyfikowani architekci AWS Solutions Architect Professional.</p>
+        <div class="service-card__tags">
+          <span class="tag">AWS</span>
+          <span class="tag">GCP</span>
+          <span class="tag">Azure</span>
+          <span class="tag">OVH</span>
+          <span class="tag">Terraform</span>
+          <span class="tag">DevOps</span>
+          <span class="tag">CI/CD</span>
+          <span class="tag">IaC</span>
+        </div>
+      </article>
+
+      <!-- ML / AI -->
+      <article class="service-card reveal" id="machine-learning-ai">
+        <div class="service-card__icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/></svg>
+        </div>
+        <h3 class="service-card__title">Machine Learning, Generative AI i&nbsp;Agentic AI</h3>
+        <p class="service-card__desc">Wdrażanie modeli machine learning, rozwiązań generative AI i&nbsp;autonomicznych systemów agentic AI. Automatyzacja procesów biznesowych z&nbsp;wykorzystaniem sztucznej inteligencji, przetwarzania języka naturalnego (NLP) i&nbsp;computer vision. Certyfikat AWS Machine Learning Specialty.</p>
+        <div class="service-card__tags">
+          <span class="tag">Machine Learning</span>
+          <span class="tag">Generative AI</span>
+          <span class="tag">Agentic AI</span>
+          <span class="tag">NLP</span>
+          <span class="tag">Computer Vision</span>
+          <span class="tag">LLM</span>
+          <span class="tag">Deep Learning</span>
+        </div>
+      </article>
+
+      <!-- IT Infrastructure -->
+      <article class="service-card reveal" id="obsluga-informatyczna">
+        <div class="service-card__icon">
+          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+        </div>
+        <h3 class="service-card__title">Obsługa informatyczna firm i&nbsp;bezpieczeństwo IT</h3>
+        <p class="service-card__desc">Kompleksowa administracja infrastrukturą IT dla firm: sieci Cisco, Fortinet i&nbsp;Ubiquiti, bezpieczeństwo z&nbsp;SIEM i&nbsp;zgodność z&nbsp;dyrektywą NIS2. Administracja serwerami Linux i&nbsp;Windows Server, bazami danych MS SQL 2025, PostgreSQL, MySQL i&nbsp;Oracle. Wdrażanie Active Directory, ADFS, SSO, obsługa RDP i&nbsp;drukarek sieciowych.</p>
+        <div class="service-card__tags">
+          <span class="tag">Cisco</span>
+          <span class="tag">Fortinet</span>
+          <span class="tag">Ubiquiti</span>
+          <span class="tag">SIEM</span>
+          <span class="tag">NIS2</span>
+          <span class="tag">Linux</span>
+          <span class="tag">Windows Server</span>
+          <span class="tag">MS SQL 2025</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">Oracle</span>
+          <span class="tag">Active Directory</span>
+          <span class="tag">ADFS / SSO</span>
+          <span class="tag">RDP</span>
+        </div>
+      </article>
+
+      <!-- Business Intelligence -->
+      <article class="service-card reveal" id="business-intelligence">
+        <div class="service-card__icon">
+          <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        </div>
+        <h3 class="service-card__title">Business Intelligence – Power BI, Tableau, QuickSight</h3>
+        <p class="service-card__desc">Projektowanie interaktywnych dashboardów, modelowanie danych i&nbsp;budowa pipeline'ów ETL. Wdrażanie platform analitycznych Power BI, Tableau i&nbsp;Amazon QuickSight. Przekształcamy surowe dane w&nbsp;actionable insights i&nbsp;decyzje biznesowe.</p>
+        <div class="service-card__tags">
+          <span class="tag">Power BI</span>
+          <span class="tag">Tableau</span>
+          <span class="tag">QuickSight</span>
+          <span class="tag">ETL</span>
+          <span class="tag">Data Modeling</span>
+          <span class="tag">Data Warehouse</span>
+        </div>
+      </article>
+
+      <!-- IT Project Supervision -->
+      <article class="service-card reveal" id="nadzor-wdrozenia">
+        <div class="service-card__icon">
+          <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <h3 class="service-card__title">Nadzór nad wdrożeniami systemów informatycznych</h3>
+        <p class="service-card__desc">Profesjonalny nadzór techniczny nad wdrożeniami systemów IT. Audyt IT, kontrola jakości oprogramowania, zarządzanie ryzykiem projektów informatycznych i&nbsp;odbiory techniczne. Doświadczenie w&nbsp;project management metodologiami Agile i&nbsp;Waterfall.</p>
+        <div class="service-card__tags">
+          <span class="tag">Audyt IT</span>
+          <span class="tag">Project Management</span>
+          <span class="tag">Kontrola jakości</span>
+          <span class="tag">Zarządzanie ryzykiem</span>
+          <span class="tag">Odbiory techniczne</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== CERTIFICATIONS MARQUEE ===== -->
+<section class="certifications reveal">
+  <div class="marquee" id="marquee">
+    <span class="marquee__item">AWS Solutions Architect Professional</span>
+    <span class="marquee__item">⬥</span>
+    <span class="marquee__item">AWS Security Specialty</span>
+    <span class="marquee__item">⬥</span>
+    <span class="marquee__item">AWS DevOps Professional Engineer</span>
+    <span class="marquee__item">⬥</span>
+    <span class="marquee__item">AWS Machine Learning Specialty</span>
+    <span class="marquee__item">⬥</span>
+    <span class="marquee__item">MCSA</span>
+    <span class="marquee__item">⬥</span>
+    <span class="marquee__item">MCSE</span>
+    <span class="marquee__item">⬥</span>
+    <span class="marquee__item">MCITP Administrator</span>
+    <span class="marquee__item">⬥</span>
+    <span class="marquee__item">MCITP Database Administrator</span>
+    <span class="marquee__item">⬥</span>
+    <!-- Duplicated for seamless loop -->
+    <span class="marquee__item">AWS Solutions Architect Professional</span>
+    <span class="marquee__item">⬥</span>
+    <span class="marquee__item">AWS Security Specialty</span>
+    <span class="marquee__item">⬥</span>
+    <span class="marquee__item">AWS DevOps Professional Engineer</span>
+    <span class="marquee__item">⬥</span>
+    <span class="marquee__item">AWS Machine Learning Specialty</span>
+    <span class="marquee__item">⬥</span>
+    <span class="marquee__item">MCSA</span>
+    <span class="marquee__item">⬥</span>
+    <span class="marquee__item">MCSE</span>
+    <span class="marquee__item">⬥</span>
+    <span class="marquee__item">MCITP Administrator</span>
+    <span class="marquee__item">⬥</span>
+    <span class="marquee__item">MCITP Database Administrator</span>
+    <span class="marquee__item">⬥</span>
+  </div>
+</section>
+
+<!-- ===== TEAM ===== -->
+<section class="team" id="zespol">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="section-label">Zespół</span>
+      <h2 class="section-title">Eksperci z certyfikatami</h2>
+      <p class="section-subtitle">Nasz zespół łączy tytułów naukowe z branżowymi certyfikatami. Stawiamy na ciągły rozwój i najwyższe standardy.</p>
+    </div>
+
+    <div class="team__grid">
+
+      <!-- Paweł Świtała -->
+      <div class="team-card reveal">
+        <div class="team-card__avatar">PŚ</div>
+        <h3 class="team-card__name">dr inż. Paweł Świtała</h3>
+        <p class="team-card__title-degree">Cloud Architect · AI/ML Engineer · IT Security</p>
+        <div class="team-card__certs">
+          <span class="cert-badge">AWS SA Pro</span>
+          <span class="cert-badge">AWS Security</span>
+          <span class="cert-badge">AWS DevOps Pro</span>
+          <span class="cert-badge">AWS ML Specialty</span>
+          <span class="cert-badge">MCSA</span>
+          <span class="cert-badge">MCSE</span>
+          <span class="cert-badge">MCITP Admin</span>
+          <span class="cert-badge">MCITP DBA</span>
+        </div>
+        <p class="team-card__email">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 4px;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:pswitala@pslab.eu">pswitala@pslab.eu</a>
+        </p>
+      </div>
+
+      <!-- Barbara Jureczko -->
+      <div class="team-card reveal">
+        <div class="team-card__avatar">BJ</div>
+        <h3 class="team-card__name">mgr Barbara Jureczko</h3>
+        <p class="team-card__title-degree">Business Intelligence · Project Management</p>
+        <div class="team-card__certs">
+          <span class="cert-badge">BI Analyst</span>
+          <span class="cert-badge">Project Manager</span>
+        </div>
+        <p class="team-card__email">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 4px;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:bjureczko@pslab.eu">bjureczko@pslab.eu</a>
+        </p>
+      </div>
+
+      <!-- Tomasz Michalski -->
+      <div class="team-card reveal">
+        <div class="team-card__avatar">TM</div>
+        <h3 class="team-card__name">mgr Tomasz Michalski</h3>
+        <p class="team-card__title-degree">Cloud Engineer · Multi-Cloud Specialist</p>
+        <div class="team-card__certs">
+          <span class="cert-badge">AWS</span>
+          <span class="cert-badge">Azure</span>
+          <span class="cert-badge">GCP</span>
+        </div>
+        <p class="team-card__email">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 4px;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:tmichalski@pslab.eu">tmichalski@pslab.eu</a>
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact" id="kontakt">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="section-label">Kontakt</span>
+      <h2 class="section-title">Porozmawiajmy o Twoim projekcie</h2>
+      <p class="section-subtitle">Wypełnij formularz lub skontaktuj się bezpośrednio. Odpowiadamy w&nbsp;ciągu 24&nbsp;godzin.</p>
+    </div>
+
+    <div class="contact__grid">
+
+      <!-- Info column -->
+      <div class="contact__info reveal">
+        <div class="contact__info-item">
+          <div class="contact__info-icon">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="contact__info-text">
+            <h4>Siedziba</h4>
+            <p>PSLAB<br />ul. Rolna 22<br />43-100 Tychy, Polska</p>
+          </div>
+        </div>
+        <div class="contact__info-item">
+          <div class="contact__info-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div class="contact__info-text">
+            <h4>Telefon</h4>
+            <p><a href="tel:+48792336306">+48 792 336 306</a></p>
+          </div>
+        </div>
+        <div class="contact__info-item">
+          <div class="contact__info-icon">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div class="contact__info-text">
+            <h4>E-mail</h4>
+            <p><a href="mailto:kontakt@pslab.eu">kontakt@pslab.eu</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form column -->
+      <form class="contact__form reveal" id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Imię i nazwisko</label>
+            <input type="text" id="name" name="name" placeholder="Jan Kowalski" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Adres e-mail</label>
+            <input type="email" id="email" name="email" placeholder="jan@firma.pl" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="service">Interesujący obszar</label>
+          <select id="service" name="service">
+            <option value="" disabled selected>Wybierz usługę…</option>
+            <option value="cloud">Cloud Computing</option>
+            <option value="ai">Machine Learning / AI</option>
+            <option value="infra">Obsługa informatyczna</option>
+            <option value="bi">Business Intelligence</option>
+            <option value="supervision">Nadzór nad wdrożeniami</option>
+            <option value="other">Inne</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Wiadomość</label>
+          <textarea id="message" name="message" placeholder="Opisz krótko swój projekt lub zapytanie…" required></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary btn--submit">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          Wyślij wiadomość
+        </button>
+        <div class="form-message form-message--success" id="formSuccess">
+          ✓ Dziękujemy! Twoja wiadomość została wysłana. Odezwiemy się wkrótce.
+        </div>
+        <div class="form-message form-message--error" id="formError">
+          ✗ Wystąpił błąd. Spróbuj ponownie lub napisz na kontakt@pslab.eu
+        </div>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ Section (SEO) ===== -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="section-label">FAQ</span>
+      <h2 class="section-title">Najczęściej zadawane pytania</h2>
+    </div>
+    <div class="faq__list reveal">
+      <details class="faq__item">
+        <summary class="faq__question">Jakie usługi cloud computing oferuje PSLAB?</summary>
+        <div class="faq__answer">
+          <p>PSLAB oferuje kompleksowe usługi cloud computing na platformach <strong>AWS (Amazon Web Services)</strong>, <strong>Google Cloud Platform (GCP)</strong>, <strong>Microsoft Azure</strong> oraz <strong>OVH</strong>. Obejmują one projektowanie architektury chmurowej, migrację do chmury, zarządzanie infrastrukturą multi-cloud, optymalizację kosztów cloud, wdrażanie DevOps, CI/CD oraz Infrastructure as Code z Terraform.</p>
+        </div>
+      </details>
+      <details class="faq__item">
+        <summary class="faq__question">Czy PSLAB wdraża rozwiązania sztucznej inteligencji i machine learning?</summary>
+        <div class="faq__answer">
+          <p>Tak, PSLAB specjalizuje się we wdrażaniu modeli <strong>machine learning</strong>, rozwiązań <strong>generative AI</strong> oraz autonomicznych systemów <strong>agentic AI</strong>. Nasz zespół posiada certyfikat AWS Machine Learning Specialty i doświadczenie w NLP, computer vision, deep learning oraz automatyzacji procesów biznesowych z wykorzystaniem AI.</p>
+        </div>
+      </details>
+      <details class="faq__item">
+        <summary class="faq__question">Jakie certyfikaty posiada zespół PSLAB?</summary>
+        <div class="faq__answer">
+          <p>Nasz zespół posiada certyfikaty: <strong>AWS Solutions Architect Professional</strong>, <strong>AWS Security Specialty</strong>, <strong>AWS DevOps Professional Engineer</strong>, <strong>AWS Machine Learning Specialty</strong>, <strong>MCSA</strong>, <strong>MCSE</strong>, <strong>MCITP Administrator</strong> oraz <strong>MCITP Database Administrator</strong>. Łączymy tytuły naukowe (dr inż., mgr) z certyfikatami branżowymi.</p>
+        </div>
+      </details>
+      <details class="faq__item">
+        <summary class="faq__question">Czy PSLAB oferuje obsługę informatyczną firm i bezpieczeństwo IT?</summary>
+        <div class="faq__answer">
+          <p>Tak, świadczymy kompleksową <strong>obsługę informatyczną firm</strong> obejmującą: sieci <strong>Cisco, Fortinet i Ubiquiti</strong>, bezpieczeństwo IT z <strong>SIEM</strong> i zgodność z dyrektywą <strong>NIS2</strong>, administrację serwerami <strong>Linux</strong> i <strong>Windows Server</strong>, bazy danych <strong>MS SQL 2025, PostgreSQL, MySQL i Oracle</strong>, <strong>Active Directory, ADFS, SSO</strong>, usługi RDP i obsługę drukarek sieciowych.</p>
+        </div>
+      </details>
+      <details class="faq__item">
+        <summary class="faq__question">Jakie narzędzia Business Intelligence obsługuje PSLAB?</summary>
+        <div class="faq__answer">
+          <p>Specjalizujemy się w wiodących platformach BI: <strong>Microsoft Power BI</strong>, <strong>Tableau</strong> oraz <strong>Amazon QuickSight</strong>. Oferujemy projektowanie interaktywnych dashboardów, modelowanie danych, budowę pipeline'ów ETL, Data Warehousing oraz szkolenia z analizy danych i raportowania.</p>
+        </div>
+      </details>
+      <details class="faq__item">
+        <summary class="faq__question">Gdzie znajduje się siedziba PSLAB i jaki jest obszar działania?</summary>
+        <div class="faq__answer">
+          <p>Siedziba PSLAB mieści się w <strong>Tychach</strong> (woj. śląskie) przy ul. Rolnej 22, 43-100. Obsługujemy klientów z <strong>całej Polski</strong> – Śląsk, Małopolska, Dolny Śląsk, Mazowsze i inne regiony. Realizujemy również projekty zdalnie.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <a href="#" class="footer__logo">
+        <img src="img/pslab-logo-3c-440px.png" alt="PSLAB – Cloud Computing, AI i IT Consulting, Tychy" />
+      </a>
+      <nav class="footer__nav" aria-label="Mapa strony">
+        <a href="#uslugi">Usługi</a>
+        <a href="#cloud-computing">Cloud Computing</a>
+        <a href="#machine-learning-ai">AI / ML</a>
+        <a href="#obsluga-informatyczna">Obsługa IT</a>
+        <a href="#business-intelligence">Business Intelligence</a>
+        <a href="#nadzor-wdrozenia">Nadzór IT</a>
+        <a href="#zespol">Zespół</a>
+        <a href="#faq">FAQ</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+      <p class="footer__copy">&copy; 2026 PSLAB. Wszystkie prawa zastrzeżone. | ul. Rolna 22, 43-100 Tychy | <a href="tel:+48792336306">+48 792 336 306</a> | <a href="mailto:kontakt@pslab.eu">kontakt@pslab.eu</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
