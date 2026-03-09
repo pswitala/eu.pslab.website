@@ -1,0 +1,69 @@
+<!DOCTYPE html><html lang="pl"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>Migracja startupu MedTech do GCP – Case Study | PSLAB</title><meta name="description" content="Case study: migracja startupu MedTech do Google Cloud Platform. GKE, Cloud SQL, Cloud Run, zgodność z RODO i MDR dla aplikacji medycznych."/><meta name="robots" content="index,follow"/><link rel="canonical" href="https://pslab.eu/case-study/migracja-gcp-startup-medtech.html"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/><link rel="stylesheet" href="../index.css"/><link rel="stylesheet" href="../article.css"/><link rel="icon" type="image/png" href="../img/pslab-logo-3c-440px.png"/></head><body>
+<div class="bg-grid"></div>
+<nav class="navbar scrolled" id="navbar"><div class="container"><a href="../" class="navbar__logo"><img src="../img/pslab-logo-3c-440px.png" alt="PSLAB"/></a><ul class="navbar__links" id="navLinks"><li><a href="../#uslugi">Usługi</a></li><li><a href="../#zespol">Zespół</a></li><li><a href="../baza-wiedzy/">Baza wiedzy</a></li><li><a href="./">Case Studies</a></li><li><a href="../#kontakt">Kontakt</a></li></ul><button class="navbar__burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button></div></nav>
+<main class="article-page">
+<section class="article-hero"><div class="container">
+<div class="article-hero__breadcrumb"><a href="../">PSLAB</a><span>›</span><a href="./">Case Studies</a><span>›</span>GCP</div>
+<h1 class="article-hero__title">Migracja startupu MedTech do Google Cloud Platform</h1>
+<div class="article-hero__meta"><span class="article-hero__meta-item">☁ GCP</span><span class="article-hero__meta-item">📅 2025</span><span class="article-hero__meta-item">⏱ 6 min czytania</span></div>
+</div></section>
+<section class="article-content"><div class="container"><div class="article-body">
+
+<div class="cs-meta">
+  <div class="cs-meta__item"><div class="cs-meta__label">Klient</div><div class="cs-meta__value">Startup MedTech, 45 pracowników</div></div>
+  <div class="cs-meta__item"><div class="cs-meta__label">Branża</div><div class="cs-meta__value">Technologie medyczne / HealthTech</div></div>
+  <div class="cs-meta__item"><div class="cs-meta__label">Okres realizacji</div><div class="cs-meta__value">Q1–Q2 2025</div></div>
+  <div class="cs-meta__item"><div class="cs-meta__label">Platforma</div><div class="cs-meta__value">Google Cloud Platform</div></div>
+</div>
+
+<h2>Wyzwanie</h2>
+<p>Startup rozwijający platformę do zdalnego monitorowania pacjentów (RPM) działał na współdzielonym hostingu, który nie spełniał wymagań regulacyjnych (RODO, MDR) ani wydajnościowych. Aplikacja mobilna obsługiwała 12 000 aktywnych pacjentów, a dane medyczne wymagały szyfrowania i audytowalnego dostępu.</p>
+<p>Klient potrzebował infrastruktury, która skaluje się automatycznie podczas porannych szczytów (pacjenci wysyłają dane o 7:00-9:00), zapewnia 99.95% SLA i spełnia wymogi certyfikacji ISO 13485.</p>
+
+<h2>Rozwiązanie</h2>
+<p>Zaprojektowaliśmy architekturę cloud-native na GCP z pełnym wykorzystaniem usług zarządzanych:</p>
+<ol>
+<li><strong>Konteneryzacja na GKE</strong> — backend (Python/FastAPI) i mikroserwisy przeniesione do Google Kubernetes Engine z autoscalingiem opartym na metrykach custom (liczba aktywnych sesji pacjentów).</li>
+<li><strong>Cloud SQL z Private IP</strong> — baza PostgreSQL z automatycznym backupem, replikacją i dostępem tylko przez prywatną sieć VPC.</li>
+<li><strong>Cloud Run dla API mobilnego</strong> — serverless endpoint obsługujący requesty z aplikacji mobilnej, skalujący się od 0 do 500 instancji w sekundy.</li>
+<li><strong>Security & Compliance</strong> — VPC Service Controls, Cloud KMS do szyfrowania danych pacjentów, Cloud Audit Logs do pełnej audytowalności.</li>
+</ol>
+
+<div class="cs-tech">
+<span class="tag">GKE</span><span class="tag">Cloud SQL</span><span class="tag">Cloud Run</span><span class="tag">Artifact Registry</span><span class="tag">Cloud KMS</span><span class="tag">VPC</span><span class="tag">Cloud Build</span><span class="tag">Terraform</span>
+</div>
+
+<h2>CI/CD i DevOps</h2>
+<p>Wdrożyliśmy pipeline CI/CD oparty na Cloud Build z automatycznym budowaniem obrazów Docker, skanowaniem podatności (Artifact Registry vulnerability scanning) i deploymentem do GKE przez GitOps (Config Sync). Każdy commit przechodzi testy jednostkowe, integracyjne i security scan przed wdrożeniem.</p>
+
+<h2>Rezultaty</h2>
+<div class="cs-results">
+<div class="cs-result"><div class="cs-result__number">99.97%</div><div class="cs-result__label">uptime platformy</div></div>
+<div class="cs-result"><div class="cs-result__number">3x</div><div class="cs-result__label">szybszy autoscaling</div></div>
+<div class="cs-result"><div class="cs-result__number">-55%</div><div class="cs-result__label">kosztów infrastruktury</div></div>
+<div class="cs-result"><div class="cs-result__number">ISO 13485</div><div class="cs-result__label">zgodność potwierdzona</div></div>
+</div>
+
+<div class="article-highlight"><p><strong>Cytat klienta:</strong> „PSLAB pomógł nam przejść z hostingu współdzielonego do profesjonalnej infrastruktury cloud w 8 tygodni. Teraz możemy skupić się na rozwoju produktu, nie na zarządzaniu serwerami."</p></div>
+
+<div class="article-cta"><h3>Planujesz migrację do GCP?</h3><p>Skontaktuj się — zaprojektujemy architekturę cloud-native dla Twojej aplikacji.</p><a href="../#kontakt" class="btn btn--primary">Skontaktuj się →</a></div>
+</div></div></section>
+</main>
+<footer class="footer"><div class="container"><div class="footer__inner"><a href="../" class="footer__logo"><img src="../img/pslab-logo-3c-440px.png" alt="PSLAB"/></a><nav class="footer__nav" aria-label="Mapa strony">
+          <a href="../#uslugi">Usługi</a>
+          <a href="../#cloud-computing">Cloud Computing</a>
+          <a href="../#machine-learning-ai">AI / ML</a>
+          <a href="../#obsluga-informatyczna">Obsługa IT</a>
+          <a href="../#business-intelligence">Business Intelligence</a>
+          <a href="../#nadzor-wdrozenia">Nadzór IT</a>
+          <a href="../baza-wiedzy/">Baza wiedzy</a>
+          <a href="../case-study/">Case Studies</a>
+          <a href="../#zespol">Zespół</a>
+          <a href="../#faq">FAQ</a>
+          <a href="../#kontakt">Kontakt</a>
+        </nav><p class="footer__copy">&copy; 2026 PSLAB - Outsourcing IT, Cloud Computing, Sztuczna
+          Inteligencja - AI, Analityka Danych - Business Intelligence. | ul. Rolna 22, 43-100 Tychy | <a
+            href="tel:+48792336306">+48 792 336 306</a>
+          | <a href="mailto:kontakt@pslab.eu">kontakt@pslab.eu</a><br /><strong>NIP:</strong> PL6462449298 | <strong>Nr
+            konta (ING):</strong> PL 06 1050 1399 1000 0090 7490 6562 | <strong>BIC/SWIFT:</strong> INGBPLPW</p></div></div></footer>
+<script src="../main.js"></script></body></html>

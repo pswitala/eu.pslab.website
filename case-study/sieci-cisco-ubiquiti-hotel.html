@@ -1,0 +1,65 @@
+<!DOCTYPE html><html lang="pl"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>Sieci Cisco i UniFi dla sieci hoteli – Case Study | PSLAB</title><meta name="description" content="Case study: projekt i wdrożenie sieci Cisco Meraki i Ubiquiti UniFi dla sieci hoteli. FortiGate, VLAN, Wi-Fi 6, gość i pracownik na oddzielnych sieciach."/><meta name="robots" content="index,follow"/><link rel="canonical" href="https://pslab.eu/case-study/sieci-cisco-ubiquiti-hotel.html"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/><link rel="stylesheet" href="../index.css"/><link rel="stylesheet" href="../article.css"/><link rel="icon" type="image/png" href="../img/pslab-logo-3c-440px.png"/></head><body>
+<div class="bg-grid"></div>
+<nav class="navbar scrolled" id="navbar"><div class="container"><a href="../" class="navbar__logo"><img src="../img/pslab-logo-3c-440px.png" alt="PSLAB"/></a><ul class="navbar__links" id="navLinks"><li><a href="../#uslugi">Usługi</a></li><li><a href="../#zespol">Zespół</a></li><li><a href="../baza-wiedzy/">Baza wiedzy</a></li><li><a href="./">Case Studies</a></li><li><a href="../#kontakt">Kontakt</a></li></ul><button class="navbar__burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button></div></nav>
+<main class="article-page">
+<section class="article-hero"><div class="container">
+<div class="article-hero__breadcrumb"><a href="../">PSLAB</a><span>›</span><a href="./">Case Studies</a><span>›</span>Sieci</div>
+<h1 class="article-hero__title">Sieci Cisco i UniFi dla sieci hoteli</h1>
+<div class="article-hero__meta"><span class="article-hero__meta-item">🌐 Sieci</span><span class="article-hero__meta-item">📅 2021</span><span class="article-hero__meta-item">⏱ 5 min czytania</span></div>
+</div></section>
+<section class="article-content"><div class="container"><div class="article-body">
+
+<div class="cs-meta">
+  <div class="cs-meta__item"><div class="cs-meta__label">Klient</div><div class="cs-meta__value">Sieć 4 hoteli, 320 pokoi łącznie</div></div>
+  <div class="cs-meta__item"><div class="cs-meta__label">Branża</div><div class="cs-meta__value">Hotelarstwo / Turystyka</div></div>
+  <div class="cs-meta__item"><div class="cs-meta__label">Okres realizacji</div><div class="cs-meta__value">Q2–Q3 2021</div></div>
+  <div class="cs-meta__item"><div class="cs-meta__label">Zakres</div><div class="cs-meta__value">Infrastruktura sieciowa + Wi-Fi</div></div>
+</div>
+
+<h2>Wyzwanie</h2>
+<p>Sieć 4 hoteli (Śląsk i Małopolska) borykała się z ciągłymi skargami gości na jakość Wi-Fi. Istniejąca infrastruktura opierała się na konsumenckich routerach TP-Link rozmieszczonych chaotycznie, bez centralnego zarządzania. Brak segmentacji sieci oznaczał, że goście i systemy hotelowe (PMS, terminale płatnicze) pracowały w jednym VLAN-ie — co stanowiło poważne ryzyko PCI DSS.</p>
+
+<h2>Rozwiązanie</h2>
+<p>Zaprojektowaliśmy i wdrożyliśmy profesjonalną infrastrukturę sieciową we wszystkich 4 lokalizacjach:</p>
+<ol>
+<li><strong>Cisco Meraki MX w centrali</strong> — zarządzanie SD-WAN, VPN Auto-mesh między hotelami, centralna konsola dashboard.</li>
+<li><strong>Ubiquiti UniFi w pokojach</strong> — 160 access pointów UniFi U6 Pro z Wi-Fi 6, captive portal dla gości, rate limiting per pokój.</li>
+<li><strong>FortiGate w każdym hotelu</strong> — firewall z segmentacją VLAN: sieć gości (izolowana), sieć staff (PMS, POS), sieć IoT (smart TV, termostaty).</li>
+<li><strong>Centralne zarządzanie</strong> — UniFi Network Controller w chmurze, monitoring Zabbix, alerty SMS przy awariach.</li>
+</ol>
+
+<div class="cs-tech">
+<span class="tag">Cisco Meraki</span><span class="tag">UniFi U6 Pro</span><span class="tag">FortiGate</span><span class="tag">VLAN</span><span class="tag">Wi-Fi 6</span><span class="tag">Captive Portal</span><span class="tag">SD-WAN</span><span class="tag">Zabbix</span>
+</div>
+
+<h2>Rezultaty</h2>
+<div class="cs-results">
+<div class="cs-result"><div class="cs-result__number">320</div><div class="cs-result__label">pokoi z Wi-Fi 6</div></div>
+<div class="cs-result"><div class="cs-result__number">0</div><div class="cs-result__label">skarg gości na Wi-Fi po wdrożeniu</div></div>
+<div class="cs-result"><div class="cs-result__number">3</div><div class="cs-result__label">VLAN-y per hotel (izolacja)</div></div>
+<div class="cs-result"><div class="cs-result__number">4.8★</div><div class="cs-result__label">ocena Wi-Fi na Booking.com</div></div>
+</div>
+
+<div class="article-highlight"><p><strong>Cytat klienta:</strong> „Goście przestali narzekać na Wi-Fi, a my zyskaliśmy bezpieczeństwo sieci i pełną widoczność z jednego dashboardu. Inwestycja zwróciła się w 6 miesięcy dzięki lepszym recenzjom."</p></div>
+
+<div class="article-cta"><h3>Potrzebujesz profesjonalnej infrastruktury sieciowej?</h3><p>Zaprojektujemy i wdrożymy sieci Cisco, UniFi i FortiGate w Twojej firmie.</p><a href="../#kontakt" class="btn btn--primary">Skontaktuj się →</a></div>
+</div></div></section>
+</main>
+<footer class="footer"><div class="container"><div class="footer__inner"><a href="../" class="footer__logo"><img src="../img/pslab-logo-3c-440px.png" alt="PSLAB"/></a><nav class="footer__nav" aria-label="Mapa strony">
+          <a href="../#uslugi">Usługi</a>
+          <a href="../#cloud-computing">Cloud Computing</a>
+          <a href="../#machine-learning-ai">AI / ML</a>
+          <a href="../#obsluga-informatyczna">Obsługa IT</a>
+          <a href="../#business-intelligence">Business Intelligence</a>
+          <a href="../#nadzor-wdrozenia">Nadzór IT</a>
+          <a href="../baza-wiedzy/">Baza wiedzy</a>
+          <a href="../case-study/">Case Studies</a>
+          <a href="../#zespol">Zespół</a>
+          <a href="../#faq">FAQ</a>
+          <a href="../#kontakt">Kontakt</a>
+        </nav><p class="footer__copy">&copy; 2026 PSLAB - Outsourcing IT, Cloud Computing, Sztuczna
+          Inteligencja - AI, Analityka Danych - Business Intelligence. | ul. Rolna 22, 43-100 Tychy | <a
+            href="tel:+48792336306">+48 792 336 306</a>
+          | <a href="mailto:kontakt@pslab.eu">kontakt@pslab.eu</a><br /><strong>NIP:</strong> PL6462449298 | <strong>Nr
+            konta (ING):</strong> PL 06 1050 1399 1000 0090 7490 6562 | <strong>BIC/SWIFT:</strong> INGBPLPW</p></div></div></footer>
+<script src="../main.js"></script></body></html>

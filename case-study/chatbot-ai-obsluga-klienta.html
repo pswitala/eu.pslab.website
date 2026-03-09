@@ -1,0 +1,69 @@
+<!DOCTYPE html><html lang="pl"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>Chatbot AI do obsługi klienta banku – Case Study | PSLAB</title><meta name="description" content="Case study: wdrożenie chatbota AI opartego na RAG i LLM do obsługi klienta banku. LangChain, Azure OpenAI, Redis, integracja z systemem bankowym."/><meta name="robots" content="index,follow"/><link rel="canonical" href="https://pslab.eu/case-study/chatbot-ai-obsluga-klienta.html"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/><link rel="stylesheet" href="../index.css"/><link rel="stylesheet" href="../article.css"/><link rel="icon" type="image/png" href="../img/pslab-logo-3c-440px.png"/></head><body>
+<div class="bg-grid"></div>
+<nav class="navbar scrolled" id="navbar"><div class="container"><a href="../" class="navbar__logo"><img src="../img/pslab-logo-3c-440px.png" alt="PSLAB"/></a><ul class="navbar__links" id="navLinks"><li><a href="../#uslugi">Usługi</a></li><li><a href="../#zespol">Zespół</a></li><li><a href="../baza-wiedzy/">Baza wiedzy</a></li><li><a href="./">Case Studies</a></li><li><a href="../#kontakt">Kontakt</a></li></ul><button class="navbar__burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button></div></nav>
+<main class="article-page">
+<section class="article-hero"><div class="container">
+<div class="article-hero__breadcrumb"><a href="../">PSLAB</a><span>›</span><a href="./">Case Studies</a><span>›</span>AI / Chatbot</div>
+<h1 class="article-hero__title">Chatbot AI do obsługi klienta banku</h1>
+<div class="article-hero__meta"><span class="article-hero__meta-item">🤖 AI / LLM</span><span class="article-hero__meta-item">📅 2024</span><span class="article-hero__meta-item">⏱ 7 min czytania</span></div>
+</div></section>
+<section class="article-content"><div class="container"><div class="article-body">
+
+<div class="cs-meta">
+  <div class="cs-meta__item"><div class="cs-meta__label">Klient</div><div class="cs-meta__value">Bank spółdzielczy, 120 000+ klientów</div></div>
+  <div class="cs-meta__item"><div class="cs-meta__label">Branża</div><div class="cs-meta__value">Bankowość / Finanse</div></div>
+  <div class="cs-meta__item"><div class="cs-meta__label">Okres realizacji</div><div class="cs-meta__value">Q2–Q4 2024</div></div>
+  <div class="cs-meta__item"><div class="cs-meta__label">Technologie</div><div class="cs-meta__value">Azure OpenAI, LangChain, RAG</div></div>
+</div>
+
+<h2>Wyzwanie</h2>
+<p>Bank spółdzielczy obsługiwał ponad 120 000 klientów indywidualnych i firmowych, przy czym call center (15 konsultantów) odpowiadał na ponad 800 zapytań dziennie. 60% zapytań dotyczyło standardowych procedur: salda konta, blokady karty, warunki kredytu, godziny otwarcia oddziałów. Czas oczekiwania na połączenie sięgał 8 minut w godzinach szczytu.</p>
+<p>Bank potrzebował rozwiązania AI, które odpowie na standardowe pytania 24/7, zintegruje się z systemem core-bankingowym, a jednocześnie spełni wymagania KNF dotyczące ochrony danych klientów.</p>
+
+<h2>Rozwiązanie</h2>
+<p>Wdrożyliśmy <strong>chatbota AI opartego na architekturze RAG</strong> (Retrieval-Augmented Generation), który łączy wiedzę z dokumentów bankowych z możliwościami modelu LLM:</p>
+<ol>
+<li><strong>Baza wiedzy RAG</strong> — zindeksowaliśmy 2 400 dokumentów (regulaminy, tabele opłat, procedury) w Azure AI Search z embeddingami text-embedding-ada-002.</li>
+<li><strong>Model LLM</strong> — Azure OpenAI GPT-4 Turbo z custom system prompt zapewniającym odpowiedzi w kontekście bankowym, z cytowaniem źródeł.</li>
+<li><strong>Integracja z core-banking</strong> — chatbot odpytuje API systemu bankowego o saldo, historię transakcji i status wniosków (za autoryzacją klienta).</li>
+<li><strong>Sesje i pamięć</strong> — Redis jako session store z 30-minutowym TTL, przechowujący kontekst rozmowy.</li>
+</ol>
+
+<div class="cs-tech">
+<span class="tag">Azure OpenAI</span><span class="tag">GPT-4 Turbo</span><span class="tag">LangChain</span><span class="tag">RAG</span><span class="tag">Azure AI Search</span><span class="tag">Redis</span><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Docker</span>
+</div>
+
+<h2>Bezpieczeństwo danych</h2>
+<p>Cały system działa w prywatnym VNet Azure bez dostępu z internetu publicznego. Dane klientów nie opuszczają tenant'u bankowego. Model GPT-4 działa w trybie „data not used for training". Wdrożyliśmy PII redaction (automatyczne maskowanie numerów PESEL, kont, kart) przed wysłaniem zapytania do modelu.</p>
+
+<h2>Rezultaty</h2>
+<div class="cs-results">
+<div class="cs-result"><div class="cs-result__number">68%</div><div class="cs-result__label">zapytań obsłużonych przez AI</div></div>
+<div class="cs-result"><div class="cs-result__number">&lt;5s</div><div class="cs-result__label">średni czas odpowiedzi</div></div>
+<div class="cs-result"><div class="cs-result__number">24/7</div><div class="cs-result__label">dostępność chatbota</div></div>
+<div class="cs-result"><div class="cs-result__number">92%</div><div class="cs-result__label">satysfakcji klientów (CSAT)</div></div>
+</div>
+
+<div class="article-highlight"><p><strong>Cytat klienta:</strong> „Chatbot AI od PSLAB odciążył naszych konsultantów o 68%. Klienci chwalą szybkość odpowiedzi, a my mamy pewność, że ich dane są bezpieczne w naszym prywatnym środowisku Azure."</p></div>
+
+<div class="article-cta"><h3>Chcesz wdrożyć chatbota AI?</h3><p>Zbudujemy rozwiązanie RAG dostosowane do Twojej branży i wymagań bezpieczeństwa.</p><a href="../#kontakt" class="btn btn--primary">Skontaktuj się →</a></div>
+</div></div></section>
+</main>
+<footer class="footer"><div class="container"><div class="footer__inner"><a href="../" class="footer__logo"><img src="../img/pslab-logo-3c-440px.png" alt="PSLAB"/></a><nav class="footer__nav" aria-label="Mapa strony">
+          <a href="../#uslugi">Usługi</a>
+          <a href="../#cloud-computing">Cloud Computing</a>
+          <a href="../#machine-learning-ai">AI / ML</a>
+          <a href="../#obsluga-informatyczna">Obsługa IT</a>
+          <a href="../#business-intelligence">Business Intelligence</a>
+          <a href="../#nadzor-wdrozenia">Nadzór IT</a>
+          <a href="../baza-wiedzy/">Baza wiedzy</a>
+          <a href="../case-study/">Case Studies</a>
+          <a href="../#zespol">Zespół</a>
+          <a href="../#faq">FAQ</a>
+          <a href="../#kontakt">Kontakt</a>
+        </nav><p class="footer__copy">&copy; 2026 PSLAB - Outsourcing IT, Cloud Computing, Sztuczna
+          Inteligencja - AI, Analityka Danych - Business Intelligence. | ul. Rolna 22, 43-100 Tychy | <a
+            href="tel:+48792336306">+48 792 336 306</a>
+          | <a href="mailto:kontakt@pslab.eu">kontakt@pslab.eu</a><br /><strong>NIP:</strong> PL6462449298 | <strong>Nr
+            konta (ING):</strong> PL 06 1050 1399 1000 0090 7490 6562 | <strong>BIC/SWIFT:</strong> INGBPLPW</p></div></div></footer>
+<script src="../main.js"></script></body></html>

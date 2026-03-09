@@ -1,0 +1,42 @@
+<!DOCTYPE html><html lang="pl"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>Wdrożenie systemu SIEM – Microsoft Sentinel i Fortinet | PSLAB</title><meta name="description" content="Kluczowa warstwa obronna (Security Operations Center). Dowiedz się, co daje system klasy SIEM, wdrożenie Microsoft Sentinel i technologia Firewall FortiGate."/><meta name="keywords" content="SIEM wdrożenie, bezpieczeństwo IT dla firm, Fortinet firewall wdrożenie, SOC (Security Operations Center), Microsoft Sentinel, SOAR ochrony infrastruktury firmowej"/><meta name="robots" content="index,follow"/><link rel="canonical" href="https://pslab.eu/baza-wiedzy/wdrozenie-siem-fortinet-microsoft-sentinel.html"/>
+<meta property="og:type" content="article"/><meta property="og:title" content="SIEM we wdrożeniu – po co nam Security Operations Center (SOC) i Sentinel?"/><meta property="og:description" content="Pełna potęga monitoringu cyberśrodowisk z wiodącym oprogramowaniem logik chmurowych Microsoft zintegrowanych jako oręż nad krawędzią Fortinet."/><meta property="og:url" content="https://pslab.eu/baza-wiedzy/wdrozenie-siem-fortinet-microsoft-sentinel.html"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/><link rel="stylesheet" href="../index.css"/><link rel="stylesheet" href="../article.css"/><link rel="icon" type="image/png" href="../img/pslab-logo-3c-440px.png"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"SIEM: Monitorowanie bezpieczeństwa na skrzyżowaniu zdarzeń firmy","description":"Krok w obronnie i mitygacji ataku APT dla Twojego w środowisku. Jak i dlaczego używać systemów z zacieśnieniem Microsoft Sentinel po chmurze we wstępnej zaporze sieci Fortinet z SOAR.","author":{"@type":"Organization","name":"PSLAB"},"publisher":{"@type":"Organization","name":"PSLAB","url":"https://pslab.eu"},"mainEntityOfPage":"https://pslab.eu/baza-wiedzy/wdrozenie-siem-fortinet-microsoft-sentinel.html"}</script>
+</head><body><div class="bg-grid"></div><nav class="navbar scrolled" id="navbar"><div class="container"><a href="../" class="navbar__logo"><img src="../img/pslab-logo-3c-440px.png" alt="PSLAB"/></a><ul class="navbar__links" id="navLinks"><li><a href="../#uslugi">Usługi</a></li><li><a href="../#zespol">Zespół</a></li><li><a href="./">Baza wiedzy</a></li><li><a href="../case-study/">Case Studies</a></li><li><a href="../#kontakt">Kontakt</a></li></ul><button class="navbar__burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button></div></nav>
+<main class="article-page"><section class="article-hero"><div class="container">
+<div class="article-hero__breadcrumb"><a href="../">PSLAB</a><span>›</span><a href="./">Baza wiedzy</a><span>›</span>Nadzór & IT Security</div>
+<h1 class="article-hero__title">Wdrożenie SIEM i powiązanie zdarzeń z Microsoft Sentinel oraz krawędzią Fortinet</h1>
+<div class="article-hero__meta"><span class="article-hero__meta-item">✍ Zespół IT PSLAB</span><span class="article-hero__meta-item">🔒 Obsługa IT & Security</span><span class="article-hero__meta-item">⏱ 5 min czytania</span></div>
+</div></section>
+<section class="article-content"><div class="container"><div class="article-body">
+<h2>Czym właściwie operuje system klasy SIEM / SOAR?</h2>
+<p>Cyberbezpieczeństwo w firmach najczęściej ograniczone bywa do zainstalowanego Endpointa (antywirus komercyjny np Eset, Windows Defender załączony w Active Directory), backupów Veeam lub dysku NAS do zabezpieczeń, oraz prostemu routerowi od ISP na zapięcie internetu w hali. Czy to wystarczające rozwiązanie w epoce uderzeń i wymuszeń krypto po okrutnym szyfrowaniu wektora ransomware wewnątrz korporacyjnych VPN z włamaniem się nieznanych załóg po hasło z leaków do poczty i logice przejęć (Shadow IT) sieci pod wymogi <a href="dyrektywa-nis2-wymagania-i-zgodnosc.html">Nowej dyrektywy nadzoru NIS2?</a> Zdecydowanie i absolutnie w ogóle.</p>
+
+<p>Do powiązywania tych kropli rzucanych z osobnych maszyn potrzebna jest inteligentna potęga korelacyjna w locie – w locie oznacza zbieranie, analizę, a w konsekwencji i reakcję (SOAR - Security Orchestration, Automation, and Response) jeszcze zanim intruz zaloguje powłokę powiązaną w infrastrukturze Active Directory lub oprogramowaniu HR. I mowa tutaj o potężnym <strong>Security Information and Event Management (SIEM)</strong>.</p>
+
+<h2>Microsoft Sentinel: Chmurowy wartownik z załącznikiem u Fortineta</h2>
+<p>W dziedzinie usług logistycznych <strong>bezpieczeństwo pod outsourcing i usługi IT dla firm w Tychach podjętych z PSLAB</strong> wdraża w rdzeń potężnego lidera branżowego - Microsoft Sentinel opłacony czysto pay-as-you-go. W platformie operujemy zbieraniem ogromnych i gęstych petabajtów danych typu Audit Logs w formacie json m.in ze zdarzeń zebranych w Windows na biurku, ze switchami do przełączania pod bramką chmurową Azure do skanowania logów pod kątem anomalii i odpalania reguł opartych min o wdrożeniach ML algorytmiki detekcyjnej logowania się po tokenie z niewyraźnej części lokacji geograficznych itp.</p>
+
+<h3>Potężny strażnik: Fortinet FortiGate UTM (Krawędź sieciowa lokalnej filii)</h3>
+<p>Żaden agent bywa niczym z samego zebrania danych serwera biurowego za pomocą SIEM bez bramki wyjściowej (Next-Generation Firewall), i w środowiskach budowanych od podszewki wdrażamy sprzęt renomowanej amerykańskiej platformy zabezpieczenia z krzemowymi ASIC dopiętymi natywnie pod weryfikacją na granicy <strong>wdrożenie złącz Fortinet NGFW (np. FortiGate na bramce brzegowej filii logistycznej)</strong>. Umożliwia to zjawiska takie jak IPS/IDS czyli kategoryczne rozstrzeliwanie sygnatur podejrzanych plików docierających pętlą TCP we wiązaniu na zębach bramki po inspekcji pod tunel VPN chroniący użytkownika przed botami. Otrzymujemy przy tym silny SD-WAN czyli elastycznym dostępem przez tunelowanie zapasowych łącz B2B i redundancji pod ujęciem weryfikowania certyfikacji pracowników on-site połączonym z Sentinel na pulpicie zespołu reagowania na zagrożenia SOC w jednym, hermetycznym, odpornym obozie firmowym.</p>
+
+<div class="article-cta"><h3>Rozważ wdrożenie klasy Enteprise w ochronie danych przed ransomware</h3><p>Od instalacji fizycznych rzędów ochrony sieci z użyciem sprzętów typu FortiGate i systemów UniFi Wi-Fi 6 chroniących IoT, od zarządzania chmurą, aż na załączeniach <i>Playbooków z instrukcjami z użyciu AI Sentinel</i> z chmury Azure — w rękach Architektów Security. Przekształcamy zwykłą serwerownię firmową nie do zdobycia dla cyfrowych włóczęg.</p><a href="../#kontakt" class="btn btn--primary">Poznaj ofertę dla swojego audytu IT →</a></div>
+</div></div></section></main>
+<footer class="footer"><div class="container"><div class="footer__inner"><a href="../" class="footer__logo"><img src="../img/pslab-logo-3c-440px.png" alt="PSLAB"/></a><nav class="footer__nav" aria-label="Mapa strony">
+          <a href="../#uslugi">Usługi</a>
+          <a href="../#cloud-computing">Cloud Computing</a>
+          <a href="../#machine-learning-ai">AI / ML</a>
+          <a href="../#obsluga-informatyczna">Obsługa IT</a>
+          <a href="../#business-intelligence">Business Intelligence</a>
+          <a href="../#nadzor-wdrozenia">Nadzór IT</a>
+          <a href="../baza-wiedzy/">Baza wiedzy</a>
+          <a href="../case-study/">Case Studies</a>
+          <a href="../#zespol">Zespół</a>
+          <a href="../#faq">FAQ</a>
+          <a href="../#kontakt">Kontakt</a>
+        </nav><p class="footer__copy">&copy; 2026 PSLAB - Outsourcing IT, Cloud Computing, Sztuczna
+          Inteligencja - AI, Analityka Danych - Business Intelligence. | ul. Rolna 22, 43-100 Tychy | <a
+            href="tel:+48792336306">+48 792 336 306</a>
+          | <a href="mailto:kontakt@pslab.eu">kontakt@pslab.eu</a><br /><strong>NIP:</strong> PL6462449298 | <strong>Nr
+            konta (ING):</strong> PL 06 1050 1399 1000 0090 7490 6562 | <strong>BIC/SWIFT:</strong> INGBPLPW</p></div></div></footer>
+<script src="../main.js"></script></body></html>
