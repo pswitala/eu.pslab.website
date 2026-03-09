@@ -1,0 +1,52 @@
+<!DOCTYPE html><html lang="pl"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>Migracja firmy produkcyjnej do AWS – Case Study | PSLAB</title><meta name="description" content="Case study: migracja infrastruktury firmy produkcyjnej z on-premise do AWS. Redukcja kosztów o 40%, wdrożenie DevOps i Infrastructure as Code z Terraform."/><meta name="robots" content="index,follow"/><link rel="canonical" href="https://pslab.eu/case-study/migracja-firmy-produkcyjnej-aws.html"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/><link rel="stylesheet" href="../index.css"/><link rel="stylesheet" href="../article.css"/><link rel="icon" type="image/png" href="../img/pslab-logo-3c-440px.png"/></head><body>
+<div class="bg-grid"></div>
+<nav class="navbar scrolled" id="navbar"><div class="container"><a href="../" class="navbar__logo"><img src="../img/pslab-logo-3c-440px.png" alt="PSLAB"/></a><ul class="navbar__links" id="navLinks"><li><a href="../#uslugi">Usługi</a></li><li><a href="../baza-wiedzy/">Baza wiedzy</a></li><li><a href="./">Case Studies</a></li><li><a href="../#kontakt">Kontakt</a></li></ul><button class="navbar__burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button></div></nav>
+<main class="article-page">
+<section class="article-hero"><div class="container">
+<div class="article-hero__breadcrumb"><a href="../">PSLAB</a><span>›</span><a href="./">Case Studies</a><span>›</span>AWS</div>
+<h1 class="article-hero__title">Migracja infrastruktury firmy produkcyjnej do AWS</h1>
+<div class="article-hero__meta"><span class="article-hero__meta-item">☁ AWS</span><span class="article-hero__meta-item">📅 2020</span><span class="article-hero__meta-item">⏱ 6 min czytania</span></div>
+</div></section>
+<section class="article-content"><div class="container"><div class="article-body">
+
+<div class="cs-meta">
+  <div class="cs-meta__item"><div class="cs-meta__label">Klient</div><div class="cs-meta__value">Firma produkcyjna, 200+ pracowników</div></div>
+  <div class="cs-meta__item"><div class="cs-meta__label">Branża</div><div class="cs-meta__value">Produkcja przemysłowa</div></div>
+  <div class="cs-meta__item"><div class="cs-meta__label">Okres realizacji</div><div class="cs-meta__value">Q1–Q3 2020</div></div>
+  <div class="cs-meta__item"><div class="cs-meta__label">Platforma</div><div class="cs-meta__value">Amazon Web Services</div></div>
+</div>
+
+<h2>Wyzwanie</h2>
+<p>Klient posiadał starzejącą się infrastrukturę on-premise opartą na fizycznych serwerach Dell i HP w dwóch serwerowniach. Rosnące koszty utrzymania, brak skalowalności i ryzyko awarii sprzętowych wymuszały modernizację. System ERP (SAP) i kilkanaście aplikacji wspierających produkcję wymagały migracji bez przestojów linii produkcyjnej.</p>
+<p>Dodatkowym wyzwaniem było zapewnienie zgodności z normami ISO 27001 i certyfikacji bezpieczeństwa wymaganej przez kluczowych klientów z branży automotive.</p>
+
+<h2>Rozwiązanie</h2>
+<p>Zaproponowaliśmy strategię <strong>migracji do AWS</strong> opartą na podejściu Replatforming — przeniesienie serwerów z drobnymi optymalizacjami (np. zmiana baz danych na Amazon RDS, storage na S3). Cały projekt podzieliliśmy na 3 fazy:</p>
+<ol>
+<li><strong>Faza 1: Audyt i planowanie</strong> — inwentaryzacja 47 serwerów, mapowanie zależności, projekt architektury docelowej w AWS.</li>
+<li><strong>Faza 2: Migracja non-production</strong> — przeniesienie środowisk deweloperskich i testowych. Walidacja wydajności i bezpieczeństwa.</li>
+<li><strong>Faza 3: Migracja produkcyjna</strong> — weekend migracyjny z oknem serwisowym 8h. Zero downtime dla krytycznych systemów dzięki AWS DMS (Database Migration Service).</li>
+</ol>
+
+<div class="cs-tech">
+<span class="tag">AWS EC2</span><span class="tag">AWS RDS</span><span class="tag">AWS S3</span><span class="tag">AWS VPC</span><span class="tag">AWS DMS</span><span class="tag">Terraform</span><span class="tag">CloudWatch</span><span class="tag">AWS WAF</span><span class="tag">AWS Backup</span>
+</div>
+
+<h2>Infrastructure as Code</h2>
+<p>Całą infrastrukturę opisaliśmy w <strong>Terraform</strong>, co pozwoliło na powtarzalne deployowanie środowisk i pełną wersjonalizację w Git. Pipeline CI/CD (AWS CodePipeline + CodeBuild) automatycznie weryfikował zmiany infrastruktury przed wdrożeniem.</p>
+
+<h2>Rezultaty</h2>
+<div class="cs-results">
+<div class="cs-result"><div class="cs-result__number">-40%</div><div class="cs-result__label">kosztów infrastruktury</div></div>
+<div class="cs-result"><div class="cs-result__number">99.95%</div><div class="cs-result__label">uptime SLA</div></div>
+<div class="cs-result"><div class="cs-result__number">0h</div><div class="cs-result__label">downtime krytycznych systemów</div></div>
+<div class="cs-result"><div class="cs-result__number">47→12</div><div class="cs-result__label">konsolidacja serwerów</div></div>
+</div>
+
+<div class="article-highlight"><p><strong>Cytat klienta:</strong> „Migracja do AWS z PSLAB pozwoliła nam nie tylko zredukować koszty, ale przede wszystkim zyskać spokój — wiemy, że nasza infrastruktura jest bezpieczna i skalowalna."</p></div>
+
+<div class="article-cta"><h3>Planujesz migrację do AWS?</h3><p>Skontaktuj się — przeprowadzimy bezpłatny audyt infrastruktury.</p><a href="../#kontakt" class="btn btn--primary">Skontaktuj się →</a></div>
+</div></div></section>
+</main>
+<footer class="footer"><div class="container"><div class="footer__inner"><a href="../" class="footer__logo"><img src="../img/pslab-logo-3c-440px.png" alt="PSLAB"/></a><nav class="footer__nav"><a href="../#uslugi">Usługi</a><a href="../baza-wiedzy/">Baza wiedzy</a><a href="./">Case Studies</a><a href="../#kontakt">Kontakt</a></nav><p class="footer__copy">&copy; 2026 PSLAB – firma IT Tychy, Śląsk. | <a href="tel:+48792336306">+48 792 336 306</a> | <a href="mailto:kontakt@pslab.eu">kontakt@pslab.eu</a></p></div></div></footer>
+<script src="../main.js"></script></body></html>

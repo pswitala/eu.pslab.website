@@ -1,0 +1,51 @@
+<!DOCTYPE html><html lang="pl"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>AWS Data Lake i Amazon QuickSight dla fintech – Case Study | PSLAB</title><meta name="description" content="Case study: budowa Data Lake na AWS S3, Glue, Athena i wizualizacja w Amazon QuickSight dla firmy fintech. Analiza transakcji i wykrywanie fraudów."/><meta name="robots" content="index,follow"/><link rel="canonical" href="https://pslab.eu/case-study/datalake-aws-quicksight-fintech.html"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/><link rel="stylesheet" href="../index.css"/><link rel="stylesheet" href="../article.css"/><link rel="icon" type="image/png" href="../img/pslab-logo-3c-440px.png"/></head><body>
+<div class="bg-grid"></div>
+<nav class="navbar scrolled" id="navbar"><div class="container"><a href="../" class="navbar__logo"><img src="../img/pslab-logo-3c-440px.png" alt="PSLAB"/></a><ul class="navbar__links" id="navLinks"><li><a href="../#uslugi">Usługi</a></li><li><a href="../baza-wiedzy/">Baza wiedzy</a></li><li><a href="./">Case Studies</a></li><li><a href="../#kontakt">Kontakt</a></li></ul><button class="navbar__burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button></div></nav>
+<main class="article-page">
+<section class="article-hero"><div class="container">
+<div class="article-hero__breadcrumb"><a href="../">PSLAB</a><span>›</span><a href="./">Case Studies</a><span>›</span>AWS / BI</div>
+<h1 class="article-hero__title">AWS Data Lake i Amazon QuickSight dla fintech</h1>
+<div class="article-hero__meta"><span class="article-hero__meta-item">📊 Data Lake / BI</span><span class="article-hero__meta-item">📅 2024</span><span class="article-hero__meta-item">⏱ 5 min czytania</span></div>
+</div></section>
+<section class="article-content"><div class="container"><div class="article-body">
+
+<div class="cs-meta">
+  <div class="cs-meta__item"><div class="cs-meta__label">Klient</div><div class="cs-meta__value">Startup fintech, płatności B2B</div></div>
+  <div class="cs-meta__item"><div class="cs-meta__label">Branża</div><div class="cs-meta__value">Fintech / Płatności</div></div>
+  <div class="cs-meta__item"><div class="cs-meta__label">Okres realizacji</div><div class="cs-meta__value">Q1–Q2 2024</div></div>
+  <div class="cs-meta__item"><div class="cs-meta__label">Platforma</div><div class="cs-meta__value">Amazon Web Services</div></div>
+</div>
+
+<h2>Wyzwanie</h2>
+<p>Startup fintech przetwarzał miliony transakcji B2B miesięcznie, ale dane były rozproszone pomiędzy systemem core banking, gateway płatności, CRM i logami aplikacji. Brak centralnego data lake uniemożliwiał analizę cross-source, a zespół compliance ręcznie generował raporty AML (Anti-Money Laundering) dla regulatora.</p>
+
+<h2>Rozwiązanie</h2>
+<p>Wdrożyliśmy <strong>Data Lake na AWS</strong> z warstwą analityczną <strong>Amazon QuickSight</strong>:</p>
+<ul>
+<li><strong>Amazon S3</strong> — Data Lake w architekturze medallion (Bronze / Silver / Gold layers).</li>
+<li><strong>AWS Glue</strong> — ETL jobs do ekstrakcji z 6 źródeł, transformacji i ładowania do S3 w formacie Parquet.</li>
+<li><strong>AWS Glue Data Catalog</strong> — centralny katalog metadanych — „co mamy, gdzie, w jakim formacie".</li>
+<li><strong>Amazon Athena</strong> — serverless SQL queries bezpośrednio na S3 (bez potrzeby ładowania do bazy danych).</li>
+<li><strong>Amazon QuickSight</strong> — dashboardy analityczne: wolumen transakcji, przychody, kohorty klientów, anomalie.</li>
+<li><strong>AWS Lake Formation</strong> — fine-grained access control (zespół compliance widzi inne dane niż business).</li>
+</ul>
+
+<div class="cs-tech">
+<span class="tag">Amazon S3</span><span class="tag">AWS Glue</span><span class="tag">Athena</span><span class="tag">QuickSight</span><span class="tag">Lake Formation</span><span class="tag">Parquet</span><span class="tag">Glue Data Catalog</span><span class="tag">Terraform</span><span class="tag">CloudWatch</span>
+</div>
+
+<h2>Rezultaty</h2>
+<div class="cs-results">
+<div class="cs-result"><div class="cs-result__number">10M+</div><div class="cs-result__label">transakcji w data lake</div></div>
+<div class="cs-result"><div class="cs-result__number">-90%</div><div class="cs-result__label">czas generowania raportów AML</div></div>
+<div class="cs-result"><div class="cs-result__number">$0.02</div><div class="cs-result__label">koszt zapytania Athena / GB</div></div>
+<div class="cs-result"><div class="cs-result__number">6→1</div><div class="cs-result__label">źródła w jednym data lake</div></div>
+</div>
+
+<div class="article-highlight"><p><strong>Efekt:</strong> Model pay-per-query (Athena + QuickSight pay-per-session) pozwolił utrzymać koszty analityki poniżej $500/mies. przy 10M+ transakcji — ułamek kosztu tradycyjnej hurtowni danych.</p></div>
+
+<div class="article-cta"><h3>Potrzebujesz Data Lake na AWS?</h3><p>Skontaktuj się — zaprojektujemy architekturę danych dopasowaną do Twojego scale.</p><a href="../#kontakt" class="btn btn--primary">Bezpłatna konsultacja →</a></div>
+</div></div></section>
+</main>
+<footer class="footer"><div class="container"><div class="footer__inner"><a href="../" class="footer__logo"><img src="../img/pslab-logo-3c-440px.png" alt="PSLAB"/></a><nav class="footer__nav"><a href="../#uslugi">Usługi</a><a href="../baza-wiedzy/">Baza wiedzy</a><a href="./">Case Studies</a><a href="../#kontakt">Kontakt</a></nav><p class="footer__copy">&copy; 2026 PSLAB – firma IT Tychy, Śląsk. | <a href="tel:+48792336306">+48 792 336 306</a> | <a href="mailto:kontakt@pslab.eu">kontakt@pslab.eu</a></p></div></div></footer>
+<script src="../main.js"></script></body></html>

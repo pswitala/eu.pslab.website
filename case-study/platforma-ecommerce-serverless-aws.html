@@ -1,0 +1,51 @@
+<!DOCTYPE html><html lang="pl"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>Platforma e-commerce serverless na AWS – Case Study | PSLAB</title><meta name="description" content="Case study: budowa platformy e-commerce serverless na AWS Lambda, API Gateway, DynamoDB. Skalowanie do 50 000 req/s w Black Friday."/><meta name="robots" content="index,follow"/><link rel="canonical" href="https://pslab.eu/case-study/platforma-ecommerce-serverless-aws.html"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/><link rel="stylesheet" href="../index.css"/><link rel="stylesheet" href="../article.css"/><link rel="icon" type="image/png" href="../img/pslab-logo-3c-440px.png"/></head><body>
+<div class="bg-grid"></div>
+<nav class="navbar scrolled" id="navbar"><div class="container"><a href="../" class="navbar__logo"><img src="../img/pslab-logo-3c-440px.png" alt="PSLAB"/></a><ul class="navbar__links" id="navLinks"><li><a href="../#uslugi">Usługi</a></li><li><a href="../baza-wiedzy/">Baza wiedzy</a></li><li><a href="./">Case Studies</a></li><li><a href="../#kontakt">Kontakt</a></li></ul><button class="navbar__burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button></div></nav>
+<main class="article-page">
+<section class="article-hero"><div class="container">
+<div class="article-hero__breadcrumb"><a href="../">PSLAB</a><span>›</span><a href="./">Case Studies</a><span>›</span>AWS</div>
+<h1 class="article-hero__title">Platforma e-commerce serverless na AWS</h1>
+<div class="article-hero__meta"><span class="article-hero__meta-item">☁ AWS</span><span class="article-hero__meta-item">📅 2022</span><span class="article-hero__meta-item">⏱ 5 min czytania</span></div>
+</div></section>
+<section class="article-content"><div class="container"><div class="article-body">
+
+<div class="cs-meta">
+  <div class="cs-meta__item"><div class="cs-meta__label">Klient</div><div class="cs-meta__value">Retailer online, sektor fashion</div></div>
+  <div class="cs-meta__item"><div class="cs-meta__label">Branża</div><div class="cs-meta__value">E-commerce / Retail</div></div>
+  <div class="cs-meta__item"><div class="cs-meta__label">Okres realizacji</div><div class="cs-meta__value">Q2–Q4 2022</div></div>
+  <div class="cs-meta__item"><div class="cs-meta__label">Platforma</div><div class="cs-meta__value">Amazon Web Services</div></div>
+</div>
+
+<h2>Wyzwanie</h2>
+<p>Szybko rosnący sklep internetowy z branży fashion doświadczał regularnych awarii podczas szczytów ruchu (Black Friday, wyprzedaże sezonowe). Monolityczna aplikacja na dedykowanych serwerach nie skalowała się wystarczająco szybko, a koszty utrzymania stale rosły mimo niskiego ruchu poza sezonem.</p>
+
+<h2>Rozwiązanie</h2>
+<p>Zaprojektowaliśmy i wdrożyliśmy w pełni <strong>serverless architekturę</strong> na AWS, eliminując zarządzanie serwerami i włączając automatyczne skalowanie:</p>
+<ul>
+<li><strong>AWS Lambda</strong> — logika biznesowa w mikroserwisach (koszyk, płatności, zamówienia, inventory).</li>
+<li><strong>Amazon API Gateway</strong> — REST API z rate limiting i cachingiem.</li>
+<li><strong>Amazon DynamoDB</strong> — baza NoSQL z auto-scalingiem dla katalogu i zamówień.</li>
+<li><strong>Amazon CloudFront + S3</strong> — CDN dla frontendu (Next.js SSG) i zasobów statycznych.</li>
+<li><strong>Amazon SQS + SNS</strong> — asynchroniczne przetwarzanie zamówień i notyfikacje.</li>
+<li><strong>AWS Step Functions</strong> — orkiestracja procesu realizacji zamówienia.</li>
+</ul>
+
+<div class="cs-tech">
+<span class="tag">AWS Lambda</span><span class="tag">API Gateway</span><span class="tag">DynamoDB</span><span class="tag">CloudFront</span><span class="tag">S3</span><span class="tag">SQS</span><span class="tag">SNS</span><span class="tag">Step Functions</span><span class="tag">Terraform</span><span class="tag">Next.js</span>
+</div>
+
+<h2>Rezultaty</h2>
+<div class="cs-results">
+<div class="cs-result"><div class="cs-result__number">50K</div><div class="cs-result__label">req/s w szczycie</div></div>
+<div class="cs-result"><div class="cs-result__number">-65%</div><div class="cs-result__label">koszty infrastruktury</div></div>
+<div class="cs-result"><div class="cs-result__number">0</div><div class="cs-result__label">awarii w Black Friday</div></div>
+<div class="cs-result"><div class="cs-result__number">&lt;100ms</div><div class="cs-result__label">średni czas odpowiedzi API</div></div>
+</div>
+
+<div class="article-highlight"><p><strong>Efekt biznesowy:</strong> Dzięki eliminacji awarii w Black Friday 2022 klient zanotował 3x wyższe przychody niż rok wcześniej. Architektura pay-per-use pozwala płacić praktycznie zero w niskim sezonie.</p></div>
+
+<div class="article-cta"><h3>Chcesz zbudować skalowalną architekturę?</h3><p>Skontaktuj się — zaprojektujemy i wdrożymy serverless na AWS.</p><a href="../#kontakt" class="btn btn--primary">Bezpłatna konsultacja →</a></div>
+</div></div></section>
+</main>
+<footer class="footer"><div class="container"><div class="footer__inner"><a href="../" class="footer__logo"><img src="../img/pslab-logo-3c-440px.png" alt="PSLAB"/></a><nav class="footer__nav"><a href="../#uslugi">Usługi</a><a href="../baza-wiedzy/">Baza wiedzy</a><a href="./">Case Studies</a><a href="../#kontakt">Kontakt</a></nav><p class="footer__copy">&copy; 2026 PSLAB – firma IT Tychy, Śląsk. | <a href="tel:+48792336306">+48 792 336 306</a> | <a href="mailto:kontakt@pslab.eu">kontakt@pslab.eu</a></p></div></div></footer>
+<script src="../main.js"></script></body></html>

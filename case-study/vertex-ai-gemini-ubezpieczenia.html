@@ -1,0 +1,52 @@
+<!DOCTYPE html><html lang="pl"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>Vertex AI i Gemini – wdrożenie AI dla firmy ubezpieczeniowej – Case Study | PSLAB</title><meta name="description" content="Case study: wdrożenie Google Vertex AI i Gemini do automatyzacji analizy polis, obsługi klienta i fraud detection w firmie ubezpieczeniowej."/><meta name="robots" content="index,follow"/><link rel="canonical" href="https://pslab.eu/case-study/vertex-ai-gemini-ubezpieczenia.html"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/><link rel="stylesheet" href="../index.css"/><link rel="stylesheet" href="../article.css"/><link rel="icon" type="image/png" href="../img/pslab-logo-3c-440px.png"/></head><body>
+<div class="bg-grid"></div>
+<nav class="navbar scrolled" id="navbar"><div class="container"><a href="../" class="navbar__logo"><img src="../img/pslab-logo-3c-440px.png" alt="PSLAB"/></a><ul class="navbar__links" id="navLinks"><li><a href="../#uslugi">Usługi</a></li><li><a href="../baza-wiedzy/">Baza wiedzy</a></li><li><a href="./">Case Studies</a></li><li><a href="../#kontakt">Kontakt</a></li></ul><button class="navbar__burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button></div></nav>
+<main class="article-page">
+<section class="article-hero"><div class="container">
+<div class="article-hero__breadcrumb"><a href="../">PSLAB</a><span>›</span><a href="./">Case Studies</a><span>›</span>AI / ML</div>
+<h1 class="article-hero__title">Vertex AI i Gemini — wdrożenie AI dla firmy ubezpieczeniowej</h1>
+<div class="article-hero__meta"><span class="article-hero__meta-item">🤖 AI / Gemini</span><span class="article-hero__meta-item">📅 2025</span><span class="article-hero__meta-item">⏱ 6 min czytania</span></div>
+</div></section>
+<section class="article-content"><div class="container"><div class="article-body">
+
+<div class="cs-meta">
+  <div class="cs-meta__item"><div class="cs-meta__label">Klient</div><div class="cs-meta__value">Firma ubezpieczeniowa, segment SME</div></div>
+  <div class="cs-meta__item"><div class="cs-meta__label">Branża</div><div class="cs-meta__value">Ubezpieczenia / InsurTech</div></div>
+  <div class="cs-meta__item"><div class="cs-meta__label">Okres realizacji</div><div class="cs-meta__value">Q1–Q3 2025</div></div>
+  <div class="cs-meta__item"><div class="cs-meta__label">Platforma</div><div class="cs-meta__value">Google Cloud – Vertex AI</div></div>
+</div>
+
+<h2>Wyzwanie</h2>
+<p>Firma ubezpieczeniowa obsługująca segment MŚP przetwarzała tysiące polis i zgłoszeń szkodowych miesięcznie. Analiza dokumentów — skanów polis, zdjęć szkód, korespondencji klientów — wymagała pracy 20+ osób. Klient chciał zautomatyzować trzy procesy: analizę dokumentów polis, obsługę zapytań klientów (chatbot) oraz wstępne wykrywanie fraudów.</p>
+
+<h2>Rozwiązanie</h2>
+<p>Wdrożyliśmy trzy rozwiązania oparte na <strong>Google Vertex AI</strong> i modelu <strong>Gemini</strong>:</p>
+
+<h3>1. Analiza dokumentów polis (Gemini Pro Vision)</h3>
+<p>Model <strong>Gemini Pro Vision</strong> analizuje skany i zdjęcia polis ubezpieczeniowych, wyciągając kluczowe dane: numer polisy, zakres ubezpieczenia, sumy gwarancyjne, daty ważności. Dane trafiają automatycznie do systemu core insurance. Accuracy: 97.3%.</p>
+
+<h3>2. Chatbot AI obsługi klienta (Gemini + RAG)</h3>
+<p>Asystent AI oparty na <strong>Gemini</strong> z warstwą <strong>Retrieval-Augmented Generation (RAG)</strong> odpowiada na pytania klientów o polisy, procedury szkodowe i warunki ubezpieczenia. Baza wiedzy (OWU, FAQ, procedury) zaindeksowana w <strong>Vertex AI Search</strong> zapewnia odpowiedzi oparte na aktualnych dokumentach firmowych.</p>
+
+<h3>3. Fraud Detection (Vertex AI AutoML + Gemini)</h3>
+<p>System łączy <strong>AutoML tabular model</strong> (scoring ryzyka na podstawie danych strukturyzowanych) z <strong>Gemini</strong> (analiza opisów szkód w języku naturalnym, wykrywanie niespójności). Podejrzane przypadki trafiają do kolejki manualnej rewizji z wyjaśnieniem przyczyny flagowania.</p>
+
+<div class="cs-tech">
+<span class="tag">Vertex AI</span><span class="tag">Gemini Pro</span><span class="tag">Gemini Pro Vision</span><span class="tag">RAG</span><span class="tag">Vertex AI Search</span><span class="tag">AutoML</span><span class="tag">Cloud Run</span><span class="tag">BigQuery</span><span class="tag">Terraform</span><span class="tag">Python</span>
+</div>
+
+<h2>Rezultaty</h2>
+<div class="cs-results">
+<div class="cs-result"><div class="cs-result__number">97.3%</div><div class="cs-result__label">accuracy OCR polis</div></div>
+<div class="cs-result"><div class="cs-result__number">-70%</div><div class="cs-result__label">czas przetwarzania polis</div></div>
+<div class="cs-result"><div class="cs-result__number">60%</div><div class="cs-result__label">zapytań obsłużonych przez chatbot</div></div>
+<div class="cs-result"><div class="cs-result__number">3x</div><div class="cs-result__label">więcej wykrytych fraudów</div></div>
+</div>
+
+<div class="article-highlight"><p><strong>Dlaczego Gemini?</strong> Wybór Gemini motywowany był multimodalnością (tekst + obraz w jednym modelu), obsługą języka polskiego i możliwością grounding na danych firmowych przez Vertex AI Search — eliminując halucynacje typowe dla generycznych LLM.</p></div>
+
+<div class="article-cta"><h3>Chcesz wdrożyć AI z Gemini w firmie?</h3><p>Skontaktuj się — zidentyfikujemy przypadki użycia i oszacujemy ROI.</p><a href="../#kontakt" class="btn btn--primary">Bezpłatna konsultacja →</a></div>
+</div></div></section>
+</main>
+<footer class="footer"><div class="container"><div class="footer__inner"><a href="../" class="footer__logo"><img src="../img/pslab-logo-3c-440px.png" alt="PSLAB"/></a><nav class="footer__nav"><a href="../#uslugi">Usługi</a><a href="../baza-wiedzy/">Baza wiedzy</a><a href="./">Case Studies</a><a href="../#kontakt">Kontakt</a></nav><p class="footer__copy">&copy; 2026 PSLAB – firma IT Tychy, Śląsk. | <a href="tel:+48792336306">+48 792 336 306</a> | <a href="mailto:kontakt@pslab.eu">kontakt@pslab.eu</a></p></div></div></footer>
+<script src="../main.js"></script></body></html>

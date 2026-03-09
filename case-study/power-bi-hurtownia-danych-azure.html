@@ -1,0 +1,51 @@
+<!DOCTYPE html><html lang="pl"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>Power BI i hurtownia danych w Azure – Case Study | PSLAB</title><meta name="description" content="Case study: wdrożenie Power BI i hurtowni danych w Azure Synapse Analytics dla firmy handlowej. Dashboardy sprzedażowe, ETL, self-service BI."/><meta name="robots" content="index,follow"/><link rel="canonical" href="https://pslab.eu/case-study/power-bi-hurtownia-danych-azure.html"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/><link rel="stylesheet" href="../index.css"/><link rel="stylesheet" href="../article.css"/><link rel="icon" type="image/png" href="../img/pslab-logo-3c-440px.png"/></head><body>
+<div class="bg-grid"></div>
+<nav class="navbar scrolled" id="navbar"><div class="container"><a href="../" class="navbar__logo"><img src="../img/pslab-logo-3c-440px.png" alt="PSLAB"/></a><ul class="navbar__links" id="navLinks"><li><a href="../#uslugi">Usługi</a></li><li><a href="../baza-wiedzy/">Baza wiedzy</a></li><li><a href="./">Case Studies</a></li><li><a href="../#kontakt">Kontakt</a></li></ul><button class="navbar__burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button></div></nav>
+<main class="article-page">
+<section class="article-hero"><div class="container">
+<div class="article-hero__breadcrumb"><a href="../">PSLAB</a><span>›</span><a href="./">Case Studies</a><span>›</span>Business Intelligence</div>
+<h1 class="article-hero__title">Power BI i hurtownia danych w Azure Synapse Analytics</h1>
+<div class="article-hero__meta"><span class="article-hero__meta-item">📊 Business Intelligence</span><span class="article-hero__meta-item">📅 2022</span><span class="article-hero__meta-item">⏱ 6 min czytania</span></div>
+</div></section>
+<section class="article-content"><div class="container"><div class="article-body">
+
+<div class="cs-meta">
+  <div class="cs-meta__item"><div class="cs-meta__label">Klient</div><div class="cs-meta__value">Firma handlowa, 300+ pracowników</div></div>
+  <div class="cs-meta__item"><div class="cs-meta__label">Branża</div><div class="cs-meta__value">Handel hurtowy</div></div>
+  <div class="cs-meta__item"><div class="cs-meta__label">Okres realizacji</div><div class="cs-meta__value">Q2–Q4 2022</div></div>
+  <div class="cs-meta__item"><div class="cs-meta__label">Platforma</div><div class="cs-meta__value">Azure + Power BI</div></div>
+</div>
+
+<h2>Wyzwanie</h2>
+<p>Firma handlowa z 300+ pracownikami prowadziła raportowanie w dziesiątkach plików Excel rozproszonych po działach. Brak centralnej hurtowni danych oznaczał, że raporty sprzedażowe, finansowe i magazynowe były niespójne — każdy dział miał „swoją prawdę". Zarząd nie miał jednego widoku na kondycję firmy.</p>
+
+<h2>Rozwiązanie</h2>
+<p>Wdrożyliśmy pełny stos <strong>Business Intelligence na Azure</strong>:</p>
+<ul>
+<li><strong>Azure Synapse Analytics</strong> — centralna hurtownia danych integrująca ERP (Comarch), CRM, system magazynowy i dane z e-commerce.</li>
+<li><strong>Azure Data Factory</strong> — pipeline'y ETL do ekstrakcji, transformacji i ładowania danych z 8 źródeł (codziennie o 5:00).</li>
+<li><strong>Azure Data Lake Storage</strong> — raw data lake dla danych historycznych i plików źródłowych.</li>
+<li><strong>Power BI Pro</strong> — 35 interaktywnych dashboardów: sprzedaż (daily/weekly/monthly), marże, rotacja zapasów, cash flow, należności, KPI handlowców.</li>
+<li><strong>Row-Level Security (RLS)</strong> — każdy handlowiec widzi tylko swoje dane, manager widzi swój region, zarząd widzi wszystko.</li>
+<li><strong>Szkolenia użytkowników</strong> — 4 warsztaty self-service BI dla 50 osób.</li>
+</ul>
+
+<div class="cs-tech">
+<span class="tag">Power BI Pro</span><span class="tag">Azure Synapse</span><span class="tag">Azure Data Factory</span><span class="tag">Azure Data Lake</span><span class="tag">SQL Server</span><span class="tag">DAX</span><span class="tag">Power Query</span><span class="tag">Row-Level Security</span>
+</div>
+
+<h2>Rezultaty</h2>
+<div class="cs-results">
+<div class="cs-result"><div class="cs-result__number">1</div><div class="cs-result__label">jedno źródło prawdy (SSOT)</div></div>
+<div class="cs-result"><div class="cs-result__number">35</div><div class="cs-result__label">dashboardów Power BI</div></div>
+<div class="cs-result"><div class="cs-result__number">-80%</div><div class="cs-result__label">czas generowania raportów</div></div>
+<div class="cs-result"><div class="cs-result__number">50</div><div class="cs-result__label">przeszkolonych użytkowników</div></div>
+</div>
+
+<div class="article-highlight"><p><strong>Efekt biznesowy:</strong> Zarząd po raz pierwszy ma dzienny widok na marżę brutto i cash flow w jednym dashboardzie. Decyzje zakupowe oparte na danych zamiast intuicji pozwoliły zredukować nadmierne zapasy o 25%.</p></div>
+
+<div class="article-cta"><h3>Chcesz wdrożyć Power BI w firmie?</h3><p>Skontaktuj się — zaprojektujemy hurtownię danych i dashboardy.</p><a href="../#kontakt" class="btn btn--primary">Bezpłatna konsultacja →</a></div>
+</div></div></section>
+</main>
+<footer class="footer"><div class="container"><div class="footer__inner"><a href="../" class="footer__logo"><img src="../img/pslab-logo-3c-440px.png" alt="PSLAB"/></a><nav class="footer__nav"><a href="../#uslugi">Usługi</a><a href="../baza-wiedzy/">Baza wiedzy</a><a href="./">Case Studies</a><a href="../#kontakt">Kontakt</a></nav><p class="footer__copy">&copy; 2026 PSLAB – firma IT Tychy, Śląsk. | <a href="tel:+48792336306">+48 792 336 306</a> | <a href="mailto:kontakt@pslab.eu">kontakt@pslab.eu</a></p></div></div></footer>
+<script src="../main.js"></script></body></html>
