@@ -271,8 +271,17 @@ a:hover {
 }
 
 @keyframes pulse-dot {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.5; transform: scale(1.5); }
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: scale(1.5);
+  }
 }
 
 .hero__title {
@@ -357,20 +366,27 @@ a:hover {
   width: 500px;
   height: 500px;
   border-radius: 50%;
-  background: radial-gradient(
-    ellipse at center,
-    rgba(26, 122, 138, 0.1) 0%,
-    rgba(39, 162, 181, 0.05) 30%,
-    rgba(13, 79, 90, 0.02) 60%,
-    transparent 80%
-  );
+  background: radial-gradient(ellipse at center,
+      rgba(26, 122, 138, 0.1) 0%,
+      rgba(39, 162, 181, 0.05) 30%,
+      rgba(13, 79, 90, 0.02) 60%,
+      transparent 80%);
   filter: blur(50px);
   animation: aurora-breathe 6s ease-in-out infinite;
 }
 
 @keyframes aurora-breathe {
-  0%, 100% { transform: scale(1); opacity: 0.5; }
-  50% { transform: scale(1.15); opacity: 0.8; }
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: scale(1.15);
+    opacity: 0.8;
+  }
 }
 
 /* Particle star field */
@@ -393,8 +409,17 @@ a:hover {
 }
 
 @keyframes twinkle {
-  0%, 100% { opacity: 0.15; transform: scale(0.8); }
-  50% { opacity: 0.7; transform: scale(1.4); }
+
+  0%,
+  100% {
+    opacity: 0.15;
+    transform: scale(0.8);
+  }
+
+  50% {
+    opacity: 0.7;
+    transform: scale(1.4);
+  }
 }
 
 /* Orbit container */
@@ -461,13 +486,23 @@ a:hover {
 }
 
 @keyframes orbit-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes orbit-spin-reverse {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(-360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
 }
 
 /* Orbiting nodes */
@@ -511,22 +546,62 @@ a:hover {
 }
 
 @keyframes node-pulse {
-  0%, 100% { opacity: 0.5; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.2); }
+
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
 }
 
 /* Counter-rotate node labels so they stay readable */
-.orbit--outer .orbit__node { animation: orbit-spin-reverse 22s linear infinite; }
-.orbit--mid .orbit__node   { animation: orbit-spin 16s linear infinite; }
-.orbit--inner .orbit__node { animation: orbit-spin-reverse 12s linear infinite; }
+.orbit--outer .orbit__node {
+  animation: orbit-spin-reverse 22s linear infinite;
+}
+
+.orbit--mid .orbit__node {
+  animation: orbit-spin 16s linear infinite;
+}
+
+.orbit--inner .orbit__node {
+  animation: orbit-spin-reverse 12s linear infinite;
+}
 
 /* Position nodes on their orbits */
-.orbit__node--1 { top: -24px; left: calc(50% - 24px); }
-.orbit__node--2 { bottom: -24px; left: calc(50% - 24px); }
-.orbit__node--3 { top: calc(50% - 24px); right: -24px; }
-.orbit__node--4 { top: calc(50% - 24px); left: -24px; }
-.orbit__node--5 { top: -24px; left: calc(50% - 24px); }
-.orbit__node--6 { bottom: -24px; left: calc(50% - 24px); }
+.orbit__node--1 {
+  top: -24px;
+  left: calc(50% - 24px);
+}
+
+.orbit__node--2 {
+  bottom: -24px;
+  left: calc(50% - 24px);
+}
+
+.orbit__node--3 {
+  top: calc(50% - 24px);
+  right: -24px;
+}
+
+.orbit__node--4 {
+  top: calc(50% - 24px);
+  left: -24px;
+}
+
+.orbit__node--5 {
+  top: -24px;
+  left: calc(50% - 24px);
+}
+
+.orbit__node--6 {
+  bottom: -24px;
+  left: calc(50% - 24px);
+}
 
 /* Center core */
 .orbit__core {
@@ -551,8 +626,17 @@ a:hover {
 }
 
 @keyframes core-pulse {
-  0%, 100% { transform: scale(0.8); opacity: 0.5; }
-  50% { transform: scale(1.3); opacity: 1; }
+
+  0%,
+  100% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: scale(1.3);
+    opacity: 1;
+  }
 }
 
 .orbit__core-inner {
@@ -572,8 +656,15 @@ a:hover {
 }
 
 @keyframes core-glow {
-  0%, 100% { box-shadow: 0 4px 20px rgba(26, 122, 138, 0.3), 0 8px 40px rgba(26, 122, 138, 0.1); }
-  50% { box-shadow: 0 4px 30px rgba(26, 122, 138, 0.45), 0 8px 60px rgba(26, 122, 138, 0.15); }
+
+  0%,
+  100% {
+    box-shadow: 0 4px 20px rgba(26, 122, 138, 0.3), 0 8px 40px rgba(26, 122, 138, 0.1);
+  }
+
+  50% {
+    box-shadow: 0 4px 30px rgba(26, 122, 138, 0.45), 0 8px 60px rgba(26, 122, 138, 0.15);
+  }
 }
 
 .orbit__core-inner svg {
@@ -593,8 +684,15 @@ a:hover {
 }
 
 @keyframes ring-expand {
-  0% { transform: scale(1); opacity: 0.8; }
-  100% { transform: scale(2.5); opacity: 0; }
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
 }
 
 /* ---------- Stats Ticker ---------- */
@@ -889,28 +987,81 @@ a:hover {
   overflow: hidden;
   border-top: 1px solid var(--clr-glass-border);
   border-bottom: 1px solid var(--clr-glass-border);
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+/* Gradient masks for smooth fade-out on edges */
+.certifications::before,
+.certifications::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.certifications::before {
+  left: 0;
+  background: linear-gradient(to right, var(--clr-bg-alt) 0%, transparent 100%);
+}
+
+.certifications::after {
+  right: 0;
+  background: linear-gradient(to left, var(--clr-bg-alt) 0%, transparent 100%);
 }
 
 .marquee {
-  display: flex;
-  gap: 48px;
-  animation: marquee-scroll 25s linear infinite;
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-left 45s linear infinite;
+  /* Hover to pause can be nice for accessibility */
+}
+
+.marquee:hover {
+  animation-play-state: paused;
 }
 
 .marquee__item {
-  flex-shrink: 0;
-  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 40px;
+  font-size: 1.05rem;
   font-weight: 600;
   color: var(--clr-text-muted);
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
-  white-space: nowrap;
-  opacity: 0.6;
+  vertical-align: middle;
 }
 
-@keyframes marquee-scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+.marquee__item img {
+  height: 36px;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  /* Make all logos neutral and less distracting */
+  filter: grayscale(100%) opacity(0.65) contrast(1.2);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.marquee__item:hover img {
+  /* Bring back original colors on interaction */
+  filter: grayscale(0%) opacity(1) contrast(1);
+  transform: scale(1.08);
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* ---------- Contact Section ---------- */
