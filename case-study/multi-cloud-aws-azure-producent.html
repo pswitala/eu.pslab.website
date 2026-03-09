@@ -22,7 +22,7 @@
 <p>Główni klienci z branży automotive (Tier 1) wymagali certyfikacji TISAX, co dodatkowo komplikowało architekturę bezpieczeństwa rozproszoną między dwoma cloudami.</p>
 
 <h2>Rozwiązanie</h2>
-<p>Zaprojektowaliśmy <strong>unified multi-cloud architecture</strong> łączącą AWS i Azure przez dedykowane połączenia VPN Site-to-Site z redundancją. Kluczowe elementy:</p>
+<p>Zaprojektowaliśmy zunifikowaną <strong>architekturę multi-cloud</strong> łączącą AWS i Azure przez dedykowane połączenia VPN Site-to-Site z redundancją. Kluczowe elementy:</p>
 <ol>
 <li><strong>Centralne zarządzanie tożsamością</strong> — Azure AD jako Identity Provider dla obu cloudów (AWS SSO + Azure AD federation).</li>
 <li><strong>Unified networking</strong> — AWS Transit Gateway + Azure Virtual WAN połączone tunelami IPsec z automatycznym failoverem.</li>
