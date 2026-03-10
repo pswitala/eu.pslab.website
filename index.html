@@ -2,6 +2,15 @@
 <html lang="pl">
 
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GT-W6J5JLW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'GT-W6J5JLW');
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PSLAB - Cloud Computing, Sztuczna Inteligencja, Obsługa IT, Business Intelligence | Tychy</title>
@@ -41,43 +50,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="index.css" />
-
-  <script>
-    (function () {
-      // Konfiguracja
-      const gtmId = 'GT-W6J5JLW'; // Twój ID z obrazka
-      const delaySeconds = 3; // Opóźnienie w sekundach (opcjonalne)
-      let gtmLoaded = false;
-
-      function loadGTM() {
-        if (gtmLoaded) return;
-        gtmLoaded = true;
-
-        // Standardowy skrypt ładowania GTM
-        (function (w, d, s, l, i) {
-          w[l] = w[l] || []; w[l].push({
-            'gtm.start':
-              new Date().getTime(), event: 'gtm.js'
-          }); var f = d.getElementsByTagName(s)[0],
-            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-              'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', gtmId);
-
-        console.log('GTM załadowany po interakcji lub opóźnieniu.');
-      }
-
-      // Wyzwalacz 1: Po pierwszej interakcji (ruch myszą, kliknięcie, scroll)
-      const triggers = ['mouseover', 'keydown', 'touchstart', 'scroll'];
-      triggers.forEach(event => {
-        window.addEventListener(event, loadGTM, { once: true, passive: true });
-      });
-
-      // Wyzwalacz 2: Po upływie X sekund (zabezpieczenie dla botów/pasywnych użytkowników)
-      window.addEventListener('load', () => {
-        setTimeout(loadGTM, delaySeconds * 1000);
-      });
-    })();
-  </script>
 
   <!-- JSON-LD: LocalBusiness + ProfessionalService -->
   <script type="application/ld+json">
