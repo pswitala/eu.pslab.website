@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GT-W6J5JLW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'GT-W6J5JLW');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 - Strona nie odnaleziona | PSLAB</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <style>
+    .error-page {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 70vh;
+      text-align: center;
+      padding: 120px 24px 80px;
+      position: relative;
+    }
+    .error-page__code {
+      font-size: clamp(6rem, 15vw, 10rem);
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-primary-light) 50%, var(--clr-primary-dark) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: 0;
+      line-height: 1;
+      filter: drop-shadow(0 0 20px rgba(26, 122, 138, 0.2));
+    }
+    .error-page__title {
+      font-size: clamp(1.5rem, 4vw, 2.2rem);
+      color: var(--clr-text-heading);
+      margin: 1.5rem 0 1rem;
+      font-weight: 700;
+    }
+    .error-page__text {
+      font-size: 1.1rem;
+      color: var(--clr-text-muted);
+      max-width: 520px;
+      margin-bottom: 2.5rem;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bg-grid"></div>
+  <div class="bg-gradient-blob bg-gradient-blob--1"></div>
+  <div class="bg-gradient-blob bg-gradient-blob--2"></div>
+
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar__logo">
+        <img src="img/pslab-logo-3c-440px.png" alt="PSLAB Logo" />
+      </a>
+      <ul class="navbar__links" id="navLinks">
+        <li><a href="index.html#uslugi">Usługi</a></li>
+        <li><a href="index.html#zespol">Zespół</a></li>
+        <li><a href="baza-wiedzy/">Baza wiedzy</a></li>
+        <li><a href="case-study/">Case Studies</a></li>
+        <li><a href="index.html#kontakt">Kontakt</a></li>
+      </ul>
+      <button class="navbar__burger" id="navBurger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="error-page">
+      <h1 class="error-page__code">404</h1>
+      <h2 class="error-page__title">Ups! Coś poszło nie tak.</h2>
+      <p class="error-page__text">Strona, której szukasz, nie istnieje lub została przeniesiona pod inny adres.</p>
+      <div class="hero__cta">
+        <a href="index.html" class="btn btn--primary">Powrót do strony głównej</a>
+        <a href="index.html#kontakt" class="btn btn--outline">Skontaktuj się z nami</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <a href="index.html" class="footer__logo">
+          <img src="img/pslab-logo-3c-440px.png" alt="PSLAB" />
+        </a>
+        <nav class="footer__nav" aria-label="Mapa strony">
+          <a href="index.html#uslugi">Usługi</a>
+          <a href="index.html#cloud-computing">Cloud Computing</a>
+          <a href="index.html#machine-learning-ai">AI / ML</a>
+          <a href="index.html#obsluga-informatyczna">Obsługa IT</a>
+          <a href="index.html#business-intelligence">Business Intelligence</a>
+          <a href="index.html#nadzor-wdrozenia">Nadzór IT</a>
+          <a href="baza-wiedzy/">Baza wiedzy</a>
+          <a href="case-study/">Case Studies</a>
+          <a href="index.html#zespol">Zespół</a>
+          <a href="index.html#faq">FAQ</a>
+          <a href="index.html#kontakt">Kontakt</a>
+        </nav>
+        <p class="footer__copy">&copy; 2026 PSLAB - Outsourcing IT, Cloud Computing, Sztuczna
+          Inteligencja - AI, Analityka Danych - Business Intelligence. | ul. Rolna 22, 43-100 Tychy | <a
+            href="tel:+48792336306">+48 792 336 306</a>
+          | <a href="mailto:kontakt@pslab.eu">kontakt@pslab.eu</a><br /><strong>NIP:</strong> PL6462449298 | <strong>Nr
+            konta (ING):</strong> PL 06 1050 1399 1000 0090 7490 6562 | <strong>BIC/SWIFT:</strong> INGBPLPW</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
