@@ -1,53 +1,146 @@
-<!DOCTYPE html><html lang="pl"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>Outsourcing IT i wdrożenie SIEM dla kancelarii – Case Study | PSLAB</title><meta name="description" content="Case study: outsourcing IT i wdrożenie systemu SIEM dla kancelarii prawnej. Fortinet, Microsoft Sentinel, M365, Intune — kompleksowa obsługa informatyczna."/><meta name="robots" content="index,follow"/><link rel="canonical" href="https://pslab.eu/case-study/outsourcing-it-kancelaria.html"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/><link rel="stylesheet" href="../index.css"/><link rel="stylesheet" href="../article.css"/>  <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
-</head><body>
-<div class="bg-grid"></div>
-<nav class="navbar scrolled" id="navbar"><div class="container"><a href="../" class="navbar__logo"><img src="../img/pslab-logo-3c-440px.png" alt="PSLAB"/></a><ul class="navbar__links" id="navLinks"><li><a href="../#uslugi">Usługi</a></li><li><a href="../#zespol">Zespół</a></li><li><a href="../baza-wiedzy/">Baza wiedzy</a></li><li><a href="./">Case Studies</a></li><li><a href="../#kontakt">Kontakt</a></li></ul><button class="navbar__burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button></div></nav>
-<main class="article-page">
-<section class="article-hero"><div class="container">
-<div class="article-hero__breadcrumb"><a href="../">PSLAB</a><span>›</span><a href="./">Case Studies</a><span>›</span>Obsługa IT</div>
-<h1 class="article-hero__title">Outsourcing IT i wdrożenie SIEM dla kancelarii prawnej</h1>
-<div class="article-hero__meta"><span class="article-hero__meta-item">🔒 Obsługa IT</span><span class="article-hero__meta-item">📅 2020</span><span class="article-hero__meta-item">⏱ 5 min czytania</span></div>
-</div></section>
-<section class="article-content"><div class="container"><div class="article-body">
+<!DOCTYPE html>
+<html lang="pl">
 
-<div class="cs-meta">
-  <div class="cs-meta__item"><div class="cs-meta__label">Klient</div><div class="cs-meta__value">Kancelaria prawna, 35 prawników, 3 biura</div></div>
-  <div class="cs-meta__item"><div class="cs-meta__label">Branża</div><div class="cs-meta__value">Usługi prawne</div></div>
-  <div class="cs-meta__item"><div class="cs-meta__label">Okres realizacji</div><div class="cs-meta__value">Q2–Q4 2020</div></div>
-  <div class="cs-meta__item"><div class="cs-meta__label">Zakres</div><div class="cs-meta__value">Outsourcing IT + SIEM</div></div>
-</div>
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GT-W6J5JLW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-<h2>Wyzwanie</h2>
-<p>Kancelaria prawna z 3 biurami (Katowice, Kraków, Warszawa) nie posiadała dedykowanego działu IT. Obsługę realizował jednoosobowy informatyk, który odszedł z firmy. Kancelaria przetwarzała wrażliwe dane klientów (tajemnica adwokacka) na stacjach roboczych bez szyfrowania, z lokalnym serwerem plików bez backupu off-site.</p>
-<p>Incydent phishingowy (pracownik kliknął w link) ujawnił brak systemu monitorowania bezpieczeństwa i procedur reakcji na incydenty.</p>
+    gtag('config', 'GT-W6J5JLW');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Outsourcing IT i wdrożenie SIEM dla kancelarii - Case Study | PSLAB</title>
+  <meta name="description"
+    content="Case study: outsourcing IT i wdrożenie systemu SIEM dla kancelarii prawnej. Fortinet, Microsoft Sentinel, M365, Intune — kompleksowa obsługa informatyczna." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://pslab.eu/case-study/outsourcing-it-kancelaria.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../index.css" />
+  <link rel="stylesheet" href="../article.css" />
+  <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+</head>
 
-<h2>Rozwiązanie</h2>
-<p>Przejęliśmy pełną obsługę informatyczną kancelarii w modelu <strong>outsourcing IT</strong>:</p>
-<ol>
-<li><strong>Migracja do Microsoft 365 E5</strong> — poczta Exchange Online, OneDrive for Business zamiast lokalnego file servera, Teams do komunikacji między biurami.</li>
-<li><strong>Fortinet FortiGate</strong> — firewall NGFW w każdym biurze, VPN Site-to-Site między lokalizacjami, IPS/IDS, web filtering.</li>
-<li><strong>Microsoft Sentinel (SIEM)</strong> — centralne zbieranie logów z FortiGate, M365, stacji roboczych. Correlation rules wykrywające anomalie (logowanie z nietypowej lokalizacji, masowe pobieranie dokumentów).</li>
-<li><strong>Intune MDM</strong> — zarządzanie laptopami i telefonami prawników, wymuszanie szyfrowania BitLocker, polityki DLP blokujące wysyłkę wrażliwych dokumentów na prywatne maile.</li>
-</ol>
+<body>
+  <div class="bg-grid"></div>
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container"><a href="../" class="navbar__logo"><img src="../img/pslab-logo-3c-440px.png"
+          alt="PSLAB" /></a>
+      <ul class="navbar__links" id="navLinks">
+        <li><a href="../#uslugi">Usługi</a></li>
+        <li><a href="../#zespol">Zespół</a></li>
+        <li><a href="../baza-wiedzy/">Baza wiedzy</a></li>
+        <li><a href="./">Case Studies</a></li>
+        <li><a href="../#kontakt">Kontakt</a></li>
+      </ul><button class="navbar__burger" id="navBurger"
+        aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <main class="article-page">
+    <section class="article-hero">
+      <div class="container">
+        <div class="article-hero__breadcrumb"><a href="../">PSLAB</a><span>></span><a href="./">Case
+            Studies</a><span>></span>Obsługa IT</div>
+        <h1 class="article-hero__title">Outsourcing IT i wdrożenie SIEM dla kancelarii prawnej</h1>
+        <div class="article-hero__meta"><span class="article-hero__meta-item">🔒 Obsługa IT</span><span
+            class="article-hero__meta-item">📅 2020</span><span class="article-hero__meta-item">⏱ 5 min czytania</span>
+        </div>
+      </div>
+    </section>
+    <section class="article-content">
+      <div class="container">
+        <div class="article-body">
 
-<div class="cs-tech">
-<span class="tag">Fortinet FortiGate</span><span class="tag">Microsoft Sentinel</span><span class="tag">Microsoft 365 E5</span><span class="tag">Intune</span><span class="tag">BitLocker</span><span class="tag">DLP</span><span class="tag">VPN</span><span class="tag">MFA</span>
-</div>
+          <div class="cs-meta">
+            <div class="cs-meta__item">
+              <div class="cs-meta__label">Klient</div>
+              <div class="cs-meta__value">Kancelaria prawna, 35 prawników, 3 biura</div>
+            </div>
+            <div class="cs-meta__item">
+              <div class="cs-meta__label">Branża</div>
+              <div class="cs-meta__value">Usługi prawne</div>
+            </div>
+            <div class="cs-meta__item">
+              <div class="cs-meta__label">Okres realizacji</div>
+              <div class="cs-meta__value">Q2-Q4 2020</div>
+            </div>
+            <div class="cs-meta__item">
+              <div class="cs-meta__label">Zakres</div>
+              <div class="cs-meta__value">Outsourcing IT + SIEM</div>
+            </div>
+          </div>
 
-<h2>Rezultaty</h2>
-<div class="cs-results">
-<div class="cs-result"><div class="cs-result__number">0</div><div class="cs-result__label">incydentów bezpieczeństwa po wdrożeniu</div></div>
-<div class="cs-result"><div class="cs-result__number">24/7</div><div class="cs-result__label">monitoring SIEM</div></div>
-<div class="cs-result"><div class="cs-result__number">100%</div><div class="cs-result__label">stacji z szyfrowaniem</div></div>
-<div class="cs-result"><div class="cs-result__number">&lt;2h</div><div class="cs-result__label">SLA na incydenty krytyczne</div></div>
-</div>
+          <h2>Wyzwanie</h2>
+          <p>Kancelaria prawna z 3 biurami (Katowice, Kraków, Warszawa) nie posiadała dedykowanego działu IT. Obsługę
+            realizował jednoosobowy informatyk, który odszedł z firmy. Kancelaria przetwarzała wrażliwe dane klientów
+            (tajemnica adwokacka) na stacjach roboczych bez szyfrowania, z lokalnym serwerem plików bez backupu
+            off-site.</p>
+          <p>Incydent phishingowy (pracownik kliknął w link) ujawnił brak systemu monitorowania bezpieczeństwa i
+            procedur reakcji na incydenty.</p>
 
-<div class="article-highlight"><p><strong>Cytat klienta:</strong> „Po przejściu na outsourcing IT z PSLAB mamy spokój głowy. Wiedząc, że dane naszych klientów są chronione systemem SIEM i FortiGate, możemy skupić się na praktyce prawnej."</p></div>
+          <h2>Rozwiązanie</h2>
+          <p>Przejęliśmy pełną obsługę informatyczną kancelarii w modelu <strong>outsourcing IT</strong>:</p>
+          <ol>
+            <li><strong>Migracja do Microsoft 365 E5</strong> — poczta Exchange Online, OneDrive for Business zamiast
+              lokalnego file servera, Teams do komunikacji między biurami.</li>
+            <li><strong>Fortinet FortiGate</strong> — firewall NGFW w każdym biurze, VPN Site-to-Site między
+              lokalizacjami, IPS/IDS, web filtering.</li>
+            <li><strong>Microsoft Sentinel (SIEM)</strong> — centralne zbieranie logów z FortiGate, M365, stacji
+              roboczych. Correlation rules wykrywające anomalie (logowanie z nietypowej lokalizacji, masowe pobieranie
+              dokumentów).</li>
+            <li><strong>Intune MDM</strong> — zarządzanie laptopami i telefonami prawników, wymuszanie szyfrowania
+              BitLocker, polityki DLP blokujące wysyłkę wrażliwych dokumentów na prywatne maile.</li>
+          </ol>
 
-<div class="article-cta"><h3>Potrzebujesz outsourcingu IT?</h3><p>Przejmiemy obsługę informatyczną Twojej firmy z gwarancją SLA.</p><a href="../#kontakt" class="btn btn--primary">Skontaktuj się →</a></div>
-</div></div></section>
-</main>
-<footer class="footer"><div class="container"><div class="footer__inner"><a href="../" class="footer__logo"><img src="../img/pslab-logo-3c-440px.png" alt="PSLAB"/></a><nav class="footer__nav" aria-label="Mapa strony">
+          <div class="cs-tech">
+            <span class="tag">Fortinet FortiGate</span><span class="tag">Microsoft Sentinel</span><span
+              class="tag">Microsoft 365 E5</span><span class="tag">Intune</span><span class="tag">BitLocker</span><span
+              class="tag">DLP</span><span class="tag">VPN</span><span class="tag">MFA</span>
+          </div>
+
+          <h2>Rezultaty</h2>
+          <div class="cs-results">
+            <div class="cs-result">
+              <div class="cs-result__number">0</div>
+              <div class="cs-result__label">incydentów bezpieczeństwa po wdrożeniu</div>
+            </div>
+            <div class="cs-result">
+              <div class="cs-result__number">24/7</div>
+              <div class="cs-result__label">monitoring SIEM</div>
+            </div>
+            <div class="cs-result">
+              <div class="cs-result__number">100%</div>
+              <div class="cs-result__label">stacji z szyfrowaniem</div>
+            </div>
+            <div class="cs-result">
+              <div class="cs-result__number">&lt;2h</div>
+              <div class="cs-result__label">SLA na incydenty krytyczne</div>
+            </div>
+          </div>
+
+          <div class="article-highlight">
+            <p><strong>Cytat klienta:</strong> „Po przejściu na outsourcing IT z PSLAB mamy spokój głowy. Wiedząc, że
+              dane naszych klientów są chronione systemem SIEM i FortiGate, możemy skupić się na praktyce prawnej."</p>
+          </div>
+
+          <div class="article-cta">
+            <h3>Potrzebujesz outsourcingu IT?</h3>
+            <p>Przejmiemy obsługę informatyczną Twojej firmy z gwarancją SLA.</p><a href="../#kontakt"
+              class="btn btn--primary">Skontaktuj się →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner"><a href="../" class="footer__logo"><img src="../img/pslab-logo-3c-440px.png"
+            alt="PSLAB" /></a>
+        <nav class="footer__nav" aria-label="Mapa strony">
           <a href="../#uslugi">Usługi</a>
           <a href="../#cloud-computing">Cloud Computing</a>
           <a href="../#machine-learning-ai">AI / ML</a>
@@ -59,9 +152,16 @@
           <a href="../#zespol">Zespół</a>
           <a href="../#faq">FAQ</a>
           <a href="../#kontakt">Kontakt</a>
-        </nav><p class="footer__copy">&copy; 2026 PSLAB - Outsourcing IT, Cloud Computing, Sztuczna
+        </nav>
+        <p class="footer__copy">&copy; 2026 PSLAB - Outsourcing IT, Cloud Computing, Sztuczna
           Inteligencja - AI, Analityka Danych - Business Intelligence. | ul. Rolna 22, 43-100 Tychy | <a
             href="tel:+48792336306">+48 792 336 306</a>
           | <a href="mailto:kontakt@pslab.eu">kontakt@pslab.eu</a><br /><strong>NIP:</strong> PL6462449298 | <strong>Nr
-            konta (ING):</strong> PL 06 1050 1399 1000 0090 7490 6562 | <strong>BIC/SWIFT:</strong> INGBPLPW</p></div></div></footer>
-<script src="../main.js"></script></body></html>
+            konta (ING):</strong> PL 06 1050 1399 1000 0090 7490 6562 | <strong>BIC/SWIFT:</strong> INGBPLPW</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../main.js"></script>
+</body>
+
+</html>

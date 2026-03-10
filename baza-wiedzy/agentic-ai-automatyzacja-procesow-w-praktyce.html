@@ -1,33 +1,135 @@
-<!DOCTYPE html><html lang="pl"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>Agentic AI – automatyzacja procesów sztuczną inteligencją | PSLAB</title><meta name="description" content="Dowiedz się, czym są rozwiązania Agentic AI i jak zaawansowane agenty sztucznej inteligencji przeprowadzają autonomiczne decyzje celem optymalizacji i wsparcia operacyjnegow IT."/><meta name="keywords" content="agentic AI rozwiązania, automatyzacja procesów AI, jak wdrożyć AI w firmie, generative AI wdrożenie, autonomous agents, langgraph, autogen, LLM"/><meta name="robots" content="index,follow"/><link rel="canonical" href="https://pslab.eu/baza-wiedzy/agentic-ai-automatyzacja-procesow-w-praktyce.html"/>
-<meta property="og:type" content="article"/><meta property="og:title" content="Agentic AI – nowy poziom automatyzacji biznesu"/><meta property="og:description" content="Autonomiczne agenty oparte o LLM: od generacji RAG do podejmowania wieloetapowych akcji."/><meta property="og:url" content="https://pslab.eu/baza-wiedzy/agentic-ai-automatyzacja-procesow-w-praktyce.html"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/><link rel="stylesheet" href="../index.css"/><link rel="stylesheet" href="../article.css"/><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Czym jest Agentic AI i dlaczego odmienia automatyzację?","description":"Rewolucja w modelach językowych. W jaki sposób niezależne byty AI, zwane Agentami, realizują na wezwanie bardzo specyficzne procesy technologiczne wyręczając kadry z powtarzalnych zadań?","author":{"@type":"Organization","name":"PSLAB"},"publisher":{"@type":"Organization","name":"PSLAB","url":"https://pslab.eu"},"mainEntityOfPage":"https://pslab.eu/baza-wiedzy/agentic-ai-automatyzacja-procesow-w-praktyce.html"}</script>
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GT-W6J5JLW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'GT-W6J5JLW');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Agentic AI - automatyzacja procesów sztuczną inteligencją | PSLAB</title>
+  <meta name="description"
+    content="Dowiedz się, czym są rozwiązania Agentic AI i jak zaawansowane agenty sztucznej inteligencji przeprowadzają autonomiczne decyzje celem optymalizacji i wsparcia operacyjnegow IT." />
+  <meta name="keywords"
+    content="agentic AI rozwiązania, automatyzacja procesów AI, jak wdrożyć AI w firmie, generative AI wdrożenie, autonomous agents, langgraph, autogen, LLM" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://pslab.eu/baza-wiedzy/agentic-ai-automatyzacja-procesow-w-praktyce.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Agentic AI - nowy poziom automatyzacji biznesu" />
+  <meta property="og:description"
+    content="Autonomiczne agenty oparte o LLM: od generacji RAG do podejmowania wieloetapowych akcji." />
+  <meta property="og:url" content="https://pslab.eu/baza-wiedzy/agentic-ai-automatyzacja-procesow-w-praktyce.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../index.css" />
+  <link rel="stylesheet" href="../article.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Czym jest Agentic AI i dlaczego odmienia automatyzację?",
+    "author": { "@type": "Person", "name": "dr inż. Paweł Świtała" },
+    "publisher": { "@type": "Organization", "name": "PSLAB", "url": "https://pslab.eu" },
+    "mainEntityOfPage": "https://pslab.eu/baza-wiedzy/agentic-ai-automatyzacja-procesow-w-praktyce.html"
+  }
+  </script>
   <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
-</head><body><div class="bg-grid"></div><nav class="navbar scrolled" id="navbar"><div class="container"><a href="../" class="navbar__logo"><img src="../img/pslab-logo-3c-440px.png" alt="PSLAB"/></a><ul class="navbar__links" id="navLinks"><li><a href="../#uslugi">Usługi</a></li><li><a href="../#zespol">Zespół</a></li><li><a href="./">Baza wiedzy</a></li><li><a href="../case-study/">Case Studies</a></li><li><a href="../#kontakt">Kontakt</a></li></ul><button class="navbar__burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button></div></nav>
-<main class="article-page"><section class="article-hero"><div class="container">
-<div class="article-hero__breadcrumb"><a href="../">PSLAB</a><span>›</span><a href="./">Baza wiedzy</a><span>›</span>Sztuczna Inteligencja</div>
-<h1 class="article-hero__title">Agentic AI: wyższy poziom w automatyzacji z LLM</h1>
-<div class="article-hero__meta"><span class="article-hero__meta-item">✍ Zespół AI PSLAB</span><span class="article-hero__meta-item">🤖 Sztuczna Inteligencja</span><span class="article-hero__meta-item">⏱ 7 min czytania</span></div>
-</div></section>
-<section class="article-content"><div class="container"><div class="article-body">
-<h2>Czym właściwie jest Agentic AI?</h2>
-<p>Zwykłe <strong>wdrożenie generative AI</strong> pozwala dzisiaj napisać treść e-maila czy dokonać prostej analizy skoku sprzedaży z arkusza Excel poprzez konwersację z chatbotem. Użytkownicy zadają pytania, na które otrzymują mniej lub bardziej trafne podpowiedzi generowane przez model.</p>
-<p><strong>Rozwiązania Agentic AI</strong> idą jednak o krok dalej. Podczas gdy tzw. chat jest reaktywny (czeka na polecenie człowieka i zwraca tekst), <strong>agenty AI to systemy ukierunkowane na realizację kompleksowych zadań, samodzielnie wykorzystujące narzędzia, API czy środowiska kodu.</strong> Odchodzimy od paradygmatu <i>"napisz mi raport"</i> na rzecz <i>"wyszukaj nowe leady w bazach, porównaj z rekordami w Salesforce, wyciągnij powiązane kontakty, stwórz dla nich persony i skonfiguruj wstępne parametry kampanii mailingowej, a następnie poproś mnie o zatwierdzenie"</i>. System agentowy nie polega tylko na modelu językowym (LLM), ale uczy się samodzielnego planowania i wnioskowania (reasoning loop).</p>
+</head>
 
-<h2>Automatyzacja procesów AI za pomocą architektury Agenckiej</h2>
-<p>We <a href="wdrozenie-sztucznej-inteligencji-ml.html">wdrożeniach sztucznej inteligencji</a> dla firm korzysta się często z bibliotek i frameworków, takich jak LangGraph, Microsoft AutoGen czy wzorzec ReAct. Powstała w ten sposób architektura pozwala systemowi iteratywnie wywoływać poszczególne narzędzia (tzw. <i>tool calls</i>).</p>
-<p>Dla przykładu, w procesie obsługi reklamacji lub naprawy Agent AI może samodzielnie zweryfikować dane u dostawcy: zaloguje się do systemu CRM, sprawdzi numer VIN lub kod zamówienia e-commerce i ustali, kiedy produkt faktycznie opuścił magazyn. Następnie skonsultuje się z predefiniowaną bazą wiedzy (RAG) by ocenić, czy warunki gwarancyjne zostały dotrzymane. Na koniec powiadomi na Slacku specjalistę technicznego z helpdesku i wygeneruje odpowiednie zgłoszenie w systemie Jira.</p>
+<body>
+  <div class="bg-grid"></div>
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container"><a href="../" class="navbar__logo"><img src="../img/pslab-logo-3c-440px.png"
+          alt="PSLAB" /></a>
+      <ul class="navbar__links" id="navLinks">
+        <li><a href="../#uslugi">Usługi</a></li>
+        <li><a href="../#zespol">Zespół</a></li>
+        <li><a href="./">Baza wiedzy</a></li>
+        <li><a href="../case-study/">Case Studies</a></li>
+        <li><a href="../#kontakt">Kontakt</a></li>
+      </ul><button class="navbar__burger" id="navBurger"
+        aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <main class="article-page">
+    <section class="article-hero">
+      <div class="container">
+        <div class="article-hero__breadcrumb"><a href="../">PSLAB</a><span>></span><a href="./">Baza
+            wiedzy</a><span>></span>Sztuczna Inteligencja</div>
+        <h1 class="article-hero__title">Agentic AI: wyższy poziom w automatyzacji z LLM</h1>
+        <div class="article-hero__meta"><span class="article-hero__meta-item">✍ Zespół AI PSLAB</span><span
+            class="article-hero__meta-item">🤖 Sztuczna Inteligencja</span><span class="article-hero__meta-item">⏱ 7 min
+            czytania</span></div>
+      </div>
+    </section>
+    <section class="article-content">
+      <div class="container">
+        <div class="article-body">
+          <h2>Czym właściwie jest Agentic AI?</h2>
+          <p>Zwykłe <strong>wdrożenie generative AI</strong> pozwala dzisiaj napisać treść e-maila czy dokonać prostej
+            analizy skoku sprzedaży z arkusza Excel poprzez konwersację z chatbotem. Użytkownicy zadają pytania, na
+            które otrzymują mniej lub bardziej trafne podpowiedzi generowane przez model.</p>
+          <p><strong>Rozwiązania Agentic AI</strong> idą jednak o krok dalej. Podczas gdy tzw. chat jest reaktywny
+            (czeka na polecenie człowieka i zwraca tekst), <strong>agenty AI to systemy ukierunkowane na realizację
+              kompleksowych zadań, samodzielnie wykorzystujące narzędzia, API czy środowiska kodu.</strong> Odchodzimy
+            od paradygmatu <i>"napisz mi raport"</i> na rzecz <i>"wyszukaj nowe leady w bazach, porównaj z rekordami w
+              Salesforce, wyciągnij powiązane kontakty, stwórz dla nich persony i skonfiguruj wstępne parametry kampanii
+              mailingowej, a następnie poproś mnie o zatwierdzenie"</i>. System agentowy nie polega tylko na modelu
+            językowym (LLM), ale uczy się samodzielnego planowania i wnioskowania (reasoning loop).</p>
 
-<h2>Jak wdrożyć AI (w formie Agenta) w firmie? Pierwsze kroki</h2>
-<p><strong>Automatyzacja procesów AI</strong> za pomocą LLM i narzędzi agentowych wymaga od klienta wcześniejszego przygotowania cyfrowego. Zanim firma wdroży samodzielnego asystenta (Agenta), jej środowisko chmurowe oraz bazy danych muszą zostać uporządkowane:</p>
-<ol>
-<li><strong>Ekstrakcja wiedzy:</strong> Przeniesienie procedur (np. z plików PDF), procesów workflow oraz notatek Sharepoint do dedykowanej wektorowej bazy (VectorDB) tak, by Agent "rozumiał" polityki firmy, odpowiadając na pytania użytkownika (architektura RAG). Oparcie bazy wiedzy wyłącznie na własnych dokumentach eliminuje problem "halucynacji", w którym modele zmyślają wiarygodnie brzmiące odpowiedzi.</li>
-<li><strong>Wykreowanie API dla narzędzi:</strong> Agenty wymagają odpowiedniego dostępu. Zespół PSLAB upewnia się, że firmowe systemy ERP i CRM posiadają bezpieczne interfejsy (REST API / webhooki). Programujemy dla Agenta pętlę decyzyjną oraz listę dozwolonych działań — np. odczyt danych z CRM lub wysłanie wiadomości na Slacku.</li>
-<li><strong>Guardrails i Nadzór:</strong> Ponieważ AI może podejmować autonomiczne decyzje, istnieje ryzyko wpadnięcia w nieskończoną pętlę poleceń. We wdrożeniach agentowych ustalamy na początku metodykę <i>Human-in-the-loop (HITL)</i>. Oznacza to, że każda krytyczna czynność (jak np. ostateczne uruchomienie masowej wysyłki e-maili) jest wstrzymywana i raportowana do uprawnionego administratora. Zakończy się dopiero po zatwierdzeniu przez autoryzowanego decydenta organizacyjnego. W ten sposób zawsze chronimy dane korporacyjne.</li>
-</ol>
+          <h2>Automatyzacja procesów AI za pomocą architektury Agenckiej</h2>
+          <p>We <a href="wdrozenie-sztucznej-inteligencji-ml.html">wdrożeniach sztucznej inteligencji</a> dla firm
+            korzysta się często z bibliotek i frameworków, takich jak LangGraph, Microsoft AutoGen czy wzorzec ReAct.
+            Powstała w ten sposób architektura pozwala systemowi iteratywnie wywoływać poszczególne narzędzia (tzw.
+            <i>tool calls</i>).</p>
+          <p>Dla przykładu, w procesie obsługi reklamacji lub naprawy Agent AI może samodzielnie zweryfikować dane u
+            dostawcy: zaloguje się do systemu CRM, sprawdzi numer VIN lub kod zamówienia e-commerce i ustali, kiedy
+            produkt faktycznie opuścił magazyn. Następnie skonsultuje się z predefiniowaną bazą wiedzy (RAG) by ocenić,
+            czy warunki gwarancyjne zostały dotrzymane. Na koniec powiadomi na Slacku specjalistę technicznego z
+            helpdesku i wygeneruje odpowiednie zgłoszenie w systemie Jira.</p>
 
-<div class="article-cta"><h3>Szukasz automatyzacji na poziomie Agentic AI?</h3><p>Poznaj w praktyce nasze wdrożenia za pomocą Google Gemini Pro i OpenAI dla sektora usług z RAG. Możemy ocenić Twój pomysł.</p><a href="../#kontakt" class="btn btn--primary">Poznaj potencjał systemów AI →</a></div>
-</div></div></section></main>
-<footer class="footer"><div class="container"><div class="footer__inner"><a href="../" class="footer__logo"><img src="../img/pslab-logo-3c-440px.png" alt="PSLAB"/></a><nav class="footer__nav" aria-label="Mapa strony">
+          <h2>Jak wdrożyć AI (w formie Agenta) w firmie? Pierwsze kroki</h2>
+          <p><strong>Automatyzacja procesów AI</strong> za pomocą LLM i narzędzi agentowych wymaga od klienta
+            wcześniejszego przygotowania cyfrowego. Zanim firma wdroży samodzielnego asystenta (Agenta), jej środowisko
+            chmurowe oraz bazy danych muszą zostać uporządkowane:</p>
+          <ol>
+            <li><strong>Ekstrakcja wiedzy:</strong> Przeniesienie procedur (np. z plików PDF), procesów workflow oraz
+              notatek Sharepoint do dedykowanej wektorowej bazy (VectorDB) tak, by Agent "rozumiał" polityki firmy,
+              odpowiadając na pytania użytkownika (architektura RAG). Oparcie bazy wiedzy wyłącznie na własnych
+              dokumentach eliminuje problem "halucynacji", w którym modele zmyślają wiarygodnie brzmiące odpowiedzi.
+            </li>
+            <li><strong>Wykreowanie API dla narzędzi:</strong> Agenty wymagają odpowiedniego dostępu. Zespół PSLAB
+              upewnia się, że firmowe systemy ERP i CRM posiadają bezpieczne interfejsy (REST API / webhooki).
+              Programujemy dla Agenta pętlę decyzyjną oraz listę dozwolonych działań — np. odczyt danych z CRM lub
+              wysłanie wiadomości na Slacku.</li>
+            <li><strong>Guardrails i Nadzór:</strong> Ponieważ AI może podejmować autonomiczne decyzje, istnieje ryzyko
+              wpadnięcia w nieskończoną pętlę poleceń. We wdrożeniach agentowych ustalamy na początku metodykę
+              <i>Human-in-the-loop (HITL)</i>. Oznacza to, że każda krytyczna czynność (jak np. ostateczne uruchomienie
+              masowej wysyłki e-maili) jest wstrzymywana i raportowana do uprawnionego administratora. Zakończy się
+              dopiero po zatwierdzeniu przez autoryzowanego decydenta organizacyjnego. W ten sposób zawsze chronimy dane
+              korporacyjne.</li>
+          </ol>
+
+          <div class="article-cta">
+            <h3>Szukasz automatyzacji na poziomie Agentic AI?</h3>
+            <p>Poznaj w praktyce nasze wdrożenia za pomocą Google Gemini Pro i OpenAI dla sektora usług z RAG. Możemy
+              ocenić Twój pomysł.</p><a href="../#kontakt" class="btn btn--primary">Poznaj potencjał systemów AI →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner"><a href="../" class="footer__logo"><img src="../img/pslab-logo-3c-440px.png"
+            alt="PSLAB" /></a>
+        <nav class="footer__nav" aria-label="Mapa strony">
           <a href="../#uslugi">Usługi</a>
           <a href="../#cloud-computing">Cloud Computing</a>
           <a href="../#machine-learning-ai">AI / ML</a>
@@ -39,9 +141,16 @@
           <a href="../#zespol">Zespół</a>
           <a href="../#faq">FAQ</a>
           <a href="../#kontakt">Kontakt</a>
-        </nav><p class="footer__copy">&copy; 2026 PSLAB - Outsourcing IT, Cloud Computing, Sztuczna
+        </nav>
+        <p class="footer__copy">&copy; 2026 PSLAB - Outsourcing IT, Cloud Computing, Sztuczna
           Inteligencja - AI, Analityka Danych - Business Intelligence. | ul. Rolna 22, 43-100 Tychy | <a
             href="tel:+48792336306">+48 792 336 306</a>
           | <a href="mailto:kontakt@pslab.eu">kontakt@pslab.eu</a><br /><strong>NIP:</strong> PL6462449298 | <strong>Nr
-            konta (ING):</strong> PL 06 1050 1399 1000 0090 7490 6562 | <strong>BIC/SWIFT:</strong> INGBPLPW</p></div></div></footer>
-<script src="../main.js"></script></body></html>
+            konta (ING):</strong> PL 06 1050 1399 1000 0090 7490 6562 | <strong>BIC/SWIFT:</strong> INGBPLPW</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../main.js"></script>
+</body>
+
+</html>

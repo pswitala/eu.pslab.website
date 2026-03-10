@@ -1,78 +1,163 @@
-<!DOCTYPE html><html lang="pl"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>Hybrydowe środowisko IT uczelni wyższej – Case Study | PSLAB</title><meta name="description" content="Case study: budowa hybrydowego środowiska IT uczelni wyższej. Azure AD, on-premise HPC, Microsoft 365 for Education, SIEM, VPN, Active Directory."/><meta name="robots" content="index,follow"/><link rel="canonical" href="https://pslab.eu/case-study/hybrydowe-srodowisko-uczelnia.html"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/><link rel="stylesheet" href="../index.css"/><link rel="stylesheet" href="../article.css"/>  <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
-</head><body>
-<div class="bg-grid"></div>
-<nav class="navbar scrolled" id="navbar"><div class="container"><a href="../" class="navbar__logo"><img src="../img/pslab-logo-3c-440px.png" alt="PSLAB"/></a><ul class="navbar__links" id="navLinks"><li><a href="../#uslugi">Usługi</a></li><li><a href="../#zespol">Zespół</a></li><li><a href="../baza-wiedzy/">Baza wiedzy</a></li><li><a href="./">Case Studies</a></li><li><a href="../#kontakt">Kontakt</a></li></ul><button class="navbar__burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button></div></nav>
-<main class="article-page">
-<section class="article-hero"><div class="container">
-<div class="article-hero__breadcrumb"><a href="../">PSLAB</a><span>›</span><a href="./">Case Studies</a><span>›</span>Infrastruktura hybrydowa</div>
-<h1 class="article-hero__title">Hybrydowe środowisko IT uczelni wyższej</h1>
-<div class="article-hero__meta"><span class="article-hero__meta-item">?? Infrastruktura hybrydowa</span><span class="article-hero__meta-item">?? 2024</span><span class="article-hero__meta-item">? 7 min czytania</span></div>
-</div></section>
-<section class="article-content"><div class="container"><div class="article-body">
+<!DOCTYPE html>
+<html lang="pl">
 
-<div class="cs-meta">
-  <div class="cs-meta__item"><div class="cs-meta__label">Klient</div><div class="cs-meta__value">Uczelnia wyższa, 5000+ studentów</div></div>
-  <div class="cs-meta__item"><div class="cs-meta__label">Branża</div><div class="cs-meta__value">Edukacja wyższa</div></div>
-  <div class="cs-meta__item"><div class="cs-meta__label">Okres realizacji</div><div class="cs-meta__value">Q2 2024 – Q1 2025</div></div>
-  <div class="cs-meta__item"><div class="cs-meta__label">Platforma</div><div class="cs-meta__value">Azure + On-premise (hybrydowa)</div></div>
-</div>
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GT-W6J5JLW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-<h2>Wyzwanie</h2>
-<p>Uczelnia wyższa z 5000+ studentów i 400+ pracowników akademickich borykała się z przestarzałą infrastrukturą IT. Kluczowe problemy:</p>
-<ul>
-<li><strong>Rozproszone systemy tożsamości</strong> — oddzielne konta w Active Directory, systemie dziekanatowym, platformie e-learningowej (Moodle) i bibliotece. Studenci zarządzali 4-5 różnymi loginami.</li>
-<li><strong>Starzejące się serwery</strong> — trzy serwerownie z serwerami 8-12 lat, brak redundancji, ryzyko utraty danych.</li>
-<li><strong>Brak cyberbezpieczeństwa</strong> — brak SIEM, brak centralnego monitoringu, incydenty phishingowe co tydzień.</li>
-<li><strong>Wymagania obliczeniowe</strong> — laboratoria naukowe potrzebowały klastra HPC (High-Performance Computing) do obliczeń, który nie mógł być całkowicie w chmurze ze względu na wymagania dotyczące latencji i kosztów GPU.</li>
-</ul>
+    gtag('config', 'GT-W6J5JLW');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Hybrydowe środowisko IT uczelni wyższej - Case Study | PSLAB</title>
+  <meta name="description"
+    content="Case study: budowa hybrydowego środowiska IT uczelni wyższej. Azure AD, on-premise HPC, Microsoft 365 for Education, SIEM, VPN, Active Directory." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://pslab.eu/case-study/hybrydowe-srodowisko-uczelnia.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../index.css" />
+  <link rel="stylesheet" href="../article.css" />
+  <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+</head>
 
-<h2>Rozwiązanie — architektura hybrydowa</h2>
-<p>Zaprojektowaliśmy <strong>hybrydowe środowisko IT</strong> łączące zalety chmury (Azure) z niezbędną infrastrukturą on-premise:</p>
+<body>
+  <div class="bg-grid"></div>
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container"><a href="../" class="navbar__logo"><img src="../img/pslab-logo-3c-440px.png"
+          alt="PSLAB" /></a>
+      <ul class="navbar__links" id="navLinks">
+        <li><a href="../#uslugi">Usługi</a></li>
+        <li><a href="../#zespol">Zespół</a></li>
+        <li><a href="../baza-wiedzy/">Baza wiedzy</a></li>
+        <li><a href="./">Case Studies</a></li>
+        <li><a href="../#kontakt">Kontakt</a></li>
+      </ul><button class="navbar__burger" id="navBurger"
+        aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <main class="article-page">
+    <section class="article-hero">
+      <div class="container">
+        <div class="article-hero__breadcrumb"><a href="../">PSLAB</a><span>></span><a href="./">Case
+            Studies</a><span>></span>Infrastruktura hybrydowa</div>
+        <h1 class="article-hero__title">Hybrydowe środowisko IT uczelni wyższej</h1>
+        <div class="article-hero__meta"><span class="article-hero__meta-item">Infrastruktura hybrydowa</span><span
+            class="article-hero__meta-item">📅 2023</span><span class="article-hero__meta-item">⏱ 8 min czytania</span>
+        </div>
+      </div>
+    </section>
+    <section class="article-content">
+      <div class="container">
+        <div class="article-body">
 
-<h3>Chmura (Azure)</h3>
-<ul>
-<li><strong>Azure AD + Azure AD Connect</strong> — synchronizacja on-premise AD z Azure AD. SSO do wszystkich systemów (Moodle, USOS, biblioteka, poczta).</li>
-<li><strong>Microsoft 365 A3 for Education</strong> — poczta Exchange Online, Teams, OneDrive, SharePoint dla 5400+ użytkowników (studenci + pracownicy).</li>
-<li><strong>Azure App Proxy</strong> — bezpieczny dostęp do aplikacji on-premise (USOS, system biblioteczny) bez VPN.</li>
-<li><strong>Azure Virtual Desktop (AVD)</strong> — laboratoria zdalne ze specjalistycznym oprogramowaniem (MATLAB, AutoCAD, SPSS).</li>
-<li><strong>Microsoft Sentinel</strong> — cloud-native SIEM do centralnego monitoringu bezpieczeństwa całej infrastruktury.</li>
-</ul>
+          <div class="cs-meta">
+            <div class="cs-meta__item">
+              <div class="cs-meta__label">Klient</div>
+              <div class="cs-meta__value">Uczelnia wyższa, 20 000 studentów</div>
+            </div>
+            <div class="cs-meta__item">
+              <div class="cs-meta__label">Branża</div>
+              <div class="cs-meta__value">Edukacja wyższa</div>
+            </div>
+            <div class="cs-meta__item">
+              <div class="cs-meta__label">Okres realizacji</div>
+              <div class="cs-meta__value">Q2 2022 - Q3 2023</div>
+            </div>
+            <div class="cs-meta__item">
+              <div class="cs-meta__label">Platforma</div>
+              <div class="cs-meta__value">AWS (Main) + Azure + Office365</div>
+            </div>
+          </div>
 
-<h3>On-premise</h3>
-<ul>
-<li><strong>Klaster HPC</strong> — 12 serwerów z GPU NVIDIA A100 do obliczeń naukowych. Bezpośrednie podłączenie do instrumentów laboratoryjnych.</li>
-<li><strong>Sieć kampusowa</strong> — redesign sieci: Cisco Catalyst core switches, FortiGate firewall, Ubiquiti UniFi WiFi 6 (120+ access pointów).</li>
-<li><strong>Active Directory</strong> — utrzymany on-premise z hybrid join do Azure AD.</li>
-<li><strong>Backup</strong> — strategia 3-2-1: lokalne backupy + Azure Backup (off-site).</li>
-</ul>
+          <h2>Wyzwanie</h2>
+          <p>Uczelnia wyższa z 20 000+ studentów, 2000+ wykładowcami i 500 pracownikami administracji borykała się z ogromną skalą rozproszonych systemów. Kluczowe problemy:</p>
+          <ul>
+            <li><strong>Rozproszone systemy tożsamości</strong> — studenci i wykładowcy zarządzali wieloma kontami, co generowało tysiące zgłoszeń do helpdesku miesięcznie.
+            </li>
+            <li><strong>Wydajność analityczna</strong> — brak centralnego systemu raportowego dla tak dużej populacji studentów utrudniał zarządzanie dydaktyką i budżetem.</li>
+            <li><strong>Skalowalność aplikacji</strong> — systemy dziekanatowe i e-learningowe nie radziły sobie z obciążeniem podczas sesji i rekrutacji.</li>
+            <li><strong>Bezpieczeństwo danych</strong> — konieczność centralizacji monitoringu dla ogromnej floty urządzeń w kampusie i chmurze.</li>
+          </ul>
 
-<div class="cs-tech">
-<span class="tag">Azure AD</span><span class="tag">Microsoft 365</span><span class="tag">Azure Virtual Desktop</span><span class="tag">Microsoft Sentinel</span><span class="tag">Azure App Proxy</span><span class="tag">Active Directory</span><span class="tag">Cisco Catalyst</span><span class="tag">FortiGate</span><span class="tag">UniFi WiFi 6</span><span class="tag">HPC / GPU</span><span class="tag">NVIDIA A100</span><span class="tag">Azure Backup</span>
-</div>
+          <h2>Rozwiązanie — Multi-cloud z przewagą AWS</h2>
+          <p>Zaprojektowaliśmy <strong>hybrydowe środowisko IT</strong>, w którym AWS pełni rolę głównej platformy infrastrukturalnej i analitycznej, a Azure zapewnia tożsamość i produktywność:</p>
 
-<h2>Bezpieczeństwo i NIS2</h2>
-<p>Uczelnia jako instytucja z sektora edukacji podlega dyrektywie <strong>NIS2</strong>. Wdrożyliśmy:</p>
-<ul>
-<li><strong>Microsoft Sentinel</strong> — centralny SIEM agregujący logi z Azure, firewalli, serwerów on-premise i urządzeń sieciowych.</li>
-<li><strong>Threat intelligence</strong> — automatyczne korelowanie alertów z bazami zagrożeń.</li>
-<li><strong>Incident response playbooki</strong> — zautomatyzowane reakcje na typowe incydenty (blokowanie IP, izolowanie urządzenia).</li>
-<li><strong>MFA everywhere</strong> — Conditional Access wymuszający MFA dla wszystkich użytkowników.</li>
-</ul>
+          <h3>Infrastruktura i Aplikacje (AWS)</h3>
+          <ul>
+            <li><strong>Amazon EKS (Elastic Kubernetes Service)</strong> — konteneryzacja systemów dziekanatowych i Moodle, zapewniająca automatyczne skalowanie podczas szczytów obciążenia.</li>
+            <li><strong>Analityka i Big Data</strong> — wdrożenie <strong>Amazon Redshift</strong> jako hurtowni danych oraz <strong>Amazon QuickSight</strong> do dashboardów menedżerskich i rektorskich.</li>
+            <li><strong>Bezpieczeństwo AWS</strong> — <strong>AWS Security Hub</strong> oraz GuardDuty do ciągłego monitoringu zagrożeń i zgodności.</li>
+            <li><strong>Obliczenia HPC</strong> — klaster obliczeniowy wykorzystujący instancje Amazon EC2 z GPU do zaawansowanych badań naukowych.</li>
+          </ul>
 
-<h2>Rezultaty</h2>
-<div class="cs-results">
-<div class="cs-result"><div class="cs-result__number">5400+</div><div class="cs-result__label">użytkowników z SSO</div></div>
-<div class="cs-result"><div class="cs-result__number">1 login</div><div class="cs-result__label">zamiast 4-5</div></div>
-<div class="cs-result"><div class="cs-result__number">-95%</div><div class="cs-result__label">incydentów phishingowych</div></div>
-<div class="cs-result"><div class="cs-result__number">100%</div><div class="cs-result__label">zgodność z NIS2</div></div>
-</div>
+          <h3>Tożsamość i Produktywność (Azure & Office 365)</h3>
+          <ul>
+            <li><strong>Azure AD + Azure AD Connect</strong> — centralne źródło prawdy dla 22 500+ tożsamości. Synchronizacja z lokalnym Active Directory i SSO do wszystkich usług (w tym AWS).</li>
+            <li><strong>Microsoft 365 A3 for Education</strong> — pełny pakiet biurowy, Teams i poczta Exchange dla całej społeczności akademickiej.</li>
+            <li><strong>Azure App Proxy</strong> — bezpieczny dostęp do zasobów on-premise bez konieczności zestawiania skomplikowanych połączeń VPN dla każdego pracownika.</li>
+          </ul>
 
-<div class="article-highlight"><p><strong>Podejście hybrydowe pozwoliło:</strong> zachować klaster HPC on-premise (niskie latencje, kontrola kosztów GPU) przy jednoczesnym przeniesieniu produktywności, tożsamości i bezpieczeństwa do chmury. Uczelnia oszczędza ~35% kosztów IT w porównaniu do full on-premise.</p></div>
+          <h3>On-premise</h3>
+          <ul>
+            <li><strong>Sieć kampusowa</strong> — redesign sieci szkieletowej: Cisco Catalyst core switches, FortiGate firewalls oraz rozległa sieć WiFi 6 (UniFi) pokrywająca cały kampus.</li>
+            <li><strong>Hybrid Storage</strong> — wykorzystanie Amazon S3 i AWS Storage Gateway do backupu i archiwizacji danych naukowych.</li>
+          </ul>
 
-<div class="article-cta"><h3>Potrzebujesz infrastruktury hybrydowej?</h3><p>Skontaktuj się — zaprojektujemy środowisko łączące chmurę z on-premise.</p><a href="../#kontakt" class="btn btn--primary">Bezpłatna konsultacja ›</a></div>
-</div></div></section>
-</main>
-<footer class="footer"><div class="container"><div class="footer__inner"><a href="../" class="footer__logo"><img src="../img/pslab-logo-3c-440px.png" alt="PSLAB"/></a><nav class="footer__nav" aria-label="Mapa strony">
+          <div class="cs-tech">
+            <span class="tag">AWS (Main)</span><span class="tag">Amazon EKS</span><span class="tag">Amazon Redshift</span><span class="tag">Amazon QuickSight</span><span class="tag">AWS Security Hub</span><span class="tag">Azure AD</span><span class="tag">Microsoft 365</span><span class="tag">Active Directory</span><span class="tag">Cisco Catalyst</span><span class="tag">FortiGate</span><span class="tag">UniFi WiFi 6</span><span class="tag">Amazon S3</span>
+          </div>
+
+          <h2>Bezpieczeństwo i Zgodność</h2>
+          <p>Jako podmiot sektora publicznego, uczelnia musi spełniać rygorystyczne normy bezpieczeństwa, w tym <strong>NIS2</strong>. Implementacja objęła:</p>
+          <ul>
+            <li><strong>AWS Security Hub</strong> — centralny panel zarządzania bezpieczeństwem infrastruktury w chmurze AWS.</li>
+            <li><strong>MFA everywhere</strong> — bezwzględny wymóg uwierzytelniania wieloskładnikowego dla wykładowców, administracji i studentów przy dostępie do wrażliwych danych.</li>
+            <li><strong>Zautomatyzowany Backup</strong> — wykorzystanie AWS Backup i Azure Backup w strategii 3-2-1 dla kluczowych systemów.</li>
+          </ul>
+
+          <h2>Rezultaty</h2>
+          <div class="cs-results">
+            <div class="cs-result">
+              <div class="cs-result__number">22 500+</div>
+              <div class="cs-result__label">użytkowników z SSO</div>
+            </div>
+            <div class="cs-result">
+              <div class="cs-result__number">1 login</div>
+              <div class="cs-result__label">zamiast wielu</div>
+            </div>
+            <div class="cs-result">
+              <div class="cs-result__number">Real-time</div>
+              <div class="cs-result__label">raporty QuickSight</div>
+            </div>
+            <div class="cs-result">
+              <div class="cs-result__number">99.99%</div>
+              <div class="cs-result__label">dostępność systemów</div>
+            </div>
+          </div>
+
+          <div class="article-highlight">
+            <p><strong>Zastosowanie multi-cloud (AWS + Azure):</strong> pozwoliło nam połączyć światowej klasy analitykę Redshift i skalowalność EKS z chmury AWS z najwyższym standardem zarządzania tożsamością w Azure AD. Rozwiązanie to pozwoliło uczelni obsłużyć 20 000 studentów przy mniejszym nakładzie pracy administracyjnej.</p>
+          </div>
+
+          <div class="article-cta">
+            <h3>Potrzebujesz infrastruktury hybrydowej?</h3>
+            <p>Skontaktuj się — zaprojektujemy środowisko łączące chmurę z on-premise.</p><a href="../#kontakt"
+              class="btn btn--primary">Bezpłatna konsultacja ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner"><a href="../" class="footer__logo"><img src="../img/pslab-logo-3c-440px.png"
+            alt="PSLAB" /></a>
+        <nav class="footer__nav" aria-label="Mapa strony">
           <a href="../#uslugi">Usługi</a>
           <a href="../#cloud-computing">Cloud Computing</a>
           <a href="../#machine-learning-ai">AI / ML</a>
@@ -84,9 +169,16 @@
           <a href="../#zespol">Zespół</a>
           <a href="../#faq">FAQ</a>
           <a href="../#kontakt">Kontakt</a>
-        </nav><p class="footer__copy">&copy; 2026 PSLAB - Outsourcing IT, Cloud Computing, Sztuczna
+        </nav>
+        <p class="footer__copy">&copy; 2026 PSLAB - Outsourcing IT, Cloud Computing, Sztuczna
           Inteligencja - AI, Analityka Danych - Business Intelligence. | ul. Rolna 22, 43-100 Tychy | <a
             href="tel:+48792336306">+48 792 336 306</a>
           | <a href="mailto:kontakt@pslab.eu">kontakt@pslab.eu</a><br /><strong>NIP:</strong> PL6462449298 | <strong>Nr
-            konta (ING):</strong> PL 06 1050 1399 1000 0090 7490 6562 | <strong>BIC/SWIFT:</strong> INGBPLPW</p></div></div></footer>
-<script src="../main.js"></script></body></html>
+            konta (ING):</strong> PL 06 1050 1399 1000 0090 7490 6562 | <strong>BIC/SWIFT:</strong> INGBPLPW</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../main.js"></script>
+</body>
+
+</html>

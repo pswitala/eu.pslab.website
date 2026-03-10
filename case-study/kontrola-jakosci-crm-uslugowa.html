@@ -1,53 +1,146 @@
-<!DOCTYPE html><html lang="pl"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>Kontrola jakości wdrożenia CRM dla firmy usługowej – Case Study | PSLAB</title><meta name="description" content="Case study: nadzór i kontrola jakości wdrożenia systemu CRM dla firmy usługowej. QA, testy regresyjne, zarządzanie ryzykiem, odbiory techniczne."/><meta name="robots" content="index,follow"/><link rel="canonical" href="https://pslab.eu/case-study/kontrola-jakosci-crm-uslugowa.html"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/><link rel="stylesheet" href="../index.css"/><link rel="stylesheet" href="../article.css"/>  <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
-</head><body>
-<div class="bg-grid"></div>
-<nav class="navbar scrolled" id="navbar"><div class="container"><a href="../" class="navbar__logo"><img src="../img/pslab-logo-3c-440px.png" alt="PSLAB"/></a><ul class="navbar__links" id="navLinks"><li><a href="../#uslugi">Usługi</a></li><li><a href="../#zespol">Zespół</a></li><li><a href="../baza-wiedzy/">Baza wiedzy</a></li><li><a href="./">Case Studies</a></li><li><a href="../#kontakt">Kontakt</a></li></ul><button class="navbar__burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button></div></nav>
-<main class="article-page">
-<section class="article-hero"><div class="container">
-<div class="article-hero__breadcrumb"><a href="../">PSLAB</a><span>›</span><a href="./">Case Studies</a><span>›</span>Nadzór wdrożeń</div>
-<h1 class="article-hero__title">Kontrola jakości wdrożenia CRM dla firmy usługowej</h1>
-<div class="article-hero__meta"><span class="article-hero__meta-item">✓ Nadzór IT</span><span class="article-hero__meta-item">📅 2023</span><span class="article-hero__meta-item">⏱ 6 min czytania</span></div>
-</div></section>
-<section class="article-content"><div class="container"><div class="article-body">
+<!DOCTYPE html>
+<html lang="pl">
 
-<div class="cs-meta">
-  <div class="cs-meta__item"><div class="cs-meta__label">Klient</div><div class="cs-meta__value">Firma usługowa B2B, 180 pracowników</div></div>
-  <div class="cs-meta__item"><div class="cs-meta__label">Branża</div><div class="cs-meta__value">Usługi profesjonalne</div></div>
-  <div class="cs-meta__item"><div class="cs-meta__label">Okres realizacji</div><div class="cs-meta__value">Q1–Q3 2023</div></div>
-  <div class="cs-meta__item"><div class="cs-meta__label">Rola PSLAB</div><div class="cs-meta__value">Niezależny nadzór techniczny</div></div>
-</div>
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GT-W6J5JLW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-<h2>Wyzwanie</h2>
-<p>Firma usługowa B2B zdecydowała się na wdrożenie systemu CRM (Salesforce) przez zewnętrznego integratora. Po 4 miesiącach pracy projekt wykazywał opóźnienia (30% vs harmonogram), a pierwszy release zawierał 47 krytycznych błędów wykrytych przez użytkowników końcowych. Zarząd stracił zaufanie do integratora i potrzebował niezależnej osoby/firmy, która oceni stan projektu i będzie nadzorować dalsze prace.</p>
+    gtag('config', 'GT-W6J5JLW');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Kontrola jakości wdrożenia CRM dla firmy usługowej - Case Study | PSLAB</title>
+  <meta name="description"
+    content="Case study: nadzór i kontrola jakości wdrożenia systemu CRM dla firmy usługowej. QA, testy regresyjne, zarządzanie ryzykiem, odbiory techniczne." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://pslab.eu/case-study/kontrola-jakosci-crm-uslugowa.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../index.css" />
+  <link rel="stylesheet" href="../article.css" />
+  <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+</head>
 
-<h2>Rozwiązanie</h2>
-<p>PSLAB objął rolę <strong>niezależnego nadzoru technicznego</strong> nad wdrożeniem CRM:</p>
-<ol>
-<li><strong>Audyt stanu projektu</strong> — przegląd kodu, konfiguracji Salesforce, dokumentacji technicznej, rejestr 127 issues z kategoryzacją (krytyczne/wysokie/średnie/niskie).</li>
-<li><strong>Plan naprawczy</strong> — priorytyzacja issues, nowy harmonogram z realnymi milestone'ami, definicja kryteriów akceptacji (DoD) dla każdego deliverable'a.</li>
-<li><strong>QA i testy regresyjne</strong> — wdrożenie procesu testowania: scenariusze testowe (180 test cases), testy regresyjne po każdym release, testy wydajnościowe (load testing 500 concurrent users).</li>
-<li><strong>Odbiory techniczne</strong> — formalny proces odbiorów z checklistą (funkcjonalność, wydajność, bezpieczeństwo, dokumentacja), sign-off zarządu przed go-live.</li>
-<li><strong>Zarządzanie ryzykiem</strong> — macierz ryzyk aktualizowana co sprint, eskalacja do steering committee, raport statusu co 2 tygodnie.</li>
-</ol>
+<body>
+  <div class="bg-grid"></div>
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container"><a href="../" class="navbar__logo"><img src="../img/pslab-logo-3c-440px.png"
+          alt="PSLAB" /></a>
+      <ul class="navbar__links" id="navLinks">
+        <li><a href="../#uslugi">Usługi</a></li>
+        <li><a href="../#zespol">Zespół</a></li>
+        <li><a href="../baza-wiedzy/">Baza wiedzy</a></li>
+        <li><a href="./">Case Studies</a></li>
+        <li><a href="../#kontakt">Kontakt</a></li>
+      </ul><button class="navbar__burger" id="navBurger"
+        aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <main class="article-page">
+    <section class="article-hero">
+      <div class="container">
+        <div class="article-hero__breadcrumb"><a href="../">PSLAB</a><span>></span><a href="./">Case
+            Studies</a><span>></span>Nadzór wdrożeń</div>
+        <h1 class="article-hero__title">Kontrola jakości wdrożenia CRM dla firmy usługowej</h1>
+        <div class="article-hero__meta"><span class="article-hero__meta-item">✓ Nadzór IT</span><span
+            class="article-hero__meta-item">📅 2023</span><span class="article-hero__meta-item">⏱ 6 min czytania</span>
+        </div>
+      </div>
+    </section>
+    <section class="article-content">
+      <div class="container">
+        <div class="article-body">
 
-<div class="cs-tech">
-<span class="tag">Salesforce</span><span class="tag">QA / Testing</span><span class="tag">Jira</span><span class="tag">Testy regresyjne</span><span class="tag">Load Testing</span><span class="tag">PRINCE2</span><span class="tag">Zarządzanie ryzykiem</span>
-</div>
+          <div class="cs-meta">
+            <div class="cs-meta__item">
+              <div class="cs-meta__label">Klient</div>
+              <div class="cs-meta__value">Firma usługowa B2B, 180 pracowników</div>
+            </div>
+            <div class="cs-meta__item">
+              <div class="cs-meta__label">Branża</div>
+              <div class="cs-meta__value">Usługi profesjonalne</div>
+            </div>
+            <div class="cs-meta__item">
+              <div class="cs-meta__label">Okres realizacji</div>
+              <div class="cs-meta__value">Q1-Q3 2023</div>
+            </div>
+            <div class="cs-meta__item">
+              <div class="cs-meta__label">Rola PSLAB</div>
+              <div class="cs-meta__value">Niezależny nadzór techniczny</div>
+            </div>
+          </div>
 
-<h2>Rezultaty</h2>
-<div class="cs-results">
-<div class="cs-result"><div class="cs-result__number">127→8</div><div class="cs-result__label">issues (119 zamkniętych)</div></div>
-<div class="cs-result"><div class="cs-result__number">0</div><div class="cs-result__label">krytycznych bugów w go-live</div></div>
-<div class="cs-result"><div class="cs-result__number">180</div><div class="cs-result__label">test cases pokrywających procesy</div></div>
-<div class="cs-result"><div class="cs-result__number">On time</div><div class="cs-result__label">go-live zgodnie z nowym planem</div></div>
-</div>
+          <h2>Wyzwanie</h2>
+          <p>Firma usługowa B2B zdecydowała się na wdrożenie systemu CRM (Salesforce) przez zewnętrznego integratora. Po
+            4 miesiącach pracy projekt wykazywał opóźnienia (30% vs harmonogram), a pierwszy release zawierał 47
+            krytycznych błędów wykrytych przez użytkowników końcowych. Zarząd stracił zaufanie do integratora i
+            potrzebował niezależnej osoby/firmy, która oceni stan projektu i będzie nadzorować dalsze prace.</p>
 
-<div class="article-highlight"><p><strong>Cytat klienta:</strong> „PSLAB uratował nasze wdrożenie CRM. Bez niezależnego nadzoru technicznego ten projekt skończyłby się fiaskiem. Teraz mamy działający system i pewność, że został przetestowany rzetelnie."</p></div>
+          <h2>Rozwiązanie</h2>
+          <p>PSLAB objął rolę <strong>niezależnego nadzoru technicznego</strong> nad wdrożeniem CRM:</p>
+          <ol>
+            <li><strong>Audyt stanu projektu</strong> — przegląd kodu, konfiguracji Salesforce, dokumentacji
+              technicznej, rejestr 127 issues z kategoryzacją (krytyczne/wysokie/średnie/niskie).</li>
+            <li><strong>Plan naprawczy</strong> — priorytyzacja issues, nowy harmonogram z realnymi milestone'ami,
+              definicja kryteriów akceptacji (DoD) dla każdego deliverable'a.</li>
+            <li><strong>QA i testy regresyjne</strong> — wdrożenie procesu testowania: scenariusze testowe (180 test
+              cases), testy regresyjne po każdym release, testy wydajnościowe (load testing 500 concurrent users).</li>
+            <li><strong>Odbiory techniczne</strong> — formalny proces odbiorów z checklistą (funkcjonalność, wydajność,
+              bezpieczeństwo, dokumentacja), sign-off zarządu przed go-live.</li>
+            <li><strong>Zarządzanie ryzykiem</strong> — macierz ryzyk aktualizowana co sprint, eskalacja do steering
+              committee, raport statusu co 2 tygodnie.</li>
+          </ol>
 
-<div class="article-cta"><h3>Potrzebujesz nadzoru nad wdrożeniem IT?</h3><p>Zapewnimy niezależną kontrolę jakości i odbiory techniczne Twojego projektu.</p><a href="../#kontakt" class="btn btn--primary">Skontaktuj się →</a></div>
-</div></div></section>
-</main>
-<footer class="footer"><div class="container"><div class="footer__inner"><a href="../" class="footer__logo"><img src="../img/pslab-logo-3c-440px.png" alt="PSLAB"/></a><nav class="footer__nav" aria-label="Mapa strony">
+          <div class="cs-tech">
+            <span class="tag">Salesforce</span><span class="tag">QA / Testing</span><span class="tag">Jira</span><span
+              class="tag">Testy regresyjne</span><span class="tag">Load Testing</span><span
+              class="tag">PRINCE2</span><span class="tag">Zarządzanie ryzykiem</span>
+          </div>
+
+          <h2>Rezultaty</h2>
+          <div class="cs-results">
+            <div class="cs-result">
+              <div class="cs-result__number">127→8</div>
+              <div class="cs-result__label">issues (119 zamkniętych)</div>
+            </div>
+            <div class="cs-result">
+              <div class="cs-result__number">0</div>
+              <div class="cs-result__label">krytycznych bugów w go-live</div>
+            </div>
+            <div class="cs-result">
+              <div class="cs-result__number">180</div>
+              <div class="cs-result__label">test cases pokrywających procesy</div>
+            </div>
+            <div class="cs-result">
+              <div class="cs-result__number">On time</div>
+              <div class="cs-result__label">go-live zgodnie z nowym planem</div>
+            </div>
+          </div>
+
+          <div class="article-highlight">
+            <p><strong>Cytat klienta:</strong> „PSLAB uratował nasze wdrożenie CRM. Bez niezależnego nadzoru
+              technicznego ten projekt skończyłby się fiaskiem. Teraz mamy działający system i pewność, że został
+              przetestowany rzetelnie."</p>
+          </div>
+
+          <div class="article-cta">
+            <h3>Potrzebujesz nadzoru nad wdrożeniem IT?</h3>
+            <p>Zapewnimy niezależną kontrolę jakości i odbiory techniczne Twojego projektu.</p><a href="../#kontakt"
+              class="btn btn--primary">Skontaktuj się →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner"><a href="../" class="footer__logo"><img src="../img/pslab-logo-3c-440px.png"
+            alt="PSLAB" /></a>
+        <nav class="footer__nav" aria-label="Mapa strony">
           <a href="../#uslugi">Usługi</a>
           <a href="../#cloud-computing">Cloud Computing</a>
           <a href="../#machine-learning-ai">AI / ML</a>
@@ -59,9 +152,16 @@
           <a href="../#zespol">Zespół</a>
           <a href="../#faq">FAQ</a>
           <a href="../#kontakt">Kontakt</a>
-        </nav><p class="footer__copy">&copy; 2026 PSLAB - Outsourcing IT, Cloud Computing, Sztuczna
+        </nav>
+        <p class="footer__copy">&copy; 2026 PSLAB - Outsourcing IT, Cloud Computing, Sztuczna
           Inteligencja - AI, Analityka Danych - Business Intelligence. | ul. Rolna 22, 43-100 Tychy | <a
             href="tel:+48792336306">+48 792 336 306</a>
           | <a href="mailto:kontakt@pslab.eu">kontakt@pslab.eu</a><br /><strong>NIP:</strong> PL6462449298 | <strong>Nr
-            konta (ING):</strong> PL 06 1050 1399 1000 0090 7490 6562 | <strong>BIC/SWIFT:</strong> INGBPLPW</p></div></div></footer>
-<script src="../main.js"></script></body></html>
+            konta (ING):</strong> PL 06 1050 1399 1000 0090 7490 6562 | <strong>BIC/SWIFT:</strong> INGBPLPW</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../main.js"></script>
+</body>
+
+</html>

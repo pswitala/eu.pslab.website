@@ -1,53 +1,143 @@
-<!DOCTYPE html><html lang="pl"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>Analityka predykcyjna na GCP dla sieci retail – Case Study | PSLAB</title><meta name="description" content="Case study: system analityki predykcyjnej na Google Cloud dla sieci handlowej. BigQuery ML, Looker, optymalizacja stanów magazynowych."/><meta name="robots" content="index,follow"/><link rel="canonical" href="https://pslab.eu/case-study/analityka-predykcyjna-gcp-retail.html"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/><link rel="stylesheet" href="../index.css"/><link rel="stylesheet" href="../article.css"/>  <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
-</head><body>
-<div class="bg-grid"></div>
-<nav class="navbar scrolled" id="navbar"><div class="container"><a href="../" class="navbar__logo"><img src="../img/pslab-logo-3c-440px.png" alt="PSLAB"/></a><ul class="navbar__links" id="navLinks"><li><a href="../#uslugi">Usługi</a></li><li><a href="../#zespol">Zespół</a></li><li><a href="../baza-wiedzy/">Baza wiedzy</a></li><li><a href="./">Case Studies</a></li><li><a href="../#kontakt">Kontakt</a></li></ul><button class="navbar__burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button></div></nav>
-<main class="article-page">
-<section class="article-hero"><div class="container">
-<div class="article-hero__breadcrumb"><a href="../">PSLAB</a><span>›</span><a href="./">Case Studies</a><span>›</span>GCP</div>
-<h1 class="article-hero__title">Analityka predykcyjna na GCP dla sieci retail</h1>
-<div class="article-hero__meta"><span class="article-hero__meta-item">? Google Cloud</span><span class="article-hero__meta-item">?? 2023</span><span class="article-hero__meta-item">? 5 min czytania</span></div>
-</div></section>
-<section class="article-content"><div class="container"><div class="article-body">
+<!DOCTYPE html>
+<html lang="pl">
 
-<div class="cs-meta">
-  <div class="cs-meta__item"><div class="cs-meta__label">Klient</div><div class="cs-meta__value">Sieć handlowa, 80+ sklepów</div></div>
-  <div class="cs-meta__item"><div class="cs-meta__label">Branża</div><div class="cs-meta__value">Retail / FMCG</div></div>
-  <div class="cs-meta__item"><div class="cs-meta__label">Okres realizacji</div><div class="cs-meta__value">Q1–Q3 2023</div></div>
-  <div class="cs-meta__item"><div class="cs-meta__label">Platforma</div><div class="cs-meta__value">Google Cloud Platform</div></div>
-</div>
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GT-W6J5JLW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-<h2>Wyzwanie</h2>
-<p>Sieć handlowa z 80+ punktami sprzedaży borykała się z problemem nadmiaru zapasów jednych produktów i brakami innych. Prognozy popytu opierały się na intuicji kupców i prostych regułach Excel. Brak centralnego systemu analitycznego powodował straty szacowane na 3-5 mln PLN rocznie z tytułu przeterminowanych produktów i utraconych sprzedaży.</p>
+    gtag('config', 'GT-W6J5JLW');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Analityka predykcyjna na GCP dla sieci retail - Case Study | PSLAB</title>
+  <meta name="description"
+    content="Case study: system analityki predykcyjnej na Google Cloud dla sieci handlowej. BigQuery ML, Looker, optymalizacja stanów magazynowych." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://pslab.eu/case-study/analityka-predykcyjna-gcp-retail.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../index.css" />
+  <link rel="stylesheet" href="../article.css" />
+  <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+</head>
 
-<h2>Rozwiązanie</h2>
-<p>Wdrożyliśmy platformę <strong>analityki predykcyjnej na GCP</strong>:</p>
-<ul>
-<li><strong>BigQuery</strong> — centralna hurtownia danych konsolidująca dane ze wszystkich sklepów (POS, ERP, dane pogodowe, kalendarze promocji).</li>
-<li><strong>BigQuery ML</strong> — modele prognozowania popytu (time-series forecasting) trenowane bezpośrednio w hurtowni danych bez potrzeby eksportu.</li>
-<li><strong>Looker</strong> — interaktywne dashboardy z prognozami popytu per SKU per sklep, z drill-down do poziomu dnia.</li>
-<li><strong>Cloud Composer (Airflow)</strong> — orkiestracja pipeline'ów ETL i re-training modeli ML.</li>
-<li><strong>Pub/Sub + Dataflow</strong> — streaming danych POS w czasie zbliżonym do real-time.</li>
-</ul>
+<body>
+  <div class="bg-grid"></div>
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container"><a href="../" class="navbar__logo"><img src="../img/pslab-logo-3c-440px.png"
+          alt="PSLAB" /></a>
+      <ul class="navbar__links" id="navLinks">
+        <li><a href="../#uslugi">Usługi</a></li>
+        <li><a href="../#zespol">Zespół</a></li>
+        <li><a href="../baza-wiedzy/">Baza wiedzy</a></li>
+        <li><a href="./">Case Studies</a></li>
+        <li><a href="../#kontakt">Kontakt</a></li>
+      </ul><button class="navbar__burger" id="navBurger"
+        aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <main class="article-page">
+    <section class="article-hero">
+      <div class="container">
+        <div class="article-hero__breadcrumb"><a href="../">PSLAB</a><span>></span><a href="./">Case
+            Studies</a><span>></span>GCP</div>
+        <h1 class="article-hero__title">Analityka predykcyjna na GCP dla sieci retail</h1>
+        <div class="article-hero__meta"><span class="article-hero__meta-item">? Google Cloud</span><span
+            class="article-hero__meta-item">?? 2023</span><span class="article-hero__meta-item">? 5 min czytania</span>
+        </div>
+      </div>
+    </section>
+    <section class="article-content">
+      <div class="container">
+        <div class="article-body">
 
-<div class="cs-tech">
-<span class="tag">BigQuery</span><span class="tag">BigQuery ML</span><span class="tag">Looker</span><span class="tag">Cloud Composer</span><span class="tag">Pub/Sub</span><span class="tag">Dataflow</span><span class="tag">Cloud Storage</span><span class="tag">Terraform</span>
-</div>
+          <div class="cs-meta">
+            <div class="cs-meta__item">
+              <div class="cs-meta__label">Klient</div>
+              <div class="cs-meta__value">Sieć handlowa, 80+ sklepów</div>
+            </div>
+            <div class="cs-meta__item">
+              <div class="cs-meta__label">Branża</div>
+              <div class="cs-meta__value">Retail / FMCG</div>
+            </div>
+            <div class="cs-meta__item">
+              <div class="cs-meta__label">Okres realizacji</div>
+              <div class="cs-meta__value">Q1-Q3 2023</div>
+            </div>
+            <div class="cs-meta__item">
+              <div class="cs-meta__label">Platforma</div>
+              <div class="cs-meta__value">Google Cloud Platform</div>
+            </div>
+          </div>
 
-<h2>Rezultaty</h2>
-<div class="cs-results">
-<div class="cs-result"><div class="cs-result__number">-35%</div><div class="cs-result__label">nadmiar zapasów</div></div>
-<div class="cs-result"><div class="cs-result__number">-60%</div><div class="cs-result__label">przeterminowane produkty</div></div>
-<div class="cs-result"><div class="cs-result__number">+12%</div><div class="cs-result__label">wzrost sprzedaży (mniej braków)</div></div>
-<div class="cs-result"><div class="cs-result__number">92%</div><div class="cs-result__label">dokładność prognoz</div></div>
-</div>
+          <h2>Wyzwanie</h2>
+          <p>Sieć handlowa z 80+ punktami sprzedaży borykała się z problemem nadmiaru zapasów jednych produktów i
+            brakami innych. Prognozy popytu opierały się na intuicji kupców i prostych regułach Excel. Brak centralnego
+            systemu analitycznego powodował straty szacowane na 3-5 mln PLN rocznie z tytułu przeterminowanych produktów
+            i utraconych sprzedaży.</p>
 
-<div class="article-highlight"><p><strong>Efekt biznesowy:</strong> ROI projektu wyniósł 380% w pierwszym roku. Zautomatyzowanie prognoz uwolniło czas kupców na zadania strategiczne zamiast ręcznego planowania w arkuszach.</p></div>
+          <h2>Rozwiązanie</h2>
+          <p>Wdrożyliśmy platformę <strong>analityki predykcyjnej na GCP</strong>:</p>
+          <ul>
+            <li><strong>BigQuery</strong> — centralna hurtownia danych konsolidująca dane ze wszystkich sklepów (POS,
+              ERP, dane pogodowe, kalendarze promocji).</li>
+            <li><strong>BigQuery ML</strong> — modele prognozowania popytu (time-series forecasting) trenowane
+              bezpośrednio w hurtowni danych bez potrzeby eksportu.</li>
+            <li><strong>Looker</strong> — interaktywne dashboardy z prognozami popytu per SKU per sklep, z drill-down do
+              poziomu dnia.</li>
+            <li><strong>Cloud Composer (Airflow)</strong> — orkiestracja pipeline'ów ETL i re-training modeli ML.</li>
+            <li><strong>Pub/Sub + Dataflow</strong> — streaming danych POS w czasie zbliżonym do real-time.</li>
+          </ul>
 
-<div class="article-cta"><h3>Potrzebujesz analityki predykcyjnej?</h3><p>Skontaktuj się — pokażemy, jak data science zwiększa przychody.</p><a href="../#kontakt" class="btn btn--primary">Bezpłatna konsultacja ›</a></div>
-</div></div></section>
-</main>
-<footer class="footer"><div class="container"><div class="footer__inner"><a href="../" class="footer__logo"><img src="../img/pslab-logo-3c-440px.png" alt="PSLAB"/></a><nav class="footer__nav" aria-label="Mapa strony">
+          <div class="cs-tech">
+            <span class="tag">BigQuery</span><span class="tag">BigQuery ML</span><span class="tag">Looker</span><span
+              class="tag">Cloud Composer</span><span class="tag">Pub/Sub</span><span class="tag">Dataflow</span><span
+              class="tag">Cloud Storage</span><span class="tag">Terraform</span>
+          </div>
+
+          <h2>Rezultaty</h2>
+          <div class="cs-results">
+            <div class="cs-result">
+              <div class="cs-result__number">-35%</div>
+              <div class="cs-result__label">nadmiar zapasów</div>
+            </div>
+            <div class="cs-result">
+              <div class="cs-result__number">-60%</div>
+              <div class="cs-result__label">przeterminowane produkty</div>
+            </div>
+            <div class="cs-result">
+              <div class="cs-result__number">+12%</div>
+              <div class="cs-result__label">wzrost sprzedaży (mniej braków)</div>
+            </div>
+            <div class="cs-result">
+              <div class="cs-result__number">92%</div>
+              <div class="cs-result__label">dokładność prognoz</div>
+            </div>
+          </div>
+
+          <div class="article-highlight">
+            <p><strong>Efekt biznesowy:</strong> ROI projektu wyniósł 380% w pierwszym roku. Zautomatyzowanie prognoz
+              uwolniło czas kupców na zadania strategiczne zamiast ręcznego planowania w arkuszach.</p>
+          </div>
+
+          <div class="article-cta">
+            <h3>Potrzebujesz analityki predykcyjnej?</h3>
+            <p>Skontaktuj się — pokażemy, jak data science zwiększa przychody.</p><a href="../#kontakt"
+              class="btn btn--primary">Bezpłatna konsultacja ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner"><a href="../" class="footer__logo"><img src="../img/pslab-logo-3c-440px.png"
+            alt="PSLAB" /></a>
+        <nav class="footer__nav" aria-label="Mapa strony">
           <a href="../#uslugi">Usługi</a>
           <a href="../#cloud-computing">Cloud Computing</a>
           <a href="../#machine-learning-ai">AI / ML</a>
@@ -59,9 +149,16 @@
           <a href="../#zespol">Zespół</a>
           <a href="../#faq">FAQ</a>
           <a href="../#kontakt">Kontakt</a>
-        </nav><p class="footer__copy">&copy; 2026 PSLAB - Outsourcing IT, Cloud Computing, Sztuczna
+        </nav>
+        <p class="footer__copy">&copy; 2026 PSLAB - Outsourcing IT, Cloud Computing, Sztuczna
           Inteligencja - AI, Analityka Danych - Business Intelligence. | ul. Rolna 22, 43-100 Tychy | <a
             href="tel:+48792336306">+48 792 336 306</a>
           | <a href="mailto:kontakt@pslab.eu">kontakt@pslab.eu</a><br /><strong>NIP:</strong> PL6462449298 | <strong>Nr
-            konta (ING):</strong> PL 06 1050 1399 1000 0090 7490 6562 | <strong>BIC/SWIFT:</strong> INGBPLPW</p></div></div></footer>
-<script src="../main.js"></script></body></html>
+            konta (ING):</strong> PL 06 1050 1399 1000 0090 7490 6562 | <strong>BIC/SWIFT:</strong> INGBPLPW</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../main.js"></script>
+</body>
+
+</html>

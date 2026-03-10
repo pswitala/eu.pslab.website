@@ -1,57 +1,154 @@
-<!DOCTYPE html><html lang="pl"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>Agentic AI — automatyzacja procesów dla dystrybutora – Case Study | PSLAB</title><meta name="description" content="Case study: wdrożenie systemu agentic AI do automatyzacji procesów biznesowych dla dystrybutora FMCG. Autonomiczne agenty AI, LangGraph, Python, integracja ERP."/><meta name="robots" content="index,follow"/><link rel="canonical" href="https://pslab.eu/case-study/agentic-ai-automatyzacja-procesow.html"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/><link rel="stylesheet" href="../index.css"/><link rel="stylesheet" href="../article.css"/>  <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
-</head><body>
-<div class="bg-grid"></div>
-<nav class="navbar scrolled" id="navbar"><div class="container"><a href="../" class="navbar__logo"><img src="../img/pslab-logo-3c-440px.png" alt="PSLAB"/></a><ul class="navbar__links" id="navLinks"><li><a href="../#uslugi">Usługi</a></li><li><a href="../#zespol">Zespół</a></li><li><a href="../baza-wiedzy/">Baza wiedzy</a></li><li><a href="./">Case Studies</a></li><li><a href="../#kontakt">Kontakt</a></li></ul><button class="navbar__burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button></div></nav>
-<main class="article-page">
-<section class="article-hero"><div class="container">
-<div class="article-hero__breadcrumb"><a href="../">PSLAB</a><span>›</span><a href="./">Case Studies</a><span>›</span>Agentic AI</div>
-<h1 class="article-hero__title">Agentic AI — automatyzacja procesów dla dystrybutora FMCG</h1>
-<div class="article-hero__meta"><span class="article-hero__meta-item">🤖 Agentic AI</span><span class="article-hero__meta-item">📅 2025</span><span class="article-hero__meta-item">⏱ 7 min czytania</span></div>
-</div></section>
-<section class="article-content"><div class="container"><div class="article-body">
+<!DOCTYPE html>
+<html lang="pl">
 
-<div class="cs-meta">
-  <div class="cs-meta__item"><div class="cs-meta__label">Klient</div><div class="cs-meta__value">Dystrybutor FMCG, 350+ pracowników, 6 magazynów</div></div>
-  <div class="cs-meta__item"><div class="cs-meta__label">Branża</div><div class="cs-meta__value">Dystrybucja / FMCG</div></div>
-  <div class="cs-meta__item"><div class="cs-meta__label">Okres realizacji</div><div class="cs-meta__value">Q1–Q3 2025</div></div>
-  <div class="cs-meta__item"><div class="cs-meta__label">Technologie</div><div class="cs-meta__value">LangGraph, Gemini, Python, AWS</div></div>
-</div>
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GT-W6J5JLW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-<h2>Wyzwanie</h2>
-<p>Dystrybutor FMCG przetwarzał dziennie ponad 1 200 zamówień z 3 kanałów (e-mail, EDI, portal B2B). Manualne procesy — weryfikacja stanów magazynowych, kalkulacja rabatów, generowanie dokumentów WZ, koordynacja z transportem — angażowały 12 osób i powodowały średnio 4% błędów w zamówieniach (niezgodności ilościowe, błędne ceny).</p>
-<p>Klient chciał wdrożyć <strong>autonomiczny system AI</strong>, który samodzielnie przetwarza zamówienia od momentu otrzymania do wysyłki, z minimalną interwencją człowieka.</p>
+    gtag('config', 'GT-W6J5JLW');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Agentic AI — automatyzacja procesów dla dystrybutora - Case Study | PSLAB</title>
+  <meta name="description"
+    content="Case study: wdrożenie systemu agentic AI do automatyzacji procesów biznesowych dla dystrybutora FMCG. Autonomiczne agenty AI, LangGraph, Python, integracja ERP." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://pslab.eu/case-study/agentic-ai-automatyzacja-procesow.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../index.css" />
+  <link rel="stylesheet" href="../article.css" />
+  <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+</head>
 
-<h2>Rozwiązanie</h2>
-<p>Zaprojektowaliśmy system <strong>agentic AI</strong> oparty na LangGraph — frameworku do budowy autonomicznych agentów AI z możliwością wywoływania narzędzi i podejmowania decyzji:</p>
-<ol>
-<li><strong>Agent parsowania zamówień</strong> — Gemini Pro parsuje zamówienia z różnych formatów (e-mail, PDF, EDI X12) do ustandaryzowanego JSON. Dokładność: 98.7%.</li>
-<li><strong>Agent walidacji</strong> — sprawdza stany magazynowe (API ERP), weryfikuje limity kredytowe klienta, kalkuluje rabaty według matrycy cenowej.</li>
-<li><strong>Agent logistyki</strong> — automatycznie przydziela zamówienie do optymalnego magazynu (odległość + dostępność), rezerwuje slot transportowy.</li>
-<li><strong>Agent dokumentów</strong> — generuje WZ, fakturę proforma i label wysyłkowy. Wysyła potwierdzenie do klienta.</li>
-<li><strong>Human-in-the-loop</strong> — zamówienia powyżej 50 000 PLN lub z nietypowymi rabatami trafiają do kolejki manualnej z rekomendacją agenta.</li>
-</ol>
+<body>
+  <div class="bg-grid"></div>
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container"><a href="../" class="navbar__logo"><img src="../img/pslab-logo-3c-440px.png"
+          alt="PSLAB" /></a>
+      <ul class="navbar__links" id="navLinks">
+        <li><a href="../#uslugi">Usługi</a></li>
+        <li><a href="../#zespol">Zespół</a></li>
+        <li><a href="../baza-wiedzy/">Baza wiedzy</a></li>
+        <li><a href="./">Case Studies</a></li>
+        <li><a href="../#kontakt">Kontakt</a></li>
+      </ul><button class="navbar__burger" id="navBurger"
+        aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <main class="article-page">
+    <section class="article-hero">
+      <div class="container">
+        <div class="article-hero__breadcrumb"><a href="../">PSLAB</a><span>></span><a href="./">Case
+            Studies</a><span>></span>Agentic AI</div>
+        <h1 class="article-hero__title">Agentic AI — automatyzacja procesów dla dystrybutora FMCG</h1>
+        <div class="article-hero__meta"><span class="article-hero__meta-item">🤖 Agentic AI</span><span
+            class="article-hero__meta-item">📅 2025</span><span class="article-hero__meta-item">⏱ 7 min czytania</span>
+        </div>
+      </div>
+    </section>
+    <section class="article-content">
+      <div class="container">
+        <div class="article-body">
 
-<div class="cs-tech">
-<span class="tag">LangGraph</span><span class="tag">Gemini Pro</span><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">AWS Lambda</span><span class="tag">SQS</span><span class="tag">DynamoDB</span><span class="tag">SAP API</span><span class="tag">Redis</span>
-</div>
+          <div class="cs-meta">
+            <div class="cs-meta__item">
+              <div class="cs-meta__label">Klient</div>
+              <div class="cs-meta__value">Dystrybutor FMCG, 350+ pracowników, 6 magazynów</div>
+            </div>
+            <div class="cs-meta__item">
+              <div class="cs-meta__label">Branża</div>
+              <div class="cs-meta__value">Dystrybucja / FMCG</div>
+            </div>
+            <div class="cs-meta__item">
+              <div class="cs-meta__label">Okres realizacji</div>
+              <div class="cs-meta__value">Q1-Q3 2025</div>
+            </div>
+            <div class="cs-meta__item">
+              <div class="cs-meta__label">Technologie</div>
+              <div class="cs-meta__value">LangGraph, Gemini, Python, AWS</div>
+            </div>
+          </div>
 
-<h2>Monitoring i uczenie</h2>
-<p>System posiada dashboard real-time z metrykami: liczba przetworzonych zamówień, czas procesowania, dokładność parsowania, liczba eskalacji do człowieka. Feedbacki od operatorów (poprawki do decyzji agenta) są wykorzystywane do fine-tuningu promptów i reguł walidacji.</p>
+          <h2>Wyzwanie</h2>
+          <p>Dystrybutor FMCG przetwarzał dziennie ponad 1 200 zamówień z 3 kanałów (e-mail, EDI, portal B2B). Manualne
+            procesy — weryfikacja stanów magazynowych, kalkulacja rabatów, generowanie dokumentów WZ, koordynacja z
+            transportem — angażowały 12 osób i powodowały średnio 4% błędów w zamówieniach (niezgodności ilościowe,
+            błędne ceny).</p>
+          <p>Klient chciał wdrożyć <strong>autonomiczny system AI</strong>, który samodzielnie przetwarza zamówienia od
+            momentu otrzymania do wysyłki, z minimalną interwencją człowieka.</p>
 
-<h2>Rezultaty</h2>
-<div class="cs-results">
-<div class="cs-result"><div class="cs-result__number">85%</div><div class="cs-result__label">zamówień przetwarzanych automatycznie</div></div>
-<div class="cs-result"><div class="cs-result__number">0.3%</div><div class="cs-result__label">błędów (z 4%)</div></div>
-<div class="cs-result"><div class="cs-result__number">12→4</div><div class="cs-result__label">osób w procesie zamówień</div></div>
-<div class="cs-result"><div class="cs-result__number">&lt;90s</div><div class="cs-result__label">czas przetwarzania zamówienia</div></div>
-</div>
+          <h2>Rozwiązanie</h2>
+          <p>Zaprojektowaliśmy system <strong>agentic AI</strong> oparty na LangGraph — frameworku do budowy
+            autonomicznych agentów AI z możliwością wywoływania narzędzi i podejmowania decyzji:</p>
+          <ol>
+            <li><strong>Agent parsowania zamówień</strong> — Gemini Pro parsuje zamówienia z różnych formatów (e-mail,
+              PDF, EDI X12) do ustandaryzowanego JSON. Dokładność: 98.7%.</li>
+            <li><strong>Agent walidacji</strong> — sprawdza stany magazynowe (API ERP), weryfikuje limity kredytowe
+              klienta, kalkuluje rabaty według matrycy cenowej.</li>
+            <li><strong>Agent logistyki</strong> — automatycznie przydziela zamówienie do optymalnego magazynu
+              (odległość + dostępność), rezerwuje slot transportowy.</li>
+            <li><strong>Agent dokumentów</strong> — generuje WZ, fakturę proforma i label wysyłkowy. Wysyła
+              potwierdzenie do klienta.</li>
+            <li><strong>Human-in-the-loop</strong> — zamówienia powyżej 50 000 PLN lub z nietypowymi rabatami trafiają
+              do kolejki manualnej z rekomendacją agenta.</li>
+          </ol>
 
-<div class="article-highlight"><p><strong>Cytat klienta:</strong> „System agentic AI od PSLAB przetwarza 85% zamówień bez udziału człowieka. To nie jest zwykły chatbot — to autonomiczny system, który faktycznie 'myśli' i podejmuje dobre decyzje."</p></div>
+          <div class="cs-tech">
+            <span class="tag">LangGraph</span><span class="tag">Gemini Pro</span><span class="tag">Python</span><span
+              class="tag">FastAPI</span><span class="tag">AWS Lambda</span><span class="tag">SQS</span><span
+              class="tag">DynamoDB</span><span class="tag">SAP API</span><span class="tag">Redis</span>
+          </div>
 
-<div class="article-cta"><h3>Szukasz automatyzacji procesów z AI?</h3><p>Wdrożymy agentów AI dostosowanych do Twoich procesów biznesowych.</p><a href="../#kontakt" class="btn btn--primary">Skontaktuj się →</a></div>
-</div></div></section>
-</main>
-<footer class="footer"><div class="container"><div class="footer__inner"><a href="../" class="footer__logo"><img src="../img/pslab-logo-3c-440px.png" alt="PSLAB"/></a><nav class="footer__nav" aria-label="Mapa strony">
+          <h2>Monitoring i uczenie</h2>
+          <p>System posiada dashboard real-time z metrykami: liczba przetworzonych zamówień, czas procesowania,
+            dokładność parsowania, liczba eskalacji do człowieka. Feedbacki od operatorów (poprawki do decyzji agenta)
+            są wykorzystywane do fine-tuningu promptów i reguł walidacji.</p>
+
+          <h2>Rezultaty</h2>
+          <div class="cs-results">
+            <div class="cs-result">
+              <div class="cs-result__number">85%</div>
+              <div class="cs-result__label">zamówień przetwarzanych automatycznie</div>
+            </div>
+            <div class="cs-result">
+              <div class="cs-result__number">0.3%</div>
+              <div class="cs-result__label">błędów (z 4%)</div>
+            </div>
+            <div class="cs-result">
+              <div class="cs-result__number">12→4</div>
+              <div class="cs-result__label">osób w procesie zamówień</div>
+            </div>
+            <div class="cs-result">
+              <div class="cs-result__number">&lt;90s</div>
+              <div class="cs-result__label">czas przetwarzania zamówienia</div>
+            </div>
+          </div>
+
+          <div class="article-highlight">
+            <p><strong>Cytat klienta:</strong> „System agentic AI od PSLAB przetwarza 85% zamówień bez udziału
+              człowieka. To nie jest zwykły chatbot — to autonomiczny system, który faktycznie 'myśli' i podejmuje dobre
+              decyzje."</p>
+          </div>
+
+          <div class="article-cta">
+            <h3>Szukasz automatyzacji procesów z AI?</h3>
+            <p>Wdrożymy agentów AI dostosowanych do Twoich procesów biznesowych.</p><a href="../#kontakt"
+              class="btn btn--primary">Skontaktuj się →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner"><a href="../" class="footer__logo"><img src="../img/pslab-logo-3c-440px.png"
+            alt="PSLAB" /></a>
+        <nav class="footer__nav" aria-label="Mapa strony">
           <a href="../#uslugi">Usługi</a>
           <a href="../#cloud-computing">Cloud Computing</a>
           <a href="../#machine-learning-ai">AI / ML</a>
@@ -63,9 +160,16 @@
           <a href="../#zespol">Zespół</a>
           <a href="../#faq">FAQ</a>
           <a href="../#kontakt">Kontakt</a>
-        </nav><p class="footer__copy">&copy; 2026 PSLAB - Outsourcing IT, Cloud Computing, Sztuczna
+        </nav>
+        <p class="footer__copy">&copy; 2026 PSLAB - Outsourcing IT, Cloud Computing, Sztuczna
           Inteligencja - AI, Analityka Danych - Business Intelligence. | ul. Rolna 22, 43-100 Tychy | <a
             href="tel:+48792336306">+48 792 336 306</a>
           | <a href="mailto:kontakt@pslab.eu">kontakt@pslab.eu</a><br /><strong>NIP:</strong> PL6462449298 | <strong>Nr
-            konta (ING):</strong> PL 06 1050 1399 1000 0090 7490 6562 | <strong>BIC/SWIFT:</strong> INGBPLPW</p></div></div></footer>
-<script src="../main.js"></script></body></html>
+            konta (ING):</strong> PL 06 1050 1399 1000 0090 7490 6562 | <strong>BIC/SWIFT:</strong> INGBPLPW</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../main.js"></script>
+</body>
+
+</html>

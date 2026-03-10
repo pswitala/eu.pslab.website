@@ -1,56 +1,152 @@
-<!DOCTYPE html><html lang="pl"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>Strategia multi-cloud AWS + Azure dla producenta – Case Study | PSLAB</title><meta name="description" content="Case study: wdrożenie strategii multi-cloud AWS i Azure dla firmy produkcyjnej. Terraform, VPN Site-to-Site, optymalizacja kosztów i wysoka dostępność."/><meta name="robots" content="index,follow"/><link rel="canonical" href="https://pslab.eu/case-study/multi-cloud-aws-azure-producent.html"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/><link rel="stylesheet" href="../index.css"/><link rel="stylesheet" href="../article.css"/>  <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
-</head><body>
-<div class="bg-grid"></div>
-<nav class="navbar scrolled" id="navbar"><div class="container"><a href="../" class="navbar__logo"><img src="../img/pslab-logo-3c-440px.png" alt="PSLAB"/></a><ul class="navbar__links" id="navLinks"><li><a href="../#uslugi">Usługi</a></li><li><a href="../#zespol">Zespół</a></li><li><a href="../baza-wiedzy/">Baza wiedzy</a></li><li><a href="./">Case Studies</a></li><li><a href="../#kontakt">Kontakt</a></li></ul><button class="navbar__burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button></div></nav>
-<main class="article-page">
-<section class="article-hero"><div class="container">
-<div class="article-hero__breadcrumb"><a href="../">PSLAB</a><span>›</span><a href="./">Case Studies</a><span>›</span>Multi-Cloud</div>
-<h1 class="article-hero__title">Strategia multi-cloud AWS + Azure dla producenta automotive</h1>
-<div class="article-hero__meta"><span class="article-hero__meta-item">☁ AWS + Azure</span><span class="article-hero__meta-item">📅 2024</span><span class="article-hero__meta-item">⏱ 7 min czytania</span></div>
-</div></section>
-<section class="article-content"><div class="container"><div class="article-body">
+<!DOCTYPE html>
+<html lang="pl">
 
-<div class="cs-meta">
-  <div class="cs-meta__item"><div class="cs-meta__label">Klient</div><div class="cs-meta__value">Producent komponentów automotive, 800+ pracowników</div></div>
-  <div class="cs-meta__item"><div class="cs-meta__label">Branża</div><div class="cs-meta__value">Motoryzacja / Produkcja</div></div>
-  <div class="cs-meta__item"><div class="cs-meta__label">Okres realizacji</div><div class="cs-meta__value">Q1–Q4 2024</div></div>
-  <div class="cs-meta__item"><div class="cs-meta__label">Platformy</div><div class="cs-meta__value">AWS + Microsoft Azure</div></div>
-</div>
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GT-W6J5JLW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-<h2>Wyzwanie</h2>
-<p>Klient posiadał krytyczne systemy produkcyjne (MES, SCADA) hostowane na AWS EC2, jednocześnie korzystając z Microsoft 365 i Azure AD do zarządzania tożsamością 800 pracowników w 3 zakładach. Brak spójnej strategii multi-cloud powodował silosy danych, niespójne polityki bezpieczeństwa i trudności w zarządzaniu kosztami rosnącymi o 25% rok do roku.</p>
-<p>Główni klienci z branży automotive (Tier 1) wymagali certyfikacji TISAX, co dodatkowo komplikowało architekturę bezpieczeństwa rozproszoną między dwoma cloudami.</p>
+    gtag('config', 'GT-W6J5JLW');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Strategia multi-cloud AWS + Azure dla producenta - Case Study | PSLAB</title>
+  <meta name="description"
+    content="Case study: wdrożenie strategii multi-cloud AWS i Azure dla firmy produkcyjnej. Terraform, VPN Site-to-Site, optymalizacja kosztów i wysoka dostępność." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://pslab.eu/case-study/multi-cloud-aws-azure-producent.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../index.css" />
+  <link rel="stylesheet" href="../article.css" />
+  <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+</head>
 
-<h2>Rozwiązanie</h2>
-<p>Zaprojektowaliśmy zunifikowaną <strong>architekturę multi-cloud</strong> łączącą AWS i Azure przez dedykowane połączenia VPN Site-to-Site z redundancją. Kluczowe elementy:</p>
-<ol>
-<li><strong>Centralne zarządzanie tożsamością</strong> — Azure AD jako Identity Provider dla obu cloudów (AWS SSO + Azure AD federation).</li>
-<li><strong>Unified networking</strong> — AWS Transit Gateway + Azure Virtual WAN połączone tunelami IPsec z automatycznym failoverem.</li>
-<li><strong>Infrastructure as Code</strong> — cała infrastruktura (oba cloudy) zarządzana z jednego repozytorium Terraform z modułami per cloud.</li>
-<li><strong>FinOps</strong> — wdrożenie AWS Cost Explorer + Azure Cost Management z alertami budżetowymi i tagowaniem zasobów.</li>
-</ol>
+<body>
+  <div class="bg-grid"></div>
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container"><a href="../" class="navbar__logo"><img src="../img/pslab-logo-3c-440px.png"
+          alt="PSLAB" /></a>
+      <ul class="navbar__links" id="navLinks">
+        <li><a href="../#uslugi">Usługi</a></li>
+        <li><a href="../#zespol">Zespół</a></li>
+        <li><a href="../baza-wiedzy/">Baza wiedzy</a></li>
+        <li><a href="./">Case Studies</a></li>
+        <li><a href="../#kontakt">Kontakt</a></li>
+      </ul><button class="navbar__burger" id="navBurger"
+        aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <main class="article-page">
+    <section class="article-hero">
+      <div class="container">
+        <div class="article-hero__breadcrumb"><a href="../">PSLAB</a><span>></span><a href="./">Case
+            Studies</a><span>></span>Multi-Cloud</div>
+        <h1 class="article-hero__title">Strategia multi-cloud AWS + Azure dla producenta automotive</h1>
+        <div class="article-hero__meta"><span class="article-hero__meta-item">☁ AWS + Azure</span><span
+            class="article-hero__meta-item">📅 2024</span><span class="article-hero__meta-item">⏱ 7 min czytania</span>
+        </div>
+      </div>
+    </section>
+    <section class="article-content">
+      <div class="container">
+        <div class="article-body">
 
-<div class="cs-tech">
-<span class="tag">AWS EC2</span><span class="tag">Azure AD</span><span class="tag">Terraform</span><span class="tag">VPN Site-to-Site</span><span class="tag">Transit Gateway</span><span class="tag">Azure Virtual WAN</span><span class="tag">AWS SSO</span><span class="tag">CloudWatch</span><span class="tag">Azure Monitor</span>
-</div>
+          <div class="cs-meta">
+            <div class="cs-meta__item">
+              <div class="cs-meta__label">Klient</div>
+              <div class="cs-meta__value">Producent komponentów automotive, 800+ pracowników</div>
+            </div>
+            <div class="cs-meta__item">
+              <div class="cs-meta__label">Branża</div>
+              <div class="cs-meta__value">Motoryzacja / Produkcja</div>
+            </div>
+            <div class="cs-meta__item">
+              <div class="cs-meta__label">Okres realizacji</div>
+              <div class="cs-meta__value">Q1-Q4 2024</div>
+            </div>
+            <div class="cs-meta__item">
+              <div class="cs-meta__label">Platformy</div>
+              <div class="cs-meta__value">AWS + Microsoft Azure</div>
+            </div>
+          </div>
 
-<h2>Bezpieczeństwo i TISAX</h2>
-<p>Wdrożyliśmy zunifikowane polityki bezpieczeństwa obejmujące oba cloudy: szyfrowanie danych at-rest i in-transit, centralne logowanie (AWS CloudTrail + Azure Activity Log → wspólny SIEM), MFA dla wszystkich kont uprzywilejowanych i segmentacja sieciowa zgodna z wymaganiami TISAX.</p>
+          <h2>Wyzwanie</h2>
+          <p>Klient posiadał krytyczne systemy produkcyjne (MES, SCADA) hostowane na AWS EC2, jednocześnie korzystając z
+            Microsoft 365 i Azure AD do zarządzania tożsamością 800 pracowników w 3 zakładach. Brak spójnej strategii
+            multi-cloud powodował silosy danych, niespójne polityki bezpieczeństwa i trudności w zarządzaniu kosztami
+            rosnącymi o 25% rok do roku.</p>
+          <p>Główni klienci z branży automotive (Tier 1) wymagali certyfikacji TISAX, co dodatkowo komplikowało
+            architekturę bezpieczeństwa rozproszoną między dwoma cloudami.</p>
 
-<h2>Rezultaty</h2>
-<div class="cs-results">
-<div class="cs-result"><div class="cs-result__number">-30%</div><div class="cs-result__label">kosztów cloud (FinOps)</div></div>
-<div class="cs-result"><div class="cs-result__number">99.99%</div><div class="cs-result__label">dostępność cross-cloud</div></div>
-<div class="cs-result"><div class="cs-result__number">1</div><div class="cs-result__label">repo Terraform, 2 cloudy</div></div>
-<div class="cs-result"><div class="cs-result__number">TISAX</div><div class="cs-result__label">certyfikacja uzyskana</div></div>
-</div>
+          <h2>Rozwiązanie</h2>
+          <p>Zaprojektowaliśmy zunifikowaną <strong>architekturę multi-cloud</strong> łączącą AWS i Azure przez
+            dedykowane połączenia VPN Site-to-Site z redundancją. Kluczowe elementy:</p>
+          <ol>
+            <li><strong>Centralne zarządzanie tożsamością</strong> — Azure AD jako Identity Provider dla obu cloudów
+              (AWS SSO + Azure AD federation).</li>
+            <li><strong>Unified networking</strong> — AWS Transit Gateway + Azure Virtual WAN połączone tunelami IPsec z
+              automatycznym failoverem.</li>
+            <li><strong>Infrastructure as Code</strong> — cała infrastruktura (oba cloudy) zarządzana z jednego
+              repozytorium Terraform z modułami per cloud.</li>
+            <li><strong>FinOps</strong> — wdrożenie AWS Cost Explorer + Azure Cost Management z alertami budżetowymi i
+              tagowaniem zasobów.</li>
+          </ol>
 
-<div class="article-highlight"><p><strong>Cytat klienta:</strong> „Dzięki PSLAB mamy wreszcie pełną kontrolę nad infrastrukturą w dwóch cloudach. Jedno repozytorium Terraform, jedna konsola kosztów — to ogromna zmiana w zarządzaniu IT."</p></div>
+          <div class="cs-tech">
+            <span class="tag">AWS EC2</span><span class="tag">Azure AD</span><span class="tag">Terraform</span><span
+              class="tag">VPN Site-to-Site</span><span class="tag">Transit Gateway</span><span class="tag">Azure Virtual
+              WAN</span><span class="tag">AWS SSO</span><span class="tag">CloudWatch</span><span class="tag">Azure
+              Monitor</span>
+          </div>
 
-<div class="article-cta"><h3>Potrzebujesz strategii multi-cloud?</h3><p>Zaprojektujemy architekturę łączącą AWS, Azure i GCP w spójne środowisko.</p><a href="../#kontakt" class="btn btn--primary">Skontaktuj się →</a></div>
-</div></div></section>
-</main>
-<footer class="footer"><div class="container"><div class="footer__inner"><a href="../" class="footer__logo"><img src="../img/pslab-logo-3c-440px.png" alt="PSLAB"/></a><nav class="footer__nav" aria-label="Mapa strony">
+          <h2>Bezpieczeństwo i TISAX</h2>
+          <p>Wdrożyliśmy zunifikowane polityki bezpieczeństwa obejmujące oba cloudy: szyfrowanie danych at-rest i
+            in-transit, centralne logowanie (AWS CloudTrail + Azure Activity Log → wspólny SIEM), MFA dla wszystkich
+            kont uprzywilejowanych i segmentacja sieciowa zgodna z wymaganiami TISAX.</p>
+
+          <h2>Rezultaty</h2>
+          <div class="cs-results">
+            <div class="cs-result">
+              <div class="cs-result__number">-30%</div>
+              <div class="cs-result__label">kosztów cloud (FinOps)</div>
+            </div>
+            <div class="cs-result">
+              <div class="cs-result__number">99.99%</div>
+              <div class="cs-result__label">dostępność cross-cloud</div>
+            </div>
+            <div class="cs-result">
+              <div class="cs-result__number">1</div>
+              <div class="cs-result__label">repo Terraform, 2 cloudy</div>
+            </div>
+            <div class="cs-result">
+              <div class="cs-result__number">TISAX</div>
+              <div class="cs-result__label">certyfikacja uzyskana</div>
+            </div>
+          </div>
+
+          <div class="article-highlight">
+            <p><strong>Cytat klienta:</strong> „Dzięki PSLAB mamy wreszcie pełną kontrolę nad infrastrukturą w dwóch
+              cloudach. Jedno repozytorium Terraform, jedna konsola kosztów — to ogromna zmiana w zarządzaniu IT."</p>
+          </div>
+
+          <div class="article-cta">
+            <h3>Potrzebujesz strategii multi-cloud?</h3>
+            <p>Zaprojektujemy architekturę łączącą AWS, Azure i GCP w spójne środowisko.</p><a href="../#kontakt"
+              class="btn btn--primary">Skontaktuj się →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner"><a href="../" class="footer__logo"><img src="../img/pslab-logo-3c-440px.png"
+            alt="PSLAB" /></a>
+        <nav class="footer__nav" aria-label="Mapa strony">
           <a href="../#uslugi">Usługi</a>
           <a href="../#cloud-computing">Cloud Computing</a>
           <a href="../#machine-learning-ai">AI / ML</a>
@@ -62,9 +158,16 @@
           <a href="../#zespol">Zespół</a>
           <a href="../#faq">FAQ</a>
           <a href="../#kontakt">Kontakt</a>
-        </nav><p class="footer__copy">&copy; 2026 PSLAB - Outsourcing IT, Cloud Computing, Sztuczna
+        </nav>
+        <p class="footer__copy">&copy; 2026 PSLAB - Outsourcing IT, Cloud Computing, Sztuczna
           Inteligencja - AI, Analityka Danych - Business Intelligence. | ul. Rolna 22, 43-100 Tychy | <a
             href="tel:+48792336306">+48 792 336 306</a>
           | <a href="mailto:kontakt@pslab.eu">kontakt@pslab.eu</a><br /><strong>NIP:</strong> PL6462449298 | <strong>Nr
-            konta (ING):</strong> PL 06 1050 1399 1000 0090 7490 6562 | <strong>BIC/SWIFT:</strong> INGBPLPW</p></div></div></footer>
-<script src="../main.js"></script></body></html>
+            konta (ING):</strong> PL 06 1050 1399 1000 0090 7490 6562 | <strong>BIC/SWIFT:</strong> INGBPLPW</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../main.js"></script>
+</body>
+
+</html>

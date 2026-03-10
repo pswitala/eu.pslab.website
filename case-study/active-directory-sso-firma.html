@@ -1,53 +1,148 @@
-<!DOCTYPE html><html lang="pl"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>Active Directory i SSO dla firmy z 5 oddziałami – Case Study | PSLAB</title><meta name="description" content="Case study: wdrożenie Active Directory, ADFS i SSO dla firmy z 5 oddziałami. Azure AD Connect, federacja tożsamości, MFA i Single Sign-On dla 280 użytkowników."/><meta name="robots" content="index,follow"/><link rel="canonical" href="https://pslab.eu/case-study/active-directory-sso-firma.html"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/><link rel="stylesheet" href="../index.css"/><link rel="stylesheet" href="../article.css"/>  <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
-</head><body>
-<div class="bg-grid"></div>
-<nav class="navbar scrolled" id="navbar"><div class="container"><a href="../" class="navbar__logo"><img src="../img/pslab-logo-3c-440px.png" alt="PSLAB"/></a><ul class="navbar__links" id="navLinks"><li><a href="../#uslugi">Usługi</a></li><li><a href="../#zespol">Zespół</a></li><li><a href="../baza-wiedzy/">Baza wiedzy</a></li><li><a href="./">Case Studies</a></li><li><a href="../#kontakt">Kontakt</a></li></ul><button class="navbar__burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button></div></nav>
-<main class="article-page">
-<section class="article-hero"><div class="container">
-<div class="article-hero__breadcrumb"><a href="../">PSLAB</a><span>›</span><a href="./">Case Studies</a><span>›</span>Active Directory</div>
-<h1 class="article-hero__title">Active Directory i SSO dla firmy z 5 oddziałami</h1>
-<div class="article-hero__meta"><span class="article-hero__meta-item">🔒 Infrastruktura IT</span><span class="article-hero__meta-item">📅 2022</span><span class="article-hero__meta-item">⏱ 5 min czytania</span></div>
-</div></section>
-<section class="article-content"><div class="container"><div class="article-body">
+<!DOCTYPE html>
+<html lang="pl">
 
-<div class="cs-meta">
-  <div class="cs-meta__item"><div class="cs-meta__label">Klient</div><div class="cs-meta__value">Firma usługowa, 280 pracowników, 5 oddziałów</div></div>
-  <div class="cs-meta__item"><div class="cs-meta__label">Branża</div><div class="cs-meta__value">Usługi profesjonalne / Outsourcing</div></div>
-  <div class="cs-meta__item"><div class="cs-meta__label">Okres realizacji</div><div class="cs-meta__value">Q1–Q3 2022</div></div>
-  <div class="cs-meta__item"><div class="cs-meta__label">Zakres</div><div class="cs-meta__value">Active Directory, SSO, MFA</div></div>
-</div>
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GT-W6J5JLW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-<h2>Wyzwanie</h2>
-<p>Firma usługowa z 5 oddziałami (Katowice, Wrocław, Gdańsk, Łódź, Poznań) zarządzała kontami użytkowników w sposób rozproszony — każdy oddział miał własny kontroler domeny Windows, niezależne polityki haseł i brak centralnego zarządzania tożsamością. Pracownicy logowali się osobno do każdego systemu: poczta (Exchange on-prem), CRM (Salesforce), ERP (Comarch) i intranet (SharePoint).</p>
-<p>Rezultatem było 5-7 różnych haseł per pracownik, częste zgłoszenia resetów (120/miesiąc) i brak możliwości centralnego odcięcia dostępu przy offboardingu (średni czas dezaktywacji: 3 dni).</p>
+    gtag('config', 'GT-W6J5JLW');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Active Directory i SSO dla firmy z 5 oddziałami - Case Study | PSLAB</title>
+  <meta name="description"
+    content="Case study: wdrożenie Active Directory, ADFS i SSO dla firmy z 5 oddziałami. Azure AD Connect, federacja tożsamości, MFA i Single Sign-On dla 280 użytkowników." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://pslab.eu/case-study/active-directory-sso-firma.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../index.css" />
+  <link rel="stylesheet" href="../article.css" />
+  <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+</head>
 
-<h2>Rozwiązanie</h2>
-<ol>
-<li><strong>Konsolidacja Active Directory</strong> — migracja 5 odrębnych domen do jednego lasu AD z 5 site'ami, replikacja DFS-R między lokalizacjami.</li>
-<li><strong>Azure AD Connect</strong> — synchronizacja tożsamości do Azure AD dla aplikacji SaaS (Salesforce, SharePoint Online).</li>
-<li><strong>ADFS → Azure AD SSO</strong> — wdrożenie Single Sign-On dla wszystkich aplikacji (SAML/OIDC), jedno logowanie = dostęp do wszystkiego.</li>
-<li><strong>Conditional Access + MFA</strong> — wymuszone MFA dla logowań spoza sieci firmowej, Conditional Access blokujący dostęp z nieznanych urządzeń.</li>
-<li><strong>Automatyczny onboarding/offboarding</strong> — skrypty PowerShell tworzące konto AD + M365 + przypisanie do odpowiedniej grupy w 15 minut.</li>
-</ol>
+<body>
+  <div class="bg-grid"></div>
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container"><a href="../" class="navbar__logo"><img src="../img/pslab-logo-3c-440px.png"
+          alt="PSLAB" /></a>
+      <ul class="navbar__links" id="navLinks">
+        <li><a href="../#uslugi">Usługi</a></li>
+        <li><a href="../#zespol">Zespół</a></li>
+        <li><a href="../baza-wiedzy/">Baza wiedzy</a></li>
+        <li><a href="./">Case Studies</a></li>
+        <li><a href="../#kontakt">Kontakt</a></li>
+      </ul><button class="navbar__burger" id="navBurger"
+        aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <main class="article-page">
+    <section class="article-hero">
+      <div class="container">
+        <div class="article-hero__breadcrumb"><a href="../">PSLAB</a><span>></span><a href="./">Case
+            Studies</a><span>></span>Active Directory</div>
+        <h1 class="article-hero__title">Active Directory i SSO dla firmy z 5 oddziałami</h1>
+        <div class="article-hero__meta"><span class="article-hero__meta-item">🔒 Infrastruktura IT</span><span
+            class="article-hero__meta-item">📅 2022</span><span class="article-hero__meta-item">⏱ 5 min czytania</span>
+        </div>
+      </div>
+    </section>
+    <section class="article-content">
+      <div class="container">
+        <div class="article-body">
 
-<div class="cs-tech">
-<span class="tag">Active Directory</span><span class="tag">Azure AD Connect</span><span class="tag">ADFS</span><span class="tag">SSO (SAML/OIDC)</span><span class="tag">MFA</span><span class="tag">Conditional Access</span><span class="tag">PowerShell</span><span class="tag">Group Policy</span>
-</div>
+          <div class="cs-meta">
+            <div class="cs-meta__item">
+              <div class="cs-meta__label">Klient</div>
+              <div class="cs-meta__value">Firma usługowa, 280 pracowników, 5 oddziałów</div>
+            </div>
+            <div class="cs-meta__item">
+              <div class="cs-meta__label">Branża</div>
+              <div class="cs-meta__value">Usługi profesjonalne / Outsourcing</div>
+            </div>
+            <div class="cs-meta__item">
+              <div class="cs-meta__label">Okres realizacji</div>
+              <div class="cs-meta__value">Q1-Q3 2022</div>
+            </div>
+            <div class="cs-meta__item">
+              <div class="cs-meta__label">Zakres</div>
+              <div class="cs-meta__value">Active Directory, SSO, MFA</div>
+            </div>
+          </div>
 
-<h2>Rezultaty</h2>
-<div class="cs-results">
-<div class="cs-result"><div class="cs-result__number">1</div><div class="cs-result__label">hasło = dostęp do wszystkich systemów</div></div>
-<div class="cs-result"><div class="cs-result__number">-85%</div><div class="cs-result__label">zgłoszeń resetów haseł</div></div>
-<div class="cs-result"><div class="cs-result__number">15 min</div><div class="cs-result__label">onboarding / offboarding</div></div>
-<div class="cs-result"><div class="cs-result__number">280</div><div class="cs-result__label">użytkowników z MFA</div></div>
-</div>
+          <h2>Wyzwanie</h2>
+          <p>Firma usługowa z 5 oddziałami (Katowice, Wrocław, Gdańsk, Łódź, Poznań) zarządzała kontami użytkowników w
+            sposób rozproszony — każdy oddział miał własny kontroler domeny Windows, niezależne polityki haseł i brak
+            centralnego zarządzania tożsamością. Pracownicy logowali się osobno do każdego systemu: poczta (Exchange
+            on-prem), CRM (Salesforce), ERP (Comarch) i intranet (SharePoint).</p>
+          <p>Rezultatem było 5-7 różnych haseł per pracownik, częste zgłoszenia resetów (120/miesiąc) i brak możliwości
+            centralnego odcięcia dostępu przy offboardingu (średni czas dezaktywacji: 3 dni).</p>
 
-<div class="article-highlight"><p><strong>Cytat klienta:</strong> „Jedno logowanie do wszystkiego — to ogromna zmiana dla naszych pracowników. A automatyczny offboarding w 15 minut zamiast 3 dni daje nam spokój o bezpieczeństwo danych."</p></div>
+          <h2>Rozwiązanie</h2>
+          <ol>
+            <li><strong>Konsolidacja Active Directory</strong> — migracja 5 odrębnych domen do jednego lasu AD z 5
+              site'ami, replikacja DFS-R między lokalizacjami.</li>
+            <li><strong>Azure AD Connect</strong> — synchronizacja tożsamości do Azure AD dla aplikacji SaaS
+              (Salesforce, SharePoint Online).</li>
+            <li><strong>ADFS → Azure AD SSO</strong> — wdrożenie Single Sign-On dla wszystkich aplikacji (SAML/OIDC),
+              jedno logowanie = dostęp do wszystkiego.</li>
+            <li><strong>Conditional Access + MFA</strong> — wymuszone MFA dla logowań spoza sieci firmowej, Conditional
+              Access blokujący dostęp z nieznanych urządzeń.</li>
+            <li><strong>Automatyczny onboarding/offboarding</strong> — skrypty PowerShell tworzące konto AD + M365 +
+              przypisanie do odpowiedniej grupy w 15 minut.</li>
+          </ol>
 
-<div class="article-cta"><h3>Potrzebujesz wdrożenia Active Directory lub SSO?</h3><p>Zintegrujemy wszystkie Twoje systemy w jeden punkt logowania.</p><a href="../#kontakt" class="btn btn--primary">Skontaktuj się →</a></div>
-</div></div></section>
-</main>
-<footer class="footer"><div class="container"><div class="footer__inner"><a href="../" class="footer__logo"><img src="../img/pslab-logo-3c-440px.png" alt="PSLAB"/></a><nav class="footer__nav" aria-label="Mapa strony">
+          <div class="cs-tech">
+            <span class="tag">Active Directory</span><span class="tag">Azure AD Connect</span><span
+              class="tag">ADFS</span><span class="tag">SSO (SAML/OIDC)</span><span class="tag">MFA</span><span
+              class="tag">Conditional Access</span><span class="tag">PowerShell</span><span class="tag">Group
+              Policy</span>
+          </div>
+
+          <h2>Rezultaty</h2>
+          <div class="cs-results">
+            <div class="cs-result">
+              <div class="cs-result__number">1</div>
+              <div class="cs-result__label">hasło = dostęp do wszystkich systemów</div>
+            </div>
+            <div class="cs-result">
+              <div class="cs-result__number">-85%</div>
+              <div class="cs-result__label">zgłoszeń resetów haseł</div>
+            </div>
+            <div class="cs-result">
+              <div class="cs-result__number">15 min</div>
+              <div class="cs-result__label">onboarding / offboarding</div>
+            </div>
+            <div class="cs-result">
+              <div class="cs-result__number">280</div>
+              <div class="cs-result__label">użytkowników z MFA</div>
+            </div>
+          </div>
+
+          <div class="article-highlight">
+            <p><strong>Cytat klienta:</strong> „Jedno logowanie do wszystkiego — to ogromna zmiana dla naszych
+              pracowników. A automatyczny offboarding w 15 minut zamiast 3 dni daje nam spokój o bezpieczeństwo danych."
+            </p>
+          </div>
+
+          <div class="article-cta">
+            <h3>Potrzebujesz wdrożenia Active Directory lub SSO?</h3>
+            <p>Zintegrujemy wszystkie Twoje systemy w jeden punkt logowania.</p><a href="../#kontakt"
+              class="btn btn--primary">Skontaktuj się →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner"><a href="../" class="footer__logo"><img src="../img/pslab-logo-3c-440px.png"
+            alt="PSLAB" /></a>
+        <nav class="footer__nav" aria-label="Mapa strony">
           <a href="../#uslugi">Usługi</a>
           <a href="../#cloud-computing">Cloud Computing</a>
           <a href="../#machine-learning-ai">AI / ML</a>
@@ -59,9 +154,16 @@
           <a href="../#zespol">Zespół</a>
           <a href="../#faq">FAQ</a>
           <a href="../#kontakt">Kontakt</a>
-        </nav><p class="footer__copy">&copy; 2026 PSLAB - Outsourcing IT, Cloud Computing, Sztuczna
+        </nav>
+        <p class="footer__copy">&copy; 2026 PSLAB - Outsourcing IT, Cloud Computing, Sztuczna
           Inteligencja - AI, Analityka Danych - Business Intelligence. | ul. Rolna 22, 43-100 Tychy | <a
             href="tel:+48792336306">+48 792 336 306</a>
           | <a href="mailto:kontakt@pslab.eu">kontakt@pslab.eu</a><br /><strong>NIP:</strong> PL6462449298 | <strong>Nr
-            konta (ING):</strong> PL 06 1050 1399 1000 0090 7490 6562 | <strong>BIC/SWIFT:</strong> INGBPLPW</p></div></div></footer>
-<script src="../main.js"></script></body></html>
+            konta (ING):</strong> PL 06 1050 1399 1000 0090 7490 6562 | <strong>BIC/SWIFT:</strong> INGBPLPW</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../main.js"></script>
+</body>
+
+</html>

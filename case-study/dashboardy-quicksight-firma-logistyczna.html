@@ -13,11 +13,11 @@
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <title>Analityka danych Amazon QuickSight dla startupu - Case Study | PSLAB</title>
+  <title>Dashboardy QuickSight dla firmy logistycznej - Case Study | PSLAB</title>
   <meta name="description"
-    content="Case study: wdrożenie Amazon QuickSight dla startupu SaaS. AWS S3, Athena, Glue — serverless BI platform, dashboardy produktowe i metryki SaaS." />
+    content="Case study: wdrożenie dashboardów QuickSight dla firmy logistycznej. Wizualizacja KPI transportu, PostgreSQL, ETL z Apache Airflow, real-time monitoring floty." />
   <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://pslab.eu/case-study/analityka-danych-quicksight-startup.html" />
+  <link rel="canonical" href="https://pslab.eu/case-study/dashboardy-QuickSight-firma-logistyczna.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../index.css" />
@@ -45,9 +45,9 @@
       <div class="container">
         <div class="article-hero__breadcrumb"><a href="../">PSLAB</a><span>></span><a href="./">Case
             Studies</a><span>></span>BI / QuickSight</div>
-        <h1 class="article-hero__title">Analityka danych Amazon QuickSight dla startupu SaaS</h1>
+        <h1 class="article-hero__title">Dashboardy QuickSight dla firmy logistycznej</h1>
         <div class="article-hero__meta"><span class="article-hero__meta-item">📊 BI</span><span
-            class="article-hero__meta-item">📅 2023</span><span class="article-hero__meta-item">⏱ 5 min czytania</span>
+            class="article-hero__meta-item">📅 2020</span><span class="article-hero__meta-item">⏱ 5 min czytania</span>
         </div>
       </div>
     </section>
@@ -58,75 +58,75 @@
           <div class="cs-meta">
             <div class="cs-meta__item">
               <div class="cs-meta__label">Klient</div>
-              <div class="cs-meta__value">Startup SaaS HR-Tech, 30 pracowników</div>
+              <div class="cs-meta__value">Firma logistyczna, 450+ pracowników, 180 pojazdów</div>
             </div>
             <div class="cs-meta__item">
               <div class="cs-meta__label">Branża</div>
-              <div class="cs-meta__value">Technologie HR / SaaS</div>
+              <div class="cs-meta__value">Transport / Logistyka</div>
             </div>
             <div class="cs-meta__item">
               <div class="cs-meta__label">Okres realizacji</div>
-              <div class="cs-meta__value">Q2-Q3 2023</div>
+              <div class="cs-meta__value">Q2-Q4 2020</div>
             </div>
             <div class="cs-meta__item">
               <div class="cs-meta__label">Narzędzia</div>
-              <div class="cs-meta__value">Amazon QuickSight, S3, Athena, Glue</div>
+              <div class="cs-meta__value">QuickSight, PostgreSQL, Apache Airflow</div>
             </div>
           </div>
 
           <h2>Wyzwanie</h2>
-          <p>Startup SaaS działający w branży HR-Tech (platforma do zarządzania benefitami pracowniczymi) posiadał 800
-            klientów B2B, ale nie miał platformy analitycznej. Metryki SaaS (MRR, churn, LTV, CAC) były liczone
-            manualnie w Google Sheets. Brak embedded analytics w produkcie (klienci nie widzieli dashboardów z
-            wykorzystaniem benefitów) ograniczał wartość platformy.</p>
+          <p>Firma logistyczna z flotą 180 pojazdów tworzyła raporty operacyjne w Excelu — manualne zestawianie danych z
+            systemów TMS (Transport Management System), GPS i księgowości zajmowało analitykowi 2 dni tygodniowo. Zarząd
+            nie miał dostępu do bieżących KPI transportu: koszt/km, wykorzystanie floty, opóźnienia dostaw, marżowość
+            tras.</p>
 
           <h2>Rozwiązanie</h2>
           <ol>
-            <li><strong>Data Lake na S3</strong> — surowe dane z aplikacji (PostgreSQL CDC via Debezium), dane płatnicze
-              (Stripe webhooks), dane marketingowe (Google Analytics, HubSpot) lądują w S3 w formacie Parquet.</li>
-            <li><strong>AWS Glue + Athena</strong> — Glue Crawlers automatycznie wykrywają schemat, Glue Jobs (PySpark)
-              transformują dane do modelu analitycznego, Athena umożliwia zapytania SQL ad-hoc.</li>
-            <li><strong>10 dashboardów QuickSight</strong> — wewnętrzne: SaaS metrics (MRR, churn, cohort analysis,
-              funnel konwersji), zewnętrzne (embedded): dashboardy dla klientów B2B z utilizacją benefitów per
-              pracownik.</li>
-            <li><strong>QuickSight Embedded</strong> — dashboardy wbudowane w aplikację klienta (iframe z row-level
-              security), każdy klient B2B widzi tylko swoje dane.</li>
+            <li><strong>Hurtownia danych PostgreSQL</strong> — centralny data warehouse agregujący dane z 4 źródeł (TMS,
+              GPS telematyka, ERP Sage, dane paliwowe).</li>
+            <li><strong>ETL z Apache Airflow</strong> — 12 DAG-ów przetwarzających dane co godzinę: normalizacja
+              formatów, kalkulacja KPI, alerty anomalii.</li>
+            <li><strong>14 dashboardów QuickSight</strong> — operacyjne (live: status pojazdów, GPS), taktyczne
+              (dzienne:
+              koszty, opóźnienia), strategiczne (miesięczne: marżowość tras, TCO floty).</li>
+            <li><strong>QuickSight Server</strong> — wdrożenie lokalne (wymaganie klienta), dostęp role-based: kierowcy
+              (mobile app), dyspozytorzy (live dashboard), zarząd (raporty strategiczne).</li>
           </ol>
 
           <div class="cs-tech">
-            <span class="tag">Amazon QuickSight</span><span class="tag">AWS S3</span><span class="tag">AWS
-              Athena</span><span class="tag">AWS Glue</span><span class="tag">Debezium CDC</span><span
-              class="tag">Parquet</span><span class="tag">Stripe API</span><span class="tag">Embedded Analytics</span>
+            <span class="tag">QuickSight Server</span><span class="tag">PostgreSQL</span><span class="tag">Apache
+              Airflow</span><span class="tag">ETL</span><span class="tag">Python</span><span class="tag">API
+              GPS</span><span class="tag">Sage ERP</span>
           </div>
 
           <h2>Rezultaty</h2>
           <div class="cs-results">
             <div class="cs-result">
-              <div class="cs-result__number">10</div>
+              <div class="cs-result__number">14</div>
               <div class="cs-result__label">dashboardów QuickSight</div>
             </div>
             <div class="cs-result">
-              <div class="cs-result__number">-15%</div>
-              <div class="cs-result__label">churn (dzięki embedded BI)</div>
+              <div class="cs-result__number">-90%</div>
+              <div class="cs-result__label">czasu tworzenia raportów</div>
             </div>
             <div class="cs-result">
-              <div class="cs-result__number">$0</div>
-              <div class="cs-result__label">koszty infra (serverless)</div>
+              <div class="cs-result__number">+8%</div>
+              <div class="cs-result__label">wykorzystanie floty</div>
             </div>
             <div class="cs-result">
               <div class="cs-result__number">Real-time</div>
-              <div class="cs-result__label">metryki SaaS dla zarządu</div>
+              <div class="cs-result__label">widoczność KPI transportu</div>
             </div>
           </div>
 
           <div class="article-highlight">
-            <p><strong>Cytat klienta:</strong> „QuickSight Embedded zmienił nasz produkt — klienci B2B doceniają
-              dashboardy z utilizacją benefitów, a nasz churn spadł o 15%. PSLAB dostarczył to w 8 tygodni."</p>
+            <p><strong>Cytat klienta:</strong> „Wcześniej na raporty czekaliśmy 2 dni. Teraz zarząd ma dashboardy na
+              telefonie w QuickSight Mobile i podejmuje decyzje na podstawie aktualnych danych."</p>
           </div>
 
           <div class="article-cta">
-            <h3>Potrzebujesz analityki danych dla Twojego SaaS?</h3>
-            <p>Wdrożymy QuickSight, Power BI lub Tableau z embedded analytics.</p><a href="../#kontakt"
+            <h3>Potrzebujesz dashboardów dla Twojej firmy?</h3>
+            <p>Wdrożymy QuickSight lub Power BI z pełnym ETL i hurtownią danych.</p><a href="../#kontakt"
               class="btn btn--primary">Skontaktuj się →</a>
           </div>
         </div>
