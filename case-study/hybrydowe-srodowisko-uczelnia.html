@@ -6,7 +6,7 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=GT-W6J5JLW"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'GT-W6J5JLW');
@@ -46,7 +46,7 @@
         <div class="article-hero__breadcrumb"><a href="../">PSLAB</a><span>></span><a href="./">Case
             Studies</a><span>></span>Infrastruktura hybrydowa</div>
         <h1 class="article-hero__title">Hybrydowe środowisko IT uczelni wyższej</h1>
-        <div class="article-hero__meta"><span class="article-hero__meta-item">Infrastruktura hybrydowa</span><span
+        <div class="article-hero__meta"><span class="article-hero__meta-item">☁ Infrastruktura hybrydowa</span><span
             class="article-hero__meta-item">📅 2023</span><span class="article-hero__meta-item">⏱ 8 min czytania</span>
         </div>
       </div>
@@ -75,49 +75,72 @@
           </div>
 
           <h2>Wyzwanie</h2>
-          <p>Uczelnia wyższa z 20 000+ studentów, 2000+ wykładowcami i 500 pracownikami administracji borykała się z ogromną skalą rozproszonych systemów. Kluczowe problemy:</p>
+          <p>Uczelnia wyższa z 20 000+ studentów, 2000+ wykładowcami i 500 pracownikami administracji borykała się z
+            ogromną skalą rozproszonych systemów. Kluczowe problemy:</p>
           <ul>
-            <li><strong>Rozproszone systemy tożsamości</strong> — studenci i wykładowcy zarządzali wieloma kontami, co generowało tysiące zgłoszeń do helpdesku miesięcznie.
+            <li><strong>Rozproszone systemy tożsamości</strong> — studenci i wykładowcy zarządzali wieloma kontami, co
+              generowało tysiące zgłoszeń do helpdesku miesięcznie.
             </li>
-            <li><strong>Wydajność analityczna</strong> — brak centralnego systemu raportowego dla tak dużej populacji studentów utrudniał zarządzanie dydaktyką i budżetem.</li>
-            <li><strong>Skalowalność aplikacji</strong> — systemy dziekanatowe i e-learningowe nie radziły sobie z obciążeniem podczas sesji i rekrutacji.</li>
-            <li><strong>Bezpieczeństwo danych</strong> — konieczność centralizacji monitoringu dla ogromnej floty urządzeń w kampusie i chmurze.</li>
+            <li><strong>Wydajność analityczna</strong> — brak centralnego systemu raportowego dla tak dużej populacji
+              studentów utrudniał zarządzanie dydaktyką i budżetem.</li>
+            <li><strong>Skalowalność aplikacji</strong> — systemy dziekanatowe i e-learningowe nie radziły sobie z
+              obciążeniem podczas sesji i rekrutacji.</li>
+            <li><strong>Bezpieczeństwo danych</strong> — konieczność centralizacji monitoringu dla ogromnej floty
+              urządzeń w kampusie i chmurze.</li>
           </ul>
 
           <h2>Rozwiązanie — Multi-cloud z przewagą AWS</h2>
-          <p>Zaprojektowaliśmy <strong>hybrydowe środowisko IT</strong>, w którym AWS pełni rolę głównej platformy infrastrukturalnej i analitycznej, a Azure zapewnia tożsamość i produktywność:</p>
+          <p>Zaprojektowaliśmy <strong>hybrydowe środowisko IT</strong>, w którym AWS pełni rolę głównej platformy
+            infrastrukturalnej i analitycznej, a Azure zapewnia tożsamość i produktywność:</p>
 
           <h3>Infrastruktura i Aplikacje (AWS)</h3>
           <ul>
-            <li><strong>Amazon EKS (Elastic Kubernetes Service)</strong> — konteneryzacja systemów dziekanatowych i Moodle, zapewniająca automatyczne skalowanie podczas szczytów obciążenia.</li>
-            <li><strong>Analityka i Big Data</strong> — wdrożenie <strong>Amazon Redshift</strong> jako hurtowni danych oraz <strong>Amazon QuickSight</strong> do dashboardów menedżerskich i rektorskich.</li>
-            <li><strong>Bezpieczeństwo AWS</strong> — <strong>AWS Security Hub</strong> oraz GuardDuty do ciągłego monitoringu zagrożeń i zgodności.</li>
-            <li><strong>Obliczenia HPC</strong> — klaster obliczeniowy wykorzystujący instancje Amazon EC2 z GPU do zaawansowanych badań naukowych.</li>
+            <li><strong>Amazon EKS (Elastic Kubernetes Service)</strong> — konteneryzacja systemów dziekanatowych i
+              Moodle, zapewniająca automatyczne skalowanie podczas szczytów obciążenia.</li>
+            <li><strong>Analityka i Big Data</strong> — wdrożenie <strong>Amazon Redshift</strong> jako hurtowni danych
+              oraz <strong>Amazon QuickSight</strong> do dashboardów menedżerskich i rektorskich.</li>
+            <li><strong>Bezpieczeństwo AWS</strong> — <strong>AWS Security Hub</strong> oraz GuardDuty do ciągłego
+              monitoringu zagrożeń i zgodności.</li>
+            <li><strong>Obliczenia HPC</strong> — klaster obliczeniowy wykorzystujący instancje Amazon EC2 z GPU do
+              zaawansowanych badań naukowych.</li>
           </ul>
 
           <h3>Tożsamość i Produktywność (Azure & Office 365)</h3>
           <ul>
-            <li><strong>Azure AD + Azure AD Connect</strong> — centralne źródło prawdy dla 22 500+ tożsamości. Synchronizacja z lokalnym Active Directory i SSO do wszystkich usług (w tym AWS).</li>
-            <li><strong>Microsoft 365 A3 for Education</strong> — pełny pakiet biurowy, Teams i poczta Exchange dla całej społeczności akademickiej.</li>
-            <li><strong>Azure App Proxy</strong> — bezpieczny dostęp do zasobów on-premise bez konieczności zestawiania skomplikowanych połączeń VPN dla każdego pracownika.</li>
+            <li><strong>Azure AD + Azure AD Connect</strong> — centralne źródło prawdy dla 22 500+ tożsamości.
+              Synchronizacja z lokalnym Active Directory i SSO do wszystkich usług (w tym AWS).</li>
+            <li><strong>Microsoft 365 A3 for Education</strong> — pełny pakiet biurowy, Teams i poczta Exchange dla
+              całej społeczności akademickiej.</li>
+            <li><strong>Azure App Proxy</strong> — bezpieczny dostęp do zasobów on-premise bez konieczności zestawiania
+              skomplikowanych połączeń VPN dla każdego pracownika.</li>
           </ul>
 
           <h3>On-premise</h3>
           <ul>
-            <li><strong>Sieć kampusowa</strong> — redesign sieci szkieletowej: Cisco Catalyst core switches, FortiGate firewalls oraz rozległa sieć WiFi 6 (UniFi) pokrywająca cały kampus.</li>
-            <li><strong>Hybrid Storage</strong> — wykorzystanie Amazon S3 i AWS Storage Gateway do backupu i archiwizacji danych naukowych.</li>
+            <li><strong>Sieć kampusowa</strong> — redesign sieci szkieletowej: Cisco Catalyst core switches, FortiGate
+              firewalls oraz rozległa sieć WiFi 6 (UniFi) pokrywająca cały kampus.</li>
+            <li><strong>Hybrid Storage</strong> — wykorzystanie Amazon S3 i AWS Storage Gateway do backupu i
+              archiwizacji danych naukowych.</li>
           </ul>
 
           <div class="cs-tech">
-            <span class="tag">AWS (Main)</span><span class="tag">Amazon EKS</span><span class="tag">Amazon Redshift</span><span class="tag">Amazon QuickSight</span><span class="tag">AWS Security Hub</span><span class="tag">Azure AD</span><span class="tag">Microsoft 365</span><span class="tag">Active Directory</span><span class="tag">Cisco Catalyst</span><span class="tag">FortiGate</span><span class="tag">UniFi WiFi 6</span><span class="tag">Amazon S3</span>
+            <span class="tag">AWS (Main)</span><span class="tag">Amazon EKS</span><span class="tag">Amazon
+              Redshift</span><span class="tag">Amazon QuickSight</span><span class="tag">AWS Security Hub</span><span
+              class="tag">Azure AD</span><span class="tag">Microsoft 365</span><span class="tag">Active
+              Directory</span><span class="tag">Cisco Catalyst</span><span class="tag">FortiGate</span><span
+              class="tag">UniFi WiFi 6</span><span class="tag">Amazon S3</span>
           </div>
 
           <h2>Bezpieczeństwo i Zgodność</h2>
-          <p>Jako podmiot sektora publicznego, uczelnia musi spełniać rygorystyczne normy bezpieczeństwa, w tym <strong>NIS2</strong>. Implementacja objęła:</p>
+          <p>Jako podmiot sektora publicznego, uczelnia musi spełniać rygorystyczne normy bezpieczeństwa, w tym
+            <strong>NIS2</strong>. Implementacja objęła:</p>
           <ul>
-            <li><strong>AWS Security Hub</strong> — centralny panel zarządzania bezpieczeństwem infrastruktury w chmurze AWS.</li>
-            <li><strong>MFA everywhere</strong> — bezwzględny wymóg uwierzytelniania wieloskładnikowego dla wykładowców, administracji i studentów przy dostępie do wrażliwych danych.</li>
-            <li><strong>Zautomatyzowany Backup</strong> — wykorzystanie AWS Backup i Azure Backup w strategii 3-2-1 dla kluczowych systemów.</li>
+            <li><strong>AWS Security Hub</strong> — centralny panel zarządzania bezpieczeństwem infrastruktury w chmurze
+              AWS.</li>
+            <li><strong>MFA everywhere</strong> — bezwzględny wymóg uwierzytelniania wieloskładnikowego dla wykładowców,
+              administracji i studentów przy dostępie do wrażliwych danych.</li>
+            <li><strong>Zautomatyzowany Backup</strong> — wykorzystanie AWS Backup i Azure Backup w strategii 3-2-1 dla
+              kluczowych systemów.</li>
           </ul>
 
           <h2>Rezultaty</h2>
@@ -141,7 +164,10 @@
           </div>
 
           <div class="article-highlight">
-            <p><strong>Zastosowanie multi-cloud (AWS + Azure):</strong> pozwoliło nam połączyć światowej klasy analitykę Redshift i skalowalność EKS z chmury AWS z najwyższym standardem zarządzania tożsamością w Azure AD. Rozwiązanie to pozwoliło uczelni obsłużyć 20 000 studentów przy mniejszym nakładzie pracy administracyjnej.</p>
+            <p><strong>Zastosowanie multi-cloud (AWS + Azure):</strong> pozwoliło nam połączyć światowej klasy analitykę
+              Redshift i skalowalność EKS z chmury AWS z najwyższym standardem zarządzania tożsamością w Azure AD.
+              Rozwiązanie to pozwoliło uczelni obsłużyć 20 000 studentów przy mniejszym nakładzie pracy
+              administracyjnej.</p>
           </div>
 
           <div class="article-cta">
