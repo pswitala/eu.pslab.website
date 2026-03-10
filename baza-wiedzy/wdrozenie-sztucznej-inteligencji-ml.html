@@ -2,15 +2,7 @@
 <html lang="pl">
 
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=GT-W6J5JLW"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
 
-    gtag('config', 'GT-W6J5JLW');
-  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wdrożenie sztucznej inteligencji i machine learning w firmie - poradnik | PSLAB</title>
@@ -41,6 +33,48 @@
   }
   </script>
   <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+  <!-- Google tag (gtag.js) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', '');
+    (function () {
+      // Konfiguracja
+      const gtmId = 'GT-W6J5JLW'; // Twój ID z obrazka
+      const delaySeconds = 3; // Opóźnienie w sekundach (opcjonalne)
+      let gtmLoaded = false;
+
+      function loadGTM() {
+        if (gtmLoaded) return;
+        gtmLoaded = true;
+
+        // Standardowy skrypt ładowania GTM
+        (function (w, d, s, l, i) {
+          w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+              new Date().getTime(), event: 'gtm.js'
+          }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+              'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', gtmId);
+
+        console.log('GTM załadowany po interakcji lub opóźnieniu.');
+      }
+
+      // Wyzwalacz 1: Po pierwszej interakcji (ruch myszą, kliknięcie, scroll)
+      const triggers = ['mouseover', 'keydown', 'touchstart', 'scroll'];
+      triggers.forEach(event => {
+        window.addEventListener(event, loadGTM, { once: true, passive: true });
+      });
+
+      // Wyzwalacz 2: Po upływie X sekund (zabezpieczenie dla botów/pasywnych użytkowników)
+      window.addEventListener('load', () => {
+        setTimeout(loadGTM, delaySeconds * 1000);
+      });
+    })();
+  </script>
 </head>
 
 <body>
@@ -137,12 +171,12 @@
           <p>Koszt wdrożenia sztucznej inteligencji zależy od złożoności projektu:</p>
           <ul>
             <li><strong>Chatbot AI / asystent</strong> — od 15 000 PLN (integracja z gotowym API) do 100 000 PLN (custom
-              model).</li>
-            <li><strong>Predykcyjny ML</strong> — od 30 000 PLN (prosty model) do 200 000 PLN (zaawansowany pipeline z
+              model, RAG).</li>
+            <li><strong>Predykcyjny ML</strong> — od 20 000 PLN (prosty model) do 200 000 PLN (zaawansowany pipeline z
               MLOps).</li>
-            <li><strong>Computer Vision</strong> — od 50 000 PLN (klasyfikacja obrazów) do 300 000 PLN (real-time
+            <li><strong>Computer Vision</strong> — od 20 000 PLN (klasyfikacja obrazów) do 300 000 PLN (real-time
               detection).</li>
-            <li><strong>Agentic AI</strong> — od 80 000 PLN (prosty agent) do 500 000 PLN (autonomiczny system
+            <li><strong>Agentic AI</strong> — od 20 000 PLN (prosty agent) do 500 000 PLN (autonomiczny system
               multi-agent).</li>
           </ul>
 
