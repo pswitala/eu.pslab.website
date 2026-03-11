@@ -1,315 +1,279 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://pslab.eu/</loc>
+    <loc>https://www.pslab.eu/</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://pslab.eu/baza-wiedzy/</loc>
+    <loc>https://www.pslab.eu/baza-wiedzy/</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://pslab.eu/uslugi/cloud-computing.html</loc>
+    <loc>https://www.pslab.eu/uslugi/cloud-computing.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://pslab.eu/uslugi/sztuczna-inteligencja.html</loc>
+    <loc>https://www.pslab.eu/uslugi/sztuczna-inteligencja.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://pslab.eu/uslugi/obsluga-informatyczna.html</loc>
+    <loc>https://www.pslab.eu/uslugi/obsluga-informatyczna.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://pslab.eu/uslugi/business-intelligence.html</loc>
+    <loc>https://www.pslab.eu/uslugi/business-intelligence.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://pslab.eu/uslugi/nadzor-wdrozen.html</loc>
+    <loc>https://www.pslab.eu/uslugi/nadzor-wdrozen.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://pslab.eu/uslugi/programowanie-aplikacji.html</loc>
+    <loc>https://www.pslab.eu/uslugi/programowanie-aplikacji.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://pslab.eu/baza-wiedzy/migracja-do-chmury-aws-azure-gcp.html</loc>
+    <loc>https://www.pslab.eu/baza-wiedzy/migracja-do-chmury-aws-azure-gcp.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pslab.eu/baza-wiedzy/wdrozenie-sztucznej-inteligencji-ml.html</loc>
+    <loc>https://www.pslab.eu/baza-wiedzy/wdrozenie-sztucznej-inteligencji-ml.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pslab.eu/baza-wiedzy/outsourcing-it-obsluga-informatyczna-firm.html</loc>
+    <loc>https://www.pslab.eu/baza-wiedzy/outsourcing-it-obsluga-informatyczna-firm.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pslab.eu/baza-wiedzy/analityka-danych-business-intelligence.html</loc>
+    <loc>https://www.pslab.eu/baza-wiedzy/analityka-danych-business-intelligence.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pslab.eu/baza-wiedzy/nadzor-projektow-informatycznych.html</loc>
+    <loc>https://www.pslab.eu/baza-wiedzy/nadzor-projektow-informatycznych.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pslab.eu/baza-wiedzy/programowanie-aplikacji-web-react-fastapi.html</loc>
+    <loc>https://www.pslab.eu/baza-wiedzy/programowanie-aplikacji-web-react-fastapi.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pslab.eu/baza-wiedzy/aplikacje-mobilne-ios-android-flutter.html</loc>
+    <loc>https://www.pslab.eu/baza-wiedzy/aplikacje-mobilne-ios-android-flutter.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pslab.eu/baza-wiedzy/agentic-ai-automatyzacja-procesow-w-praktyce.html</loc>
+    <loc>https://www.pslab.eu/baza-wiedzy/agentic-ai-automatyzacja-procesow-w-praktyce.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pslab.eu/baza-wiedzy/chatbot-ai-obsluga-klienta-dla-firmy.html</loc>
+    <loc>https://www.pslab.eu/baza-wiedzy/chatbot-ai-obsluga-klienta-dla-firmy.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pslab.eu/baza-wiedzy/optymalizacja-kosztow-chmury-aws-azure.html</loc>
+    <loc>https://www.pslab.eu/baza-wiedzy/optymalizacja-kosztow-chmury-aws-azure.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pslab.eu/baza-wiedzy/architektura-multi-cloud-zarzadzanie.html</loc>
+    <loc>https://www.pslab.eu/baza-wiedzy/architektura-multi-cloud-zarzadzanie.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pslab.eu/baza-wiedzy/dyrektywa-nis2-wymagania-i-zgodnosc.html</loc>
+    <loc>https://www.pslab.eu/baza-wiedzy/dyrektywa-nis2-wymagania-i-zgodnosc.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pslab.eu/baza-wiedzy/wdrozenie-siem-fortinet-microsoft-sentinel.html</loc>
+    <loc>https://www.pslab.eu/baza-wiedzy/wdrozenie-siem-fortinet-microsoft-sentinel.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pslab.eu/baza-wiedzy/raportowanie-power-bi-vs-tableau.html</loc>
+    <loc>https://www.pslab.eu/baza-wiedzy/raportowanie-power-bi-vs-tableau.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pslab.eu/baza-wiedzy/due-diligence-technologiczne-przed-zakupem-it.html</loc>
+    <loc>https://www.pslab.eu/baza-wiedzy/due-diligence-technologiczne-przed-zakupem-it.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pslab.eu/case-study/</loc>
+    <loc>https://www.pslab.eu/case-study/</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://pslab.eu/case-study/migracja-firmy-produkcyjnej-aws.html</loc>
+    <loc>https://www.pslab.eu/case-study/migracja-firmy-produkcyjnej-aws.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pslab.eu/case-study/platforma-ecommerce-serverless-aws.html</loc>
+    <loc>https://www.pslab.eu/case-study/platforma-ecommerce-serverless-aws.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pslab.eu/case-study/infrastruktura-gcp-firma-logistyczna.html</loc>
+    <loc>https://www.pslab.eu/case-study/infrastruktura-gcp-firma-logistyczna.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pslab.eu/case-study/analityka-predykcyjna-gcp-retail.html</loc>
+    <loc>https://www.pslab.eu/case-study/analityka-predykcyjna-gcp-retail.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pslab.eu/case-study/migracja-azure-office365-deweloper.html</loc>
+    <loc>https://www.pslab.eu/case-study/migracja-azure-office365-deweloper.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pslab.eu/case-study/azure-microsoft365-kancelaria-prawna.html</loc>
+    <loc>https://www.pslab.eu/case-study/azure-microsoft365-kancelaria-prawna.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pslab.eu/case-study/power-bi-hurtownia-danych-azure.html</loc>
+    <loc>https://www.pslab.eu/case-study/power-bi-hurtownia-danych-azure.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pslab.eu/case-study/datalake-aws-quicksight-fintech.html</loc>
+    <loc>https://www.pslab.eu/case-study/datalake-aws-quicksight-fintech.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pslab.eu/case-study/vertex-ai-gemini-ubezpieczenia.html</loc>
+    <loc>https://www.pslab.eu/case-study/vertex-ai-gemini-ubezpieczenia.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pslab.eu/case-study/hybrydowe-srodowisko-uczelnia.html</loc>
+    <loc>https://www.pslab.eu/case-study/hybrydowe-srodowisko-uczelnia.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pslab.eu/case-study/multi-cloud-aws-azure-producent.html</loc>
+    <loc>https://www.pslab.eu/case-study/multi-cloud-aws-azure-producent.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pslab.eu/case-study/migracja-gcp-startup-medtech.html</loc>
+    <loc>https://www.pslab.eu/case-study/migracja-gcp-startup-medtech.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pslab.eu/case-study/chatbot-ai-obsluga-klienta.html</loc>
+    <loc>https://www.pslab.eu/case-study/chatbot-ai-obsluga-klienta.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pslab.eu/case-study/agentic-ai-automatyzacja-procesow.html</loc>
+    <loc>https://www.pslab.eu/case-study/agentic-ai-automatyzacja-procesow.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pslab.eu/case-study/outsourcing-it-kancelaria.html</loc>
+    <loc>https://www.pslab.eu/case-study/outsourcing-it-kancelaria.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pslab.eu/case-study/sieci-cisco-ubiquiti-hotel.html</loc>
+    <loc>https://www.pslab.eu/case-study/sieci-cisco-ubiquiti-hotel.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pslab.eu/case-study/active-directory-sso-firma.html</loc>
+    <loc>https://www.pslab.eu/case-study/active-directory-sso-firma.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pslab.eu/case-study/infrastruktura-it-biuro-rachunkowe.html</loc>
+    <loc>https://www.pslab.eu/case-study/infrastruktura-it-biuro-rachunkowe.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pslab.eu/case-study/dashboardy-quicksight-firma-logistyczna.html</loc>
+    <loc>https://www.pslab.eu/case-study/dashboardy-quicksight-firma-logistyczna.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pslab.eu/case-study/raportowanie-power-bi-siec-handlowa.html</loc>
+    <loc>https://www.pslab.eu/case-study/raportowanie-power-bi-siec-handlowa.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pslab.eu/case-study/analityka-danych-quicksight-startup.html</loc>
+    <loc>https://www.pslab.eu/case-study/analityka-danych-quicksight-startup.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pslab.eu/case-study/kontrola-jakosci-crm-uslugowa.html</loc>
+    <loc>https://www.pslab.eu/case-study/kontrola-jakosci-crm-uslugowa.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pslab.eu/#cloud-computing</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pslab.eu/#machine-learning-ai</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pslab.eu/#obsluga-informatyczna</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pslab.eu/#business-intelligence</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pslab.eu/#zespol</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://pslab.eu/#kontakt</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
   </url>
 </urlset>
